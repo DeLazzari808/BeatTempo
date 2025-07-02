@@ -1,0 +1,77 @@
+/* --- OPÇÃO 1: Importar a fonte Gotham de um CDN (Recomendado) --- */
+/* Esta linha já importa a fonte para o seu projeto. */
+@import url('https://fonts.cdnfonts.com/css/gotham-9');
+
+/* --- OPÇÃO 2: Auto-hospedar a sua fonte (Avançado) --- */
+/* Se preferir usar os seus próprios ficheiros, siga estes passos:
+   1. Coloque os seus ficheiros de fonte (ex: .woff2, .ttf) na pasta 'assets/fonts/'.
+   2. Remova ou comente a linha @import acima.
+   3. Descomente as regras @font-face abaixo e ajuste os nomes dos ficheiros.
+*/
+
+/*
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Book.woff2') format('woff2'),
+         url('assets/fonts/Gotham-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Bold.woff2') format('woff2'),
+         url('assets/fonts/Gotham-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Light.woff2') format('woff2'),
+         url('assets/fonts/Gotham-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+*/
+
+body {
+    /* A fonte principal foi alterada de 'Inter' para 'Gotham'. */
+    font-family: 'Gotham', sans-serif; 
+}
+
+.section-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 3rem; /* 48px */
+    }
+}
+
+.scroll-container {
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.modal-content {
+    animation: slide-up 0.4s ease-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
