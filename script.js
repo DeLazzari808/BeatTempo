@@ -1,74 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- LÓGICA DO MODAL DE INFORMAÇÃO (ARTISTAS E PARCEIROS) ---
-    const infoModal = document.getElementById('info-modal');
-    if (infoModal) {
-        const closeInfoModalBtn = document.getElementById('close-info-modal');
-        const infoTriggers = document.querySelectorAll('.info-trigger');
-        const modalImg = document.getElementById('modal-img');
-        const modalName = document.getElementById('modal-name');
-        const modalRole = document.getElementById('modal-role');
-        const modalBio = document.getElementById('modal-bio');
-        
-        const modalSpotify = document.getElementById('modal-spotify');
-        const modalYoutube = document.getElementById('modal-youtube');
-        const modalSoundcloud = document.getElementById('modal-soundcloud');
-        const modalInstagram = document.getElementById('modal-instagram');
 
-        const closeInfoModal = () => infoModal.classList.add('hidden');
+    // --- LÓGICA DA NOVA SEÇÃO DE ORÇAMENTO ---
+    const budgetOptions = document.querySelectorAll('.budget-option');
+    const detailSections = {
+        'btn-projeto': document.getElementById('details-projeto'),
+        'btn-agenciamento': document.getElementById('details-agenciamento'),
+        'btn-ensina': document.getElementById('details-ensina')
+    };
 
-        document.body.addEventListener('click', function(event) {
-            const trigger = event.target.closest('.info-trigger');
-            if (trigger) {
-                if (modalImg) modalImg.src = trigger.dataset.img;
-                if (modalName) modalName.textContent = trigger.dataset.name;
-                if (modalRole) modalRole.textContent = trigger.dataset.role;
-                if (modalBio) modalBio.textContent = trigger.dataset.bio;
-                
-                // Atualiza e mostra/esconde os links das redes sociais
-                const socialLinks = [
-                    { el: modalSpotify, link: trigger.dataset.spotify },
-                    { el: modalYoutube, link: trigger.dataset.youtube },
-                    { el: modalSoundcloud, link: trigger.dataset.soundcloud },
-                    { el: modalInstagram, link: trigger.dataset.instagram }
-                ];
+    budgetOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const targetId = option.id;
+            
+            // Esconde todas as seções de detalhe
+            Object.values(detailSections).forEach(section => {
+                if(section) section.classList.add('hidden');
+            });
 
-                let hasSocialLinks = false;
-                socialLinks.forEach(item => {
-                    if (item.el) {
-                        if (item.link && item.link !== '#') {
-                            item.el.href = item.link;
-                            item.el.classList.remove('hidden');
-                            hasSocialLinks = true;
-                        } else {
-                            item.el.classList.add('hidden');
-                        }
-                    }
-                });
+            // Remove a borda de todos os botões
+            budgetOptions.forEach(btn => btn.classList.remove('border-white'));
 
-                // Esconde a secção de links se não houver nenhum
-                const socialLinksContainer = document.getElementById('modal-social-links');
-                if(socialLinksContainer) {
-                    socialLinksContainer.classList.toggle('hidden', !hasSocialLinks);
-                }
-
-                infoModal.classList.remove('hidden');
+            // Mostra a seção de detalhe clicada e adiciona a borda
+            if (detailSections[targetId]) {
+                detailSections[targetId].classList.remove('hidden');
+                option.classList.add('border-white');
             }
         });
+    });
 
-        if(closeInfoModalBtn) closeInfoModalBtn.addEventListener('click', closeInfoModal);
-        infoModal.addEventListener('click', (e) => {
-            if (e.target === infoModal) closeInfoModal();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !infoModal.classList.contains('hidden')) closeInfoModal();
-        });
-    }
-
-    // --- LÓGICA DO MODAL DE PRODUÇÃO ---
+    // --- LÓGICA DO MODAL DE PRODUÇÃO (PRODUÇÕES) ---
     const productionModal = document.getElementById('production-modal');
     if (productionModal) {
         const closeProductionModalBtn = document.getElementById('close-production-modal');
-        
         const closeProductionModal = () => productionModal.classList.add('hidden');
 
         document.body.addEventListener('click', function(event) {
@@ -81,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if(modalProductionTitle) modalProductionTitle.textContent = trigger.dataset.title;
                 if(modalProductionDescription) modalProductionDescription.textContent = trigger.dataset.description;
-                
                 if(modalSpotifyLink) {
                     const spotifyLink = trigger.dataset.spotifyLink;
                     if (spotifyLink && spotifyLink !== '#') {
@@ -91,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         modalSpotifyLink.style.display = 'none';
                     }
                 }
-                
                 if(modalYoutubeLink) {
                     const youtubeLink = trigger.dataset.youtubeLink;
                     if (youtubeLink && youtubeLink !== '#') {
@@ -101,11 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         modalYoutubeLink.style.display = 'none';
                     }
                 }
-                
                 productionModal.classList.remove('hidden');
             }
         });
-
         if(closeProductionModalBtn) closeProductionModalBtn.addEventListener('click', closeProductionModal);
         productionModal.addEventListener('click', (e) => {
             if (e.target === productionModal) closeProductionModal();
@@ -115,7 +74,66 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // --- CARROSSEL DE ARTISTAS (CORRIGIDO) ---
+    // --- LÓGICA DO MODAL DE INFORMAÇÕES (ARTISTAS, PARCEIROS, CEO, CO.FOUNDER) ---
+    const infoModal = document.getElementById('info-modal');
+    if (infoModal) {
+        const closeInfoModalBtn = document.getElementById('close-info-modal');
+        const infoTriggers = document.querySelectorAll('.info-trigger');
+        const modalImg = document.getElementById('modal-img');
+        const modalName = document.getElementById('modal-name');
+        const modalRole = document.getElementById('modal-role');
+        const modalBio = document.getElementById('modal-bio');
+        const modalSpotify = document.getElementById('modal-spotify');
+        const modalYoutube = document.getElementById('modal-youtube');
+        const modalSoundcloud = document.getElementById('modal-soundcloud');
+        const modalInstagram = document.getElementById('modal-instagram');
+        const socialLinksContainer = document.getElementById('modal-social-links');
+
+        const closeInfoModal = () => infoModal.classList.add('hidden');
+
+        document.body.addEventListener('click', function(event) {
+            const trigger = event.target.closest('.info-trigger');
+            if (trigger) {
+                if (modalImg) modalImg.src = trigger.dataset.img;
+                if (modalName) modalName.textContent = trigger.dataset.name;
+                if (modalRole) modalRole.textContent = trigger.dataset.role;
+                if (modalBio) modalBio.textContent = trigger.dataset.bio;
+
+                // Atualiza e mostra/esconde os links das redes sociais
+                const socialLinks = [
+                    { el: modalSpotify, link: trigger.dataset.spotify },
+                    { el: modalYoutube, link: trigger.dataset.youtube },
+                    { el: modalSoundcloud, link: trigger.dataset.soundcloud },
+                    { el: modalInstagram, link: trigger.dataset.instagram }
+                ];
+                let hasSocialLinks = false;
+                socialLinks.forEach(item => {
+                    if (item.el) {
+                        if (item.link && item.link !== '#') {
+                            item.el.href = item.link;
+                            item.el.classList.remove('hidden');
+                            hasSocialLinks = true;
+                        } else {
+                            item.el.classList.add('hidden');
+                        }
+                    }
+                });
+                if(socialLinksContainer) {
+                    socialLinksContainer.classList.toggle('hidden', !hasSocialLinks);
+                }
+                infoModal.classList.remove('hidden');
+            }
+        });
+        if(closeInfoModalBtn) closeInfoModalBtn.addEventListener('click', closeInfoModal);
+        infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) closeInfoModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !infoModal.classList.contains('hidden')) closeInfoModal();
+        });
+    }
+    
+    // --- LÓGICA DO CARROSSEL DE ARTISTAS ---
     const artistsCarouselContainer = document.getElementById('artists-carousel-container');
     if (artistsCarouselContainer) {
         const carousel = document.getElementById('artists-carousel');

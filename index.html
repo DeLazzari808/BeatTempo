@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatempo - Transformamos Som em Sucesso</title>
-    
+    <title>Beatempo - Agência Criativa para Artistas</title>
+
     <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="antialiased bg-black text-white">
+<body class="bg-black text-white antialiased">
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex-1">
-                <a href="#">
-                    <img src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-20 w-auto">
-                </a>
+                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-12 w-auto"></a>
             </div>
-            <div class="hidden md:flex flex-1 justify-center items-center space-x-2">
+            <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
                 <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Serviços</a>
                 <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Produções</a>
-                <a href="#artists" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Artistas</a>
-                <a href="#partners" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Parceiros</a>
                 <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Sobre</a>
+                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Orçamento</a>
             </div>
             <div class="flex-1 flex justify-end">
-                 <a href="#contact" class="bg-white text-black hover:bg-gray-200 font-semibold px-5 py-2 rounded-lg transition-colors text-sm">
+                 <a href="https://wa.link/w7qku7" target="_blank" class="bg-white text-black hover:bg-gray-200 font-semibold px-5 py-2 rounded-lg transition-colors text-sm">
                     Quero ser Artista
                 </a>
             </div>
@@ -43,201 +38,220 @@
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
             <video autoplay loop muted class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-dj-mixing-at-a-party-3044-large.mp4" type="video/mp4">
-                O seu navegador não suporta a tag de vídeo.
             </video>
             <div class="relative z-20 px-4 flex flex-col items-center">
                 <h1 class="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-tight text-white">
-                    Transformamos som<br>em sucesso
+                    Sua música, sua marca, nosso corre.
                 </h1>
                 <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                    Desenvolvemos a sua fanbase, construímos o seu negócio e criamos o mundo à volta da sua música.
+                    Fortalecemos artistas com visão, identidade e estratégia pra fazer o som bater e a carreira crescer.
                 </p>
-                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl mx-auto text-white">
-                    <a href="#services" class="bg-black/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:bg-black/50 transition-all duration-300 hover:scale-105">Amplifique a sua música</a>
-                    <a href="#services" class="bg-black/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:bg-black/50 transition-all duration-300 hover:scale-105">Conecte-se com fãs</a>
-                    <a href="#services" class="bg-black/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:bg-black/50 transition-all duration-300 hover:scale-105">Faça crescer o seu negócio</a>
-                    <a href="#services" class="bg-black/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:bg-black/50 transition-all duration-300 hover:scale-105">Entenda o seu público</a>
-                </div>
             </div>
         </section>
 
         <section id="services" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-20">
-                    <h2 class="section-title">As Ferramentas para a sua Carreira</h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Gerimos a sua carreira de ponta a ponta. Desde a produção musical e visual até ao marketing e lançamento.</p>
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Nossos Serviços</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
-                    <div class="pr-8">
-                        <h3 class="text-3xl font-bold mb-4">Produção Musical Completa</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Elevamos a sua música ao nível profissional. Cuidamos de todos os aspetos técnicos e criativos para que a sua visão se torne realidade.</p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Criação de Beats:</strong> Beats exclusivos que correspondem ao seu estilo.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Mistura e Masterização:</strong> Som cristalino e potente, pronto para as plataformas de streaming.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Gestão de Projeto:</strong> Acompanhamento completo do início ao fim da produção.</span></li>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-zinc-900 p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-6">Projeto Beatempo</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Gerenciamento do Lançamento</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Produção de Conteúdo</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Capa (diversos formatos)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Ensaio de Fotos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Videoclipe / Visualizer</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Estilista</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Tráfego Pago / Impulsionamentos</li>
                         </ul>
                     </div>
-                    <div>
-                        <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Produção+Musical" class="rounded-lg shadow-2xl" alt="Imagem de um estúdio de produção musical">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="md:order-2 pl-8">
-                        <h3 class="text-3xl font-bold mb-4">Identidade Visual de Artista</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">A sua música merece uma imagem à altura. Criamos uma identidade visual forte que o representa como artista.</p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Criação de Capa:</strong> Designs impactantes para os seus singles, EPs e álbuns.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Ensaio Fotográfico e Styling:</strong> Sessões de fotos com direção de arte e styling profissional.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong class="text-zinc-800 dark:text-white">Produção de Videoclipe:</strong> Do roteiro à edição final, criamos videoclipes e visualizers que contam a sua história.</span></li>
+                    <div class="bg-zinc-900 p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-6">Agenciamento Mensal</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Assessoria via WhatsApp</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Reunião Mensal</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Encontros no QG da Beatempo</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Definição de identidade e estética</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Postagens Semanais</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Acompanhamento em lançamentos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Desconto com parceiros</li>
                         </ul>
                     </div>
-                    <div class="md:order-1">
-                        <img src="https://placehold.co/800x600/2a2a2a/ffffff?text=Identidade+Visual" class="rounded-lg shadow-2xl" alt="Imagem representando identidade visual e capas de álbuns">
+                    <div class="bg-zinc-900 p-8 rounded-2xl">
+                        <h3 class="text-3xl font-bold mb-6">Beatempo Ensina</h3>
+                         <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Aulas de Violão e Guitarra</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Aulas de Piano e Teclado</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Aulas de Ukulele</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Mentorias de Home Production</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Mentorias de Composição</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i>Oficinas e Práticas Coletivas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="productions" class="py-20 md:py-32 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300">
+        <section id="productions" class="py-20 md:py-32 bg-zinc-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="section-title">As Nossas Produções</h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Projetos que tivemos o orgulho de produzir e lançar.</p>
+                    <h2 class="section-title">Nossas Produções</h2>
                 </div>
-                
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
                     <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger" 
-                         data-title="Munha - QVSDN"
-                         data-description="Um resumo envolvente sobre como foi o processo de produção desta faixa, desde a conceção da ideia até à masterização final. Lançamento a 19/09."
-                         data-spotify-link="#"
-                         data-youtube-link="#">
-                        <img src="https://placehold.co/800x800/18181b/ffffff?text=Munha%0AQVSDN" alt="Capa da música Munha - QVSDN" class="w-full rounded-lg shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300">
+                         data-title="Dilema (remix funk) - Bega, S..."
+                         data-description="Último Lançamento da Beatempo."
+                         data-spotify-link="https://open.spotify.com/intl-pt/track/3..."
+                         data-youtube-link="https://youtube.com/watch?v=QPxnBg...">
+                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa da música Dilema Remix" class="w-full rounded-lg shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300">
                         <div>
                             <p class="text-gray-400 font-semibold">Último Lançamento</p>
-                            <h3 class="text-4xl font-extrabold mt-2">Munha - QVSDN</h3>
+                            <h3 class="text-4xl font-extrabold mt-2">Dilema (remix funk)</h3>
                         </div>
                     </div>
-
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl bg-black border border-transparent hover:border-gray-700 transition-all duration-300 transform hover:-translate-y-1"
-                                 data-title="Sentimentos - Born"
-                                 data-description="Texto resumo sobre a produção de 'Sentimentos' do artista Born."
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=859b502322aa4f78"
-                                 data-youtube-link="https://www.youtube.com/watch?v=66BTEjMgf-E">
-                                <img src="https://placehold.co/400x400/18181b/ffffff?text=Born%0ASentimentos" alt="Capa da música Sentimentos - Born" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Sentimentos</h4>
-                                    <p class="text-gray-300">Born</p>
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Dilema - Bega, Sao Tchelli..." data-spotify-link="https://open.spotify.com/intl-pt/track/2..." data-youtube-link="https://youtube.com/watch?v=3Ow77A...">
+                                <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <h4 class="text-white text-lg font-bold">Dilema</h4><p class="text-gray-300">Bega, Sao Tchelli, Born...</p>
                                 </div>
                             </div>
-
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl bg-black border border-transparent hover:border-gray-700 transition-all duration-300 transform hover:-translate-y-1"
-                                 data-title="Lei da Atração - Tento"
-                                 data-description="Texto resumo sobre a produção de 'Lei da Atração' do artista Tento."
-                                 data-spotify-link="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDlzuf8?si=M0qJRhgTTTCPQh-ZalVPzA"
-                                 data-youtube-link="https://www.youtube.com/watch?v=0Jw0b58uNI0&list=PLsQSYYnJHwH0DKN79llnoetTH04jTugrx">
-                                <img src="https://placehold.co/400x400/18181b/ffffff?text=Tento%0ALei+da+Atra%C3%A7%C3%A3o" alt="Capa da música Lei da Atração - Tento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Lei da Atração</h4>
-                                    <p class="text-gray-300">Tento</p>
+                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="QVSDN - Munha" data-spotify-link="https://open.spotify.com/intl-pt/track/0..." data-youtube-link="https://youtube.com/watch?v=vOCgIQ...">
+                                <img src="assets/capas/capa-qvsdn.jpg" alt="Capa da música QVSDN" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <h4 class="text-white text-lg font-bold">QVSDN</h4><p class="text-gray-300">Munha</p>
                                 </div>
                             </div>
-                            
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl bg-black border border-transparent hover:border-gray-700 transition-all duration-300 transform hover:-translate-y-1"
-                                 data-title="Meia Lua - Sao Tchelli & Bega"
-                                 data-description="Texto resumo sobre a produção de 'Meia Lua' dos artistas Sao Tchelli & Bega."
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=e3a4b745f31b4c09"
-                                 data-youtube-link="https://www.youtube.com/watch?v=u26HdC5mKUM">
-                                <img src="https://placehold.co/400x400/18181b/ffffff?text=Sao+Tchelli" alt="Capa da música Meia Lua" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Meia Lua</h4>
-                                    <p class="text-gray-300">Sao Tchelli & Bega</p>
+                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Sentimentos - Born" data-spotify-link="https://open.spotify.com/intl-pt/track/3..." data-youtube-link="https://youtube.com/watch?v=JMqf-E...">
+                                <img src="assets/capas/capa-sentimentos.jpg" alt="Capa da música Sentimentos" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <h4 class="text-white text-lg font-bold">Sentimentos</h4><p class="text-gray-300">Born</p>
                                 </div>
                             </div>
-
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl bg-black border border-transparent hover:border-gray-700 transition-all duration-300 transform hover:-translate-y-1"
-                                 data-title="Outro Lançamento"
-                                 data-description="Descrição para este outro lançamento."
-                                 data-spotify-link="#"
-                                 data-youtube-link="#">
-                                <img src="https://placehold.co/400x400/18181b/ffffff?text=Artista+4" alt="Capa de música" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Nome da Música</h4>
-                                    <p class="text-gray-300">Artista 4</p>
+                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Lei da Atração - Tento" data-spotify-link="https://open.spotify.com/intl-pt/track/5..." data-youtube-link="https://youtube.com/watch?v=JTugrx...">
+                                <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa da música Lei da Atração" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <h4 class="text-white text-lg font-bold">Lei da Atração</h4><p class="text-gray-300">Tento</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="max-w-2xl mx-auto mt-16 md:mt-24">
-                    <div class="bg-black rounded-2xl p-8 text-center">
-                        <h3 class="text-2xl font-bold">Quer ser o próximo?</h3>
-                        <p class="text-gray-400 mt-2 mb-6">Vamos levar a sua carreira para o próximo nível.</p>
-                        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <a href="#contact" class="w-full sm:w-auto text-center bg-white hover:bg-gray-200 text-black font-bold py-3 px-6 rounded-lg transition-colors"><i class="fa-solid fa-microphone-lines mr-2"></i> Quero ser Artista</a>
-                            <a href="#" class="w-full sm:w-auto text-center border border-gray-500 hover:bg-gray-800 font-bold py-3 px-6 rounded-lg transition-colors"><i class="fab fa-whatsapp mr-2"></i> Quero ser Parceiro</a>
-                        </div>
-                    </div>
-                </div>
+                 <div class="max-w-xl mx-auto mt-16 md:mt-24">
+  <div class="bg-black/80 rounded-2xl p-8 text-center shadow-lg border border-gray-700">
+    <h3 class="text-2xl font-bold mb-4 text-white">Vamos conversar?</h3>
+    <p class="text-gray-400 mb-8">Se você quer impulsionar sua carreira ou ser nosso parceiro, escolha uma opção:</p>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <a href="https://wa.link/w7qku7" target="_blank"
+         class="w-full sm:w-auto text-center bg-white text-black font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+        Quero ser artista!
+      </a>
+      <a href="https://wa.link/336bwv" target="_blank"
+         class="w-full sm:w-auto text-center border border-gray-500 text-white font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+        Quero ser parceiro!
+      </a>
+    </div>
+  </div>
+</div>
             </div>
         </section>
 
-        <section id="artists" class="py-20 md:py-32">
+        <section id="artists" class="hidden py-20 md:py-32"> <!-- Standby: Oculto por requisito do cliente -->
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16"><h2 class="section-title">Os Nossos Artistas</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Talentos que confiam na Beatempo para construir as suas carreiras.</p></div>
                 <div id="artists-carousel-container" class="relative w-full overflow-hidden">
                     <div id="artists-carousel" class="flex">
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item"><div class="text-center cursor-pointer group info-trigger" data-type="artist" data-name="Sao Tchelli" data-role="Artista e Sócio" data-bio="Sao Tchelli é um artista independente que há 4 anos iniciou a sua carreira musical como compositor e cantor. Inspirado pela cena nacional e internacional do rap e do trap que ja ouvia a anos, sempre sonhou em trabalhar com arte. Após um hiato desde seu primeiro lançamento, o single "Meia Lua", deu início a a uma nova fase em sua carreira. A Música , conhecida por ser a primeiro lançada como um projeto beatempo, trouxe o profissionalismo sonhado por qualquer artista. Desde então Sao Tchelli, trabalha como um dos sócios da beatempo, ajudando outros artistas a encontrar o profissionalismo que tanto almejam para seus projetos." data-img="https://placehold.co/400x400/18181b/ffffff?text=ST" data-spotify="https://open.spotify.com/intl-pt/artist/1AUjwkJjroCocJanbEIPxK?si=cIGJDXkySqiHq6fqmMbFpg" data-youtube="https://www.youtube.com/@saotchelli" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=ST" alt="Foto de Sao Tchelli" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Sao Tchelli</h3><p class="text-gray-400">Artista</p></div></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item"><div class="text-center cursor-pointer group info-trigger" data-type="artist" data-name="Born" data-role="Artista" data-bio="Born, um rapper de 18 anos, teve seu primeiro contato com a música ainda na infância. Influenciado por sua mãe, que frequentemente comprava CDs de grandes artistas como Chris Brown, T-Pain e Justin Bieber, Born cresceu ouvindo muito rap e pop. De forma independente, o artista desenvolve seu projeto autoral, onde, em forma de freestyle, aborda narrativas que falam de amor, ambição, superação, sentimentos e conquistas." data-img="https://placehold.co/400x400/18181b/ffffff?text=Born" data-spotify="https://open.spotify.com/artist/4Kvf72k3rrlkT0T12biiEP?si=8xEvFMz2TLmble-g80N6TA" data-youtube="https://youtube.com/@born.prodigio?si=_JHP2DRrMPlW4MD0" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Born" alt="Foto de Born" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Born</h3><p class="text-gray-400">Artista</p></div></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item"><div class="text-center cursor-pointer group info-trigger" data-type="artist" data-name="Munha" data-role="Artista" data-bio="Descrição do artista Munha a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Munha" data-spotify="https://open.spotify.com/artist/75jxy3Cya8iRKMfeKPNVJn?si=FnzllzjcRBHcmqDPzTCHA" data-youtube="https://youtube.com/@guilhermesteve1?si=3zQ24XDNaQAd0X3C" data-soundcloud="https://on.soundcloud.com/ZyczfJJWgy2dUaij9" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Munha" alt="Foto de Munha" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Munha</h3><p class="text-gray-400">Artista</p></div></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item"><div class="text-center cursor-pointer group info-trigger" data-type="artist" data-name="Tento" data-role="Artista" data-bio="Descrição do artista Tento a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-spotify="#" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Tento</h3><p class="text-gray-400">Artista</p></div></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item"><div class="text-center cursor-pointer group info-trigger" data-type="artist" data-name="Bega" data-role="Artista" data-bio="Gabriel Ramos é curitibano, mas passou a maior parte da vida na região metropolitana, em São José dos Pinhais. Sempre foi um apreciador de música, especialmente Rap, mas só em 2020 começou a se interessar por cantar e escrever. Seu objetivo é divertir os ouvintes e transmitir uma visão de progresso constante." data-img="https://placehold.co/400x400/18181b/ffffff?text=Bega" data-spotify="https://open.spotify.com/artist/6GEQGQIi5OdqCWJdqzZhzf?si=8cJliTkuTvWoLVLa8xt3cA" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Bega" alt="Foto de Bega" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Bega</h3><p class="text-gray-400">Artista</p></div></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Sao Tchelli" data-role="Artista e Sócio" data-bio="Sao Tchelli é um artista independente que há 4 anos iniciou a sua carreira musical como compositor e cantor..." data-img="https://placehold.co/400x400/18181b/ffffff?text=ST" data-spotify="https://open.spotify.com/intl-pt/artist/1AUjwkJjroCocJanbEIPxK?si=cIGJDXkySqiHq6fqmMbFpg" data-youtube="https://www.youtube.com/@saotchelli" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=ST" alt="Foto de Sao Tchelli" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Sao Tchelli</h3><p class="text-gray-400">Artista</p></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Born" data-role="Artista" data-bio="Born, um rapper de 18 anos, teve seu primeiro contato com a música ainda na infância..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Born" data-spotify="https://open.spotify.com/artist/4Kvf72k3rrlkT0T12biiEP?si=8xEvFMz2TLmble-g80N6TA" data-youtube="https://youtube.com/@born.prodigio?si=_JHP2DRrMPlW4MD0" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Born" alt="Foto de Born" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Born</h3><p class="text-gray-400">Artista</p></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Munha" data-role="Artista" data-bio="Descrição do artista Munha a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Munha" data-spotify="https://open.spotify.com/artist/75jxy3Cya8iRKMfeKPNVJn?si=FnzllzjcRBHcmqDPzTCHA" data-youtube="https://youtube.com/@guilhermesteve1?si=3zQ24XDNaQAd0X3C" data-soundcloud="https://on.soundcloud.com/ZyczfJJWgy2dUaij9" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Munha" alt="Foto de Munha" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Munha</h3><p class="text-gray-400">Artista</p></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Tento" data-role="Artista" data-bio="Descrição do artista Tento a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-spotify="#" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Tento</h3><p class="text-gray-400">Artista</p></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Bega" data-role="Artista" data-bio="Gabriel Ramos é curitibano, mas passou a maior parte da vida na região metropolitana..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Bega" data-spotify="https://open.spotify.com/artist/6GEQGQIi5OdqCWJdqzZhzf?si=8cJliTkuTvWoLVLa8xt3cA" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Bega" alt="Foto de Bega" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Bega</h3><p class="text-gray-400">Artista</p></div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="partners" class="py-20 md:py-32 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300">
+        <section id="partners" class="hidden py-20 md:py-32 bg-zinc-900"> <!-- Standby: Oculto por requisito do cliente -->
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16"><h2 class="section-title">Os Nossos Parceiros</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">A rede de profissionais que torna tudo possível.</p></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Sonkei37" data-role="Beatmaker & Produtor" data-bio="Salv salv, Eu sou o Sonkei do 37 estúdio, Beatmaker e produtor musical brasileiro, tenho 24 anos e ou nascido e criado em Curitiba PR, desde pequeno sempre tive vontade de aprender a fazer músicas mas meu início foi como Mc cantando e fazendo improvisos na escola..." data-img="https://placehold.co/400x400/18181b/ffffff?text=S37" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=S37" alt="Foto de Sonkei37" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Sonkei37</h3><p class="text-gray-400">Beatmaker</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Gabi Munhoz" data-role="Estilista & Consultora de Imagem" data-bio="Muito prazer, sou Gabi Munhoz, artista, designer e consultora de estilo e imagem pessoal. Gosto de pensar que faço o que faço para ressaltar o que existe de melhor nos meus clientes: a própria essência..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Gabi" data-instagram="https://www.instagram.com/gabimunhoz.art/"><img src="https://placehold.co/400x400/18181b/ffffff?text=Gabi" alt="Foto de Gabi" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Gabi Munhoz</h3><p class="text-gray-400">Estilista</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Joluho" data-role="Fotógrafo" data-bio="Me chamo João Lucas Horvath, mais conhecido como Joluho. Sou fotógrafo de pessoas, apaixonado por moda e música. Gosto de vivenciar a linha tênue entre o clássico e o contemporâneo..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Joluho" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Joluho" alt="Foto de Joluho" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Joluho</h3><p class="text-gray-400">Fotógrafo</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Lukfile" data-role="Fotógrafo & Videomaker" data-bio="Lucas, conhecido no mundo artístico como Lukfiles, é um verdadeiro apaixonado por retratos que capturam a essência das pessoas. Além de se dedicar à fotografia colorida, ele se especializa em documentar a vida e o cotidiano dos artistas..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Luk" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Luk" alt="Foto de Lukfile" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Lukfile</h3><p class="text-gray-400">Fotógrafo</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Anna Beatriz" data-role="Relações Públicas" data-bio="Meu nome é Anna Beatriz, faço faculdade de Relações Públicas e sou apaixonada pela área de eventos. Meu pai é músico, então cresci com a música sendo algo muito presente na minha vida..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Anna" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Anna" alt="Foto de Anna Beatriz" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Anna Beatriz</h3><p class="text-gray-400">Relações Públicas</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Sonkei37" data-role="Beatmaker & Produtor" data-bio="Salv salv, Eu sou o Sonkei do 37 estúdio, Beatmaker e produtor musical brasileiro..." data-img="https://placehold.co/400x400/18181b/ffffff?text=S37" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=S37" alt="Foto de Sonkei37" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Sonkei37</h3><p class="text-gray-400">Beatmaker</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Gabi Munhoz" data-role="Estilista & Consultora de Imagem" data-bio="Muito prazer, sou Gabi Munhoz, artista, designer e consultora de estilo e imagem pessoal..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Gabi" data-instagram="https://www.instagram.com/gabimunhoz.art/"><img src="https://placehold.co/400x400/18181b/ffffff?text=Gabi" alt="Foto de Gabi" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Gabi Munhoz</h3><p class="text-gray-400">Estilista</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Joluho" data-role="Fotógrafo" data-bio="Me chamo João Lucas Horvath, mais conhecido como Joluho. Sou fotógrafo de pessoas..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Joluho" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Joluho" alt="Foto de Joluho" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Joluho</h3><p class="text-gray-400">Fotógrafo</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Lukfile" data-role="Fotógrafo & Videomaker" data-bio="Lucas, conhecido no mundo artístico como Lukfiles, é um verdadeiro apaixonado por retratos..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Luk" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Luk" alt="Foto de Lukfile" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Lukfile</h3><p class="text-gray-400">Fotógrafo</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Anna Beatriz" data-role="Relações Públicas" data-bio="Meu nome é Anna Beatriz, faço faculdade de Relações Públicas e sou apaixonada pela área de eventos..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Anna" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Anna" alt="Foto de Anna Beatriz" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Anna Beatriz</h3><p class="text-gray-400">Relações Públicas</p></div>
                     <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Tento" data-role="Eng. de Produção" data-bio="Descrição do parceiro Tento a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Tento</h3><p class="text-gray-400">Eng. de Produção</p></div>
                 </div>
             </div>
         </section>
         
         <section id="about" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16"><h2 class="section-title">Sobre a Beatempo</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Nascemos da paixão pela música e da vontade de profissionalizar a cena. Somos artistas a ajudar artistas.</p></div>
-                <div class="bg-zinc-100 dark:bg-zinc-900 rounded-2xl p-8 md:p-12"><div class="aspect-w-16 aspect-h-9 mb-12"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg"></iframe></div><div class="text-center max-w-4xl mx-auto"><h3 class="text-2xl font-bold">A Nossa Missão</h3><p class="mt-4 text-gray-300">Acreditamos que toda a grande música merece uma grande estratégia. A nossa missão é fornecer as ferramentas, o conhecimento e a parceria necessários para que os artistas independentes possam competir em pé de igualdade no mercado musical, transformando o talento bruto numa carreira sustentável e de sucesso.</p></div></div>
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Sobre a Beatempo</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">
+                    A Beatempo é de Curitiba e vive o corre da cena. A gente fortalece artistas com visão, identidade e estratégia pra fazer o som bater e a carreira crescer. Lançamento, conteúdo, estética, presença e posicionamento. Se você leva sua música a sério, cola com a gente.
+                </p>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-lg mx-auto">
+                    <div class="text-center info-trigger" data-type="ceo" data-name="Patrick Zeni" data-role="CEO" data-bio="Patrick Zeni é o CEO da Beatempo. Descrição detalhada do CEO aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick"><img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick" alt="Foto de Patrick Zeni" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg"><h3 class="mt-4 text-xl font-bold">Patrick Zeni</h3><p class="text-gray-400">CEO</p></div>
+                    <div class="text-center info-trigger" data-type="cofounder" data-name="João Celli" data-role="Co.Founder" data-bio="João Celli é o Co.Founder da Beatempo. Descrição detalhada do Co.Founder aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+João"><img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+João" alt="Foto de João Celli" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg"><h3 class="mt-4 text-xl font-bold">João Celli</h3><p class="text-gray-400">Co.Founder</p></div>
+                </div>
+
+                <div class="mt-16 bg-zinc-900 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold">Nossa Missão</h3>
+                    <p class="mt-4 text-gray-300">
+                        Nossa missão é impulsionar artistas independentes por meio de estratégias criativas, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um ecossistema colaborativo que conecta talentos, marcas e oportunidades para fortalecer a cena musical. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20 md:py-32 bg-zinc-100 dark:bg-zinc-900 transition-colors duration-300">
+        <section id="contact" class="py-20 md:py-32 bg-zinc-900">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16"><h2 class="section-title">Vamos Tirar o seu Projeto do Papel?</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Preencha o formulário abaixo com os detalhes do seu projeto. A nossa equipa entrará em contacto em breve.</p></div>
-                <form class="max-w-4xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><input type="text" placeholder="O seu nome artístico" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-4 focus:ring-2 focus:ring-white outline-none transition-all"><input type="email" placeholder="O seu melhor e-mail" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-4 focus:ring-2 focus:ring-white outline-none transition-all"></div><div class="mb-8"><label class="block text-lg font-semibold mb-4">Que serviços procura?</label><div class="grid grid-cols-2 md:grid-cols-3 gap-4"><div><input type="checkbox" id="s1" class="hidden peer"><label for="s1" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Gestão</label></div><div><input type="checkbox" id="s2" class="hidden peer"><label for="s2" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Capa da Música</label></div><div><input type="checkbox" id="s3" class="hidden peer"><label for="s3" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Produção Musical</label></div><div><input type="checkbox" id="s4" class="hidden peer"><label for="s4" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Videoclipe</label></div><div><input type="checkbox" id="s5" class="hidden peer"><label for="s5" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Ensaio Fotográfico</label></div><div><input type="checkbox" id="s6" class="hidden peer"><label for="s6" class="block cursor-pointer p-4 rounded-lg bg-gray-900 border border-gray-700 peer-checked:bg-white peer-checked:text-black transition-all">Marketing</label></div></div></div><textarea placeholder="Fale um pouco mais sobre o seu projeto..." rows="5" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-4 focus:ring-2 focus:ring-white outline-none transition-all mb-6"></textarea><button type="submit" class="w-full bg-white hover:bg-gray-200 text-black font-bold py-4 px-8 rounded-lg transition-colors text-lg">Enviar Orçamento</button></form>
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Orçamento</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Clique numa das opções abaixo para ver os detalhes e solicitar um orçamento.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <div id="btn-projeto" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all">
+                        <i class="fa-solid fa-rocket text-4xl mb-4"></i><h3 class="text-xl font-bold">Projeto Beatempo</h3>
+                    </div>
+                    <div id="btn-agenciamento" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all">
+                        <i class="fa-solid fa-calendar-days text-4xl mb-4"></i><h3 class="text-xl font-bold">Agenciamento Mensal</h3>
+                    </div>
+                    <div id="btn-ensina" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all">
+                        <i class="fa-solid fa-graduation-cap text-4xl mb-4"></i><h3 class="text-xl font-bold">Beatempo Ensina</h3>
+                    </div>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all">
+                        <i class="fab fa-whatsapp text-4xl mb-4"></i><h3 class="text-xl font-bold">Contato via WhatsApp</h3>
+                    </a>
+                </div>
+
+                <div id="details-projeto" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">Selecione os serviços para o seu Projeto:</h3>
+                    <div class="space-y-2 text-lg"><label class="flex items-center"><input type="checkbox" class="h-5 w-5 mr-3 bg-gray-700 border-gray-600 rounded">Gerenciamento do Lançamento</label></div>
+                    <div class="space-y-2 text-lg"><label class="flex items-center"><input type="checkbox" class="h-5 w-5 mr-3 bg-gray-700 border-gray-600 rounded">Produção de Conteúdo</label></div>
+                    <button class="mt-6 bg-white text-black font-bold py-3 px-6 rounded-lg">Solicitar Orçamento</button>
+                </div>
+                <div id="details-agenciamento" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">Nosso Agenciamento Mensal inclui:</h3>
+                    <p class="text-gray-300">Assessoria completa para sua carreira. Entre em contato para mais detalhes.</p>
+                     <a href="https://wa.link/w7qku7" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Falar com um especialista</a>
+                </div>
+                <div id="details-ensina" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
+                     <h3 class="text-2xl font-bold mb-4">Nossas Aulas e Mentorias:</h3>
+                     <p class="text-gray-300">Desenvolva suas habilidades com nossos profissionais. Entre em contato para saber mais.</p>
+                      <a href="https://wa.link/w7qku7" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Saber Mais</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-8 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <a href="#">
-                <img id="footer-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-10 w-auto mx-auto mb-4">
-            </a>
-            <p>© 2025 Beatempo. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
+    <footer class="py-8 border-t border-gray-800">
+        </footer>
+    <script src="script.js"></script>
     <div id="info-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-black rounded-2xl max-w-2xl w-full p-8 md:p-10 relative modal-content border border-gray-700">
             <button id="close-info-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8"><i class="fa-solid fa-xmark text-2xl"></i></button>
@@ -257,7 +271,6 @@
             </div>
         </div>
     </div>
-
     <div id="production-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-black rounded-2xl max-w-2xl w-full p-8 md:p-10 relative modal-content border border-gray-700">
             <button id="close-production-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8"><i class="fa-solid fa-xmark text-2xl"></i></button>
@@ -271,7 +284,5 @@
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

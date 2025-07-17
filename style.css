@@ -1,54 +1,59 @@
-/* --- OPÇÃO 1: Importar a fonte Gotham de um CDN (Recomendado) --- */
-/* Esta linha já importa a fonte para o seu projeto. */
-@import url('https://fonts.cdnfonts.com/css/gotham-9');
+/* --- Fonte Gotham Auto-Hospedada --- */
 
-/* --- OPÇÃO 2: Auto-hospedar a sua fonte (Avançado) --- */
-/* Se preferir usar os seus próprios ficheiros, siga estes passos:
-   1. Coloque os seus ficheiros de fonte (ex: .woff2, .ttf) na pasta 'assets/fonts/'.
-   2. Remova ou comente a linha @import acima.
-   3. Descomente as regras @font-face abaixo e ajuste os nomes dos ficheiros.
-*/
-
-/*
+/* Peso Normal (Book) */
 @font-face {
     font-family: 'Gotham';
     src: url('assets/fonts/Gotham-Book.woff2') format('woff2'),
-         url('assets/fonts/Gotham-Book.ttf') format('truetype');
+         url('assets/fonts/Gotham-Book.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap; /* Melhora a performance de carregamento */
 }
 
+/* Peso Médio (Medium) */
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Medium.woff2') format('woff2'),
+         url('assets/fonts/Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Peso Negrito (Bold) */
 @font-face {
     font-family: 'Gotham';
     src: url('assets/fonts/Gotham-Bold.woff2') format('woff2'),
-         url('assets/fonts/Gotham-Bold.ttf') format('truetype');
-    font-weight: 700;
+         url('assets/fonts/Gotham-Bold.woff') format('woff');
+    font-weight: 700; /* Pode usar 700 ou 800 para Bold */
     font-style: normal;
+    font-display: swap;
 }
 
-@font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Light.woff2') format('woff2'),
-         url('assets/fonts/Gotham-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-*/
+/* --- Aplicação das Fontes --- */
+/* Importação da fonte Roboto (usada como alternativa) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 body {
-    /* A fonte principal foi alterada de 'Inter' para 'Gotham'. */
-    font-family: 'Gotham', sans-serif; 
+    /* Usamos Gotham como fonte principal, com Roboto como reserva */
+    font-family: 'Gotham', 'Roboto', sans-serif;
+    font-weight: 400; /* Usa o Gotham-Book por padrão */
 }
 
+h1, h2, h3, h4, h5, h6, .section-title, strong, b {
+    /* Usa o Gotham-Bold por padrão para títulos e textos em negrito */
+    font-weight: 700;
+}
+
+/* O resto do seu CSS continua aqui... */
 .section-title {
-    font-size: 2.5rem; /* 40px */
-    font-weight: 800;
+    font-size: 2.5rem;
     line-height: 1.2;
 }
 
 @media (min-width: 768px) {
     .section-title {
-        font-size: 3rem; /* 48px */
+        font-size: 3rem;
     }
 }
 
@@ -56,15 +61,12 @@ body {
     -ms-overflow-style: none;  /* IE e Edge */
     scrollbar-width: none;  /* Firefox */
 }
-
 .scroll-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
-
 .modal-content {
     animation: slide-up 0.4s ease-out;
 }
-
 @keyframes slide-up {
     from {
         transform: translateY(30px);
