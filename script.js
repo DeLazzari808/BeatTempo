@@ -42,8 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const modalSpotifyLink = document.getElementById('modal-spotify-link');
                 const modalYoutubeLink = document.getElementById('modal-youtube-link');
 
-                if(modalProductionTitle) modalProductionTitle.textContent = trigger.dataset.title;
-                if(modalProductionDescription) modalProductionDescription.textContent = trigger.dataset.description;
+                // Ajuste: só o nome da música no título, integrantes na descrição
+                let title = trigger.dataset.title || '';
+                let description = '';
+                // Se o título contém ' - ', separa música e integrantes
+                if (title.includes(' - ')) {
+                    const [music, members] = title.split(' - ');
+                    title = music.trim();
+                    description = members ? members.trim() : '';
+                }
+                if(modalProductionTitle) modalProductionTitle.textContent = title;
+                if(modalProductionDescription) modalProductionDescription.textContent = description;
                 if(modalSpotifyLink) {
                     const spotifyLink = trigger.dataset.spotifyLink;
                     if (spotifyLink && spotifyLink !== '#') {
