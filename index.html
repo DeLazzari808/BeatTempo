@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatempo - Agência Criativa para Artistas</title>
+    <title>Beatempo - Agência Publicitária Musical</title>
 
     <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'gotham': ['Gotham', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-black text-white antialiased">
 
@@ -19,14 +30,14 @@
                 <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-20 w-auto"></a>
             </div>
             <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
-                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Serviços</a>
-                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Produções</a>
-                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Sobre</a>
-                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">Orçamento</a>
+                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">SERVIÇOS</a>
+                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">PRODUÇÕES</a>
+                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">SOBRE</a>
+                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">ORÇAMENTO</a>
             </div>
             <div class="flex-1 flex justify-end">
-                 <a href="https://wa.link/w7qku7" target="_blank" class="bg-white text-black hover:bg-gray-200 font-semibold px-5 py-2 rounded-lg transition-colors text-sm">
-                    Quero ser Artista
+                 <a href="https://wa.link/gxyofy" target="_blank" class="bg-white text-black hover:bg-gray-200 font-semibold px-5 py-2 rounded-lg transition-colors text-sm">
+                    QUERO SER ARTISTA
                 </a>
             </div>
         </nav>
@@ -53,36 +64,66 @@
                 <div class="text-center mb-16">
                     <h2 class="section-title">SERVIÇOS</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12 items-start mb-24">
-                    <div class="pr-8">
-                        <h3 class="text-3xl font-bold mb-4">Projeto Beatempo <span class="text-xs font-normal">(flexível)</span></h3>
+                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                    <div class="pr-8 flex flex-col">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(FLEXÍVEL)</span></h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li>Gerenciamento do Lançamento</li>
-                            <li>Produção de Conteúdo</li>
-                            <li>Capa (diversos formatos)</li>
-                            <li>Ensaio de Fotos</li>
-                            <li>Vídeoclipe / Visualizer</li>
-                            <li>Estilista</li>
-                            <li>Tráfego Pago / Impulsionamentos</li>
+                                <li>GERENCIAMENTO DO LANÇAMENTO</li>
+                                <li>PRODUÇÃO DE CONTEÚDO</li>
+                                <li>CAPA (DIVERSOS FORMATOS)</li>
+                                <li>ENSAIO DE FOTOS</li>
+                                <li>VÍDEOCLIPE / VISUALIZER</li>
+                                <li>ESTILISTA</li>
+                                <li>TRÁFEGO PAGO / IMPULSIONAMENTOS</li>
                         </ul>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
+                                <a href="#contact"
+                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Projeto+Beatempo" class="rounded-lg shadow-2xl" alt="Projeto Beatempo">
+                        <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Projeto+Beatempo" class="rounded-lg shadow-2xl h-full object-cover" alt="Projeto Beatempo">
                     </div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 items-start mb-24">
                     <div class="md:order-2 pl-8 text-left">
-                        <h3 class="text-3xl font-bold mb-4">Agenciamento Mensal</h3>
+                        <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li>Assessoria via WhatsApp</li>
-                            <li>Reunião Mensal</li>
-                            <li>Encontros frequentes no QG da Beatempo</li>
-                            <li>Definição de identidade, estética e conteúdos</li>
-                            <li>Postagens Semanais (fotos, artes, reels, stories & carrosseis)</li>
-                            <li>Sugestão de conteúdos adicionais</li>
-                            <li>Acompanhamento em lançamentos, estratégias e fortalecimento de imagem</li>
-                            <li>Desconto com parceiros Beatempo</li>
+                            <li>ASSESSORIA VIA WHATSAPP</li>
+                            <li>REUNIÃO MENSAL</li>
+                            <li>ENCONTROS FREQUENTES NO QG DA BEATEMPO</li>
+                            <li>DEFINIÇÃO DE IDENTIDADE, ESTÉTICA E CONTEÚDOS</li>
+                            <li>POSTAGENS SEMANAIS (FOTOS, ARTES, REELS, STORIES & CARROSSEIS)</li>
+                            <li>SUGESTÃO DE CONTEÚDOS ADICIONAIS</li>
+                            <li>ACOMPANHAMENTO EM LANÇAMENTOS, ESTRATÉGIAS E FORTALECIMENTO DE IMAGEM</li>
+                            <li>DESCONTO COM PARCEIROS BEATEMPO</li>
                         </ul>
+                        <br>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
+                                <a href="#contact"
+                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="md:order-1">
                         <img src="https://placehold.co/800x600/2a2a2a/ffffff?text=Agenciamento+Mensal" class="rounded-lg shadow-2xl" alt="Agenciamento Mensal">
@@ -90,11 +131,30 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 items-start mb-24">
                     <div class="pr-8">
-                        <h3 class="text-3xl font-bold mb-4">Beatempo Ensina</h3>
+                        <h3 class="text-3xl font-bold mb-4">BEATEMPO ENSINA</h3>
                         <ul class="space-y-4 text-gray-300">
-                            <li>Aulas Instrumentais: Violã, Guitarra, Ukulele, Piano, Teclado (por enquanto…)</li>
-                            <li>Aulas/ Mentorias sobre harmonia, home production, composição e muito mais</li>
+                            <li>AULAS INSTRUMENTAIS: VIOLÃO, GUITARRA, UKULELE, PIANO, TECLADO (POR ENQUANTO…)</li>
+                            <li>AULAS/ MENTORIAS SOBRE HARMONIA, HOME PRODUCTION, COMPOSIÇÃO E MUITO MAIS</li>
                         </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
+                                <a href="#contact"
+                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <img src="https://placehold.co/800x600/232323/ffffff?text=Beatempo+Ensina" class="rounded-lg shadow-2xl" alt="Beatempo Ensina">
@@ -102,7 +162,7 @@
                 </div>
                 <div class="max-w-2xl mx-auto mt-12">
                     <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
-                        <h4 class="text-xl font-bold mb-2 text-gray-200">Em Breve</h4>
+                        <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
                         <ul class="space-y-2 text-gray-400">
                             <li>Estúdio Musical</li>
                             <li>Estúdio Fotográfico</li>
@@ -121,7 +181,7 @@
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
                     
                     <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger" 
-                         data-title="Dilema (remix funk) - Bega, S..."
+                         data-title="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
                          data-description="Último Lançamento da Beatempo."
                          data-spotify-link="https://open.spotify.com/intl-pt/track/3..."
                          data-youtube-link="https://youtube.com/watch?v=QPxnBg...">
@@ -134,38 +194,73 @@
                     
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Dilema - Bega, Sao Tchelli..." data-spotify-link="https://open.spotify.com/intl-pt/track/2..." data-youtube-link="https://youtube.com/watch?v=3Ow77A...">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" 
+                                 data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci" 
+                                 data-spotify-link="https://open.spotify.com/intl-pt/track/2..." 
+                                 data-youtube-link="https://youtube.com/watch?v=3Ow77A...">
                                 <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Dilema</h4><p class="text-gray-300">Bega, Sao Tchelli, Born...</p>
+                                    <h4 class="text-white text-lg font-bold">Dilema</h4>
+                                    <p class="text-gray-300">Bega, Sao Tchelli, Born...</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="QVSDN - Munha" data-spotify-link="https://open.spotify.com/intl-pt/track/0..." data-youtube-link="https://youtube.com/watch?v=vOCgIQ...">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" 
+                                 data-title="QVSDN - Munha" 
+                                 data-spotify-link="https://open.spotify.com/intl-pt/track/0..." 
+                                 data-youtube-link="https://youtube.com/watch?v=vOCgIQ...">
                                 <img src="assets/capas/capa-qvsdn.jpg" alt="Capa da música QVSDN" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">QVSDN</h4><p class="text-gray-300">Munha</p>
+                                    <h4 class="text-white text-lg font-bold">QVSDN</h4>
+                                    <p class="text-gray-300">Munha</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Sentimentos - Born" data-spotify-link="https://open.spotify.com/intl-pt/track/3..." data-youtube-link="https://youtube.com/watch?v=JMqf-E...">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" 
+                                 data-title="Sentimentos - Born" 
+                                 data-spotify-link="https://open.spotify.com/intl-pt/track/3..." 
+                                 data-youtube-link="https://youtube.com/watch?v=JMqf-E...">
                                 <img src="assets/capas/capa-sentimentos.jpg" alt="Capa da música Sentimentos" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Sentimentos</h4><p class="text-gray-300">Born</p>
+                                    <h4 class="text-white text-lg font-bold">Sentimentos</h4>
+                                    <p class="text-gray-300">Born</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" data-title="Lei da Atração - Tento" data-spotify-link="https://open.spotify.com/intl-pt/track/5..." data-youtube-link="https://youtube.com/watch?v=JTugrx...">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl" 
+                                 data-title="Lei da Atração - Tento" 
+                                 data-spotify-link="https://open.spotify.com/intl-pt/track/5..." 
+                                 data-youtube-link="https://youtube.com/watch?v=JTugrx...">
                                 <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa da música Lei da Atração" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Lei da Atração</h4><p class="text-gray-300">Tento</p>
+                                    <h4 class="text-white text-lg font-bold">Lei da Atração</h4>
+                                    <p class="text-gray-300">Tento</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="flex justify-end">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <a href="https://open.spotify.com/playlist/6c4gbHXzq40aNzTGMCeD8f" target="_blank" 
+                                   class="flex items-center gap-4 w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 p-3 rounded-lg transition-colors duration-200">
+                                    <i class="fab fa-spotify text-4xl text-green-500 flex-shrink-0"></i>
+                                    <div class="text-left">
+                                        <p class="font-bold text-white leading-tight">Spotify</p>
+                                        <p class="text-sm text-gray-400 leading-tight">This is Beatempo</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/@Beatempo-ag/" target="_blank" 
+                                   class="flex items-center gap-4 w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 p-3 rounded-lg transition-colors duration-200">
+                                    <i class="fab fa-youtube text-4xl text-red-600 flex-shrink-0"></i>
+                                    <div class="text-left">
+                                        <p class="font-bold text-white leading-tight">YouTube</p>
+                                        <p class="text-sm text-gray-400 leading-tight">Beatempo</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="flex-shrink-0">
                             <a href="lancamentos.html"
-                               class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 text-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                                   class="inline-flex items-center gap-2 bg-white border border-black text-black font-black py-3 px-8 rounded-lg shadow transition-all duration-200 text-lg focus:outline-none focus:ring-2 focus:ring-black uppercase hover:bg-gray-200">
                                 <i class="fa-solid fa-music"></i>
                                 CONFIRA TODOS OS LANÇAMENTOS!
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,25 +320,42 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title">SOBRE A BEATEMPO</h2>
                 <p class="mt-4 max-w-3xl mx-auto text-base md:text-lg text-gray-400">
-                    A Beatempo é de Curitiba e vive o corre da cena. A gente fortalece <span class="font-semibold">artistas</span> com <span class="font-semibold">visão</span>, <span class="font-semibold">identidade</span> e <span class="font-semibold">estratégia</span> pra fazer o som bater e a <span class="font-semibold">carreira crescer</span>. Lançamento, conteúdo, estética, presença e posicionamento. Se você leva sua música a sério, cola com a gente.
+                    A <strong>Beatempo</strong> é de <strong>Curitiba</strong> e vive o corre da cena. A gente fortalece artistas com visão, identidade e estratégia pra fazer o som bater e a carreira crescer. Lançamento, conteúdo, estética, presença e posicionamento. Se você leva sua <strong>música a sério</strong>, cola com <strong>BT</strong>.<br>
                 </p>
                 
-                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-lg mx-auto">
-                    <div class="text-center info-trigger" data-type="ceo" data-name="Patrick Zeni" data-role="CEO" data-bio="Patrick Zeni é o CEO da Beatempo. Descrição detalhada do CEO aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick"><img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick" alt="Foto de Patrick Zeni" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg"><h3 class="mt-4 text-xl font-bold">Patrick Zeni</h3><p class="text-gray-400">CEO</p></div>
-                    <div class="text-center info-trigger" data-type="cofounder" data-name="João Celli" data-role="Co.Founder" data-bio="João Celli é o Co.Founder da Beatempo. Descrição detalhada do Co.Founder aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+João"><img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+João" alt="Foto de João Celli" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg"><h3 class="mt-4 text-xl font-bold">João Celli</h3><p class="text-gray-400">Co.Founder</p></div>
-                </div>
-                <div class="mt-8 flex justify-center">
-                    <div class="text-center">
-                        <div class="w-40 h-40 mx-auto rounded-full bg-zinc-800 flex items-center justify-center text-4xl font-black text-white shadow-lg border-4 border-gray-700">+40</div>
-                        <h3 class="mt-4 text-xl font-bold">Parceiros</h3>
-                        <p class="text-gray-400">+40 parceiros</p>
+                <div class="mt-16 grid grid-cols-2 gap-4 max-w-3xl w-full mx-auto">
+                    <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full flex items-center justify-center bg-zinc-800 text-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick" alt="Foto de Patrick Zeni" class="w-28 h-28 rounded-full object-cover">
+                        </div>
+                        <h3 class="mt-2 text-xl font-bold text-white">Patrick Zeni</h3>
+                        <p class="text-gray-300">CEO</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full flex items-center justify-center bg-zinc-800 text-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+João" alt="Foto de João Celli" class="w-28 h-28 rounded-full object-cover">
+                        </div>
+                        <h3 class="mt-2 text-xl font-bold text-white">João Celli</h3>
+                        <p class="text-gray-300">Co.Founder</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full flex items-center justify-center bg-zinc-800 text-white shadow-lg group-hover:scale-105 transition-transform duration-300 text-3xl font-black">
+                            +30
+                        </div>
+                        <h3 class="mt-2 text-xl font-bold text-white">Parceiros</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 rounded-full flex items-center justify-center bg-zinc-800 text-white shadow-lg group-hover:scale-105 transition-transform duration-300 text-3xl font-black">
+                            +15
+                        </div>
+                        <h3 class="mt-2 text-xl font-bold text-white">Marcas</h3>
                     </div>
                 </div>
 
                 <div class="mt-16 bg-zinc-900 rounded-2xl p-8 max-w-4xl mx-auto">
                     <h3 class="text-2xl font-bold">Nossa Missão</h3>
                     <p class="mt-4 text-gray-300">
-                        Nossa missão é impulsionar artistas independentes por meio de estratégias criativas, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um ecossistema colaborativo que conecta talentos, marcas e oportunidades para fortalecer a cena musical. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
+                        Nossa missão é impulsionar <strong>artistas independentes</strong> por meio de <strong>estratégias criativas</strong>, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um <strong>ecossistema colaborativo</strong> que conecta <strong>talentos, marcas e oportunidades</strong> para fortalecer a <strong>cena artística e musical</strong>. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
                     </p>
                 </div>
             </div>
@@ -318,9 +430,11 @@
           © 2024 Beatempo. Todos os direitos reservados.
         </div>
         <div class="flex space-x-4">
-          <a href="https://www.instagram.com/beatempo/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="https://wa.link/w7qku7" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-whatsapp fa-lg"></i></a>
-          <a href="mailto:contato@beatempo.com" class="hover:text-white transition-colors"><i class="fas fa-envelope fa-lg"></i></a>
+          <a href="https://www.instagram.com/beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://wa.link/gxyofy" target="_blank" class="hover:text-white transition-colors" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="mailto:beatempoco@gmail.com" class="hover:text-white transition-colors" title="Gmail"><i class="fas fa-envelope fa-lg"></i></a>
+          <a href="https://www.youtube.com/@Beatempo-ag" target="_blank" class="hover:text-white transition-colors" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.tiktok.com/@beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
         </div>
       </div>
     </footer>
@@ -357,5 +471,11 @@
             </div>
         </div>
     </div>
+    <style>
+.custom-budget-btn svg {
+  min-width: 2rem;
+  min-height: 2rem;
+}
+</style>
 </body>
 </html>
