@@ -177,4 +177,37 @@ document.addEventListener('DOMContentLoaded', () => {
             document.head.appendChild(style);
         }
     }
+
+    // --- LÓGICA DO NOVO MODAL (TODOS OS LANÇAMENTOS) ---
+    const allProductionsModal = document.getElementById('all-productions-modal');
+    if (allProductionsModal) {
+        const openBtn = document.getElementById('open-all-productions-modal');
+        const closeBtn = document.getElementById('close-all-productions-modal');
+
+        const openModal = () => {
+            allProductionsModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // trava scroll do body
+        };
+        const closeModal = () => {
+            allProductionsModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        };
+
+        if(openBtn) openBtn.addEventListener('click', openModal);
+        if(closeBtn) closeBtn.addEventListener('click', closeModal);
+
+        // Fechar ao clicar fora
+        allProductionsModal.addEventListener('click', (e) => {
+            if (e.target === allProductionsModal) {
+                closeModal();
+            }
+        });
+
+        // Fechar com a tecla Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !allProductionsModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    }
 });

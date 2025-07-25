@@ -27,16 +27,16 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex-1">
-                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-20 w-auto"></a>
+                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
             </div>
             <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
-                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">SERVIÇOS</a>
-                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">PRODUÇÕES</a>
-                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">SOBRE</a>
-                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-black">ORÇAMENTO</a>
+                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
+                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
+                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
+                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
             </div>
             <div class="flex-1 flex justify-end">
-                 <a href="https://wa.link/gxyofy" target="_blank" class="bg-white text-black hover:bg-gray-200 font-semibold px-5 py-2 rounded-lg transition-colors text-sm">
+                 <a href="https://wa.me/5541991990409" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
                     QUERO SER ARTISTA
                 </a>
             </div>
@@ -44,17 +44,18 @@
     </header>
 
     <main>
-        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-cover bg-center" style="background-image: url('assets/hero-background.jpg'); background-position: center 30%;">
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
-            <video autoplay loop muted class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-dj-mixing-at-a-party-3044-large.mp4" type="video/mp4">
-            </video>
+            <!-- Remover o vídeo -->
             <div class="relative z-20 px-4 flex flex-col items-center">
-                <h1 class="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-tight text-white">
-                    Sua música, sua marca, nosso corre.
+                <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
+                    A <span class="font-black">BASE</span> DA SUA
+                </h1>
+                <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
+                    JORNADA MUSICAL
                 </h1>
                 <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                    Fortalecemos artistas com visão, identidade e estratégia pra fazer o som bater e a carreira crescer.
+                    make the drop worth it
                 </p>
             </div>
         </section>
@@ -238,28 +239,20 @@
                         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div class="flex flex-col sm:flex-row items-center gap-4">
                                 <a href="https://open.spotify.com/playlist/6c4gbHXzq40aNzTGMCeD8f" target="_blank" 
-                                   class="flex items-center gap-4 w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 p-3 rounded-lg transition-colors duration-200">
-                                    <i class="fab fa-spotify text-4xl text-green-500 flex-shrink-0"></i>
-                                    <div class="text-left">
-                                        <p class="font-bold text-white leading-tight">Spotify</p>
-                                        <p class="text-sm text-gray-400 leading-tight">This is Beatempo</p>
-                                    </div>
+                                   class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
+                                    <i class="fab fa-spotify text-3xl text-green-500"></i>
                                 </a>
                                 <a href="https://www.youtube.com/@Beatempo-ag/" target="_blank" 
-                                   class="flex items-center gap-4 w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 p-3 rounded-lg transition-colors duration-200">
-                                    <i class="fab fa-youtube text-4xl text-red-600 flex-shrink-0"></i>
-                                    <div class="text-left">
-                                        <p class="font-bold text-white leading-tight">YouTube</p>
-                                        <p class="text-sm text-gray-400 leading-tight">Beatempo</p>
-                                    </div>
+                                   class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
+                                    <i class="fab fa-youtube text-3xl text-red-600"></i>
                                 </a>
                             </div>
                             <div class="flex-shrink-0">
-                            <a href="lancamentos.html"
-                                   class="inline-flex items-center gap-2 bg-white border border-black text-black font-black py-3 px-8 rounded-lg shadow transition-all duration-200 text-lg focus:outline-none focus:ring-2 focus:ring-black uppercase hover:bg-gray-200">
-                                <i class="fa-solid fa-music"></i>
-                                CONFIRA TODOS OS LANÇAMENTOS!
-                            </a>
+                                <button id="open-all-productions-modal"
+                                    class="inline-flex items-center gap-2 bg-white border border-black text-black font-black py-3 px-8 rounded-lg shadow transition-all duration-200 text-lg focus:outline-none focus:ring-2 focus:ring-black uppercase hover:bg-gray-200 ml-4">
+                                    <i class="fa-solid fa-music"></i>
+                                    CONFIRA TODOS OS LANÇAMENTOS
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -270,11 +263,11 @@
                         <h3 class="text-2xl font-bold mb-4 text-white uppercase">VAMOS CONVERSAR?</h3>
                         <p class="text-gray-400 mb-8">Para quem quer <strong>impulsionar</strong> sua <strong>carreira</strong> no <strong>ramo musical</strong></p>
                         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <a href="https://wa.link/gxyofy" target="_blank"
+                            <a href="https://wa.me/5541991990409" target="_blank"
                                class="w-full sm:w-auto text-center bg-white text-black font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                 QUERO SER ARTISTA!
                             </a>
-                            <a href="https://wa.link/gxyofy" target="_blank"
+                            <a href="https://wa.me/5541991990409" target="_blank"
                                class="w-full sm:w-auto text-center border border-white text-white font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                 QUERO SER PARCEIRO!
                             </a>
@@ -377,7 +370,7 @@
                     <div id="btn-ensina" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
                         <i class="fa-solid fa-graduation-cap text-4xl mb-4"></i><h3 class="text-xl font-bold">Beatempo Ensina</h3>
                     </div>
-                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
+                    <a href="https://wa.me/554123910713" target="_blank" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
                         <i class="fab fa-whatsapp text-4xl mb-4"></i><h3 class="text-xl font-bold">Contato via WhatsApp</h3>
                     </a>
                 </div>
@@ -391,12 +384,12 @@
                 <div id="details-agenciamento" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
                     <h3 class="text-2xl font-bold mb-4">Nosso Agenciamento Mensal inclui:</h3>
                     <p class="text-gray-300">Assessoria completa para sua carreira. Entre em contato para mais detalhes.</p>
-                     <a href="https://wa.link/w7qku7" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Falar com um especialista</a>
+                     <a href="https://wa.me/5541991990409" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Falar com um especialista</a>
                 </div>
                 <div id="details-ensina" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
                      <h3 class="text-2xl font-bold mb-4">Nossas Aulas e Mentorias:</h3>
                      <p class="text-gray-300">Desenvolva suas habilidades com nossos profissionais. Entre em contato para saber mais.</p>
-                      <a href="https://wa.link/w7qku7" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Saber Mais</a>
+                      <a href="https://wa.me/5541991990409" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Saber Mais</a>
                 </div>
             </div>
         </section>
@@ -423,7 +416,7 @@
     <footer class="bg-black border-t border-gray-800 py-10">
       <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         <div class="flex items-center space-x-3 mb-4 md:mb-0">
-          <img src="assets/PNG_SIMBOLO_BRANCO.png" alt="Logo Beatempo" class="h-10 w-auto">
+          <img src="assets/PNG_SIMBOLO_BRANCO.png" alt="Logo Beatempo" class="h-16 w-auto">
           <span class="font-bold text-lg tracking-wide">Beatempo</span>
         </div>
         <div class="text-gray-400 text-sm mb-4 md:mb-0">
@@ -431,7 +424,7 @@
         </div>
         <div class="flex space-x-4">
           <a href="https://www.instagram.com/beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="https://wa.link/gxyofy" target="_blank" class="hover:text-white transition-colors" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="https://wa.me/5541991990409" target="_blank" class="hover:text-white transition-colors" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
           <a href="mailto:beatempoco@gmail.com" class="hover:text-white transition-colors" title="Gmail"><i class="fas fa-envelope fa-lg"></i></a>
           <a href="https://www.youtube.com/@Beatempo-ag" target="_blank" class="hover:text-white transition-colors" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
           <a href="https://www.tiktok.com/@beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
@@ -471,11 +464,89 @@
             </div>
         </div>
     </div>
+    <div id="all-productions-modal" class="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 hidden">
+        <div class="bg-zinc-900 rounded-2xl max-w-4xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
+            <button id="close-all-productions-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <h3 class="text-3xl font-bold mb-6 text-center">Todos os Lançamentos</h3>
+            <div class="overflow-y-auto pr-4 scroll-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa Dilema (remix funk)" class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Dilema (remix funk)</h4>
+                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born...</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="#" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                            <a href="#" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-dilema.jpg" alt="Capa Dilema" class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Dilema</h4>
+                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born...</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="#" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                            <a href="#" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-qvsdn.jpg" alt="Capa QVSDN" class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">QVSDN</h4>
+                        <p class="text-sm text-gray-400">Munha</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="#" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                            <a href="#" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-sentimentos.jpg" alt="Capa Sentimentos" class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Sentimentos</h4>
+                        <p class="text-sm text-gray-400">Born</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="#" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                            <a href="#" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa Lei da Atração" class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Lei da Atração</h4>
+                        <p class="text-sm text-gray-400">Tento</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="#" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                            <a href="#" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-meia-lua.jpg" alt="Capa Meia Lua" class="w-full h-auto rounded-md object-cover mb-4">
+                            <h4 class="font-bold text-lg">Meia Lua</h4>
+                        <p class="text-sm text-gray-400">Sao Tchelli ft. Bega</p>
+                            <div class="flex items-center gap-4 mt-2">
+                                <a href="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=9d139e8f2e1347e7" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
+                                <a href="https://www.youtube.com/watch?v=u26HdC5mKUM" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            </div>
+                        </div>
+                    <div class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
+                        <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
+                        <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
+                        <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
+                        <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <style>
 .custom-budget-btn svg {
   min-width: 2rem;
   min-height: 2rem;
 }
 </style>
+<div id="whatsapp-float" class="fixed bottom-6 right-6 z-50">
+  <a href="https://wa.me/554123910713" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"
+     class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg transition-colors duration-200">
+    <i class="fab fa-whatsapp text-3xl text-white"></i>
+  </a>
+</div>
 </body>
 </html>
