@@ -232,4 +232,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // Inicia o slideshow
         setInterval(nextSlide, slideInterval);
     }
+    // --- LÓGICA DO MODAL BEATEMPO ENSINA ---
+const ensinaModal = document.getElementById('ensina-modal');
+if (ensinaModal) {
+    const openBtn = document.getElementById('open-ensina-modal');
+    const closeBtn = document.getElementById('close-ensina-modal');
+
+    const openModal = () => {
+        ensinaModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+    };
+    const closeModal = () => {
+        ensinaModal.classList.add('hidden');
+        document.body.style.overflow = ''; // Libera o scroll do fundo
+    };
+
+    if(openBtn) openBtn.addEventListener('click', openModal);
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Fechar ao clicar fora ou com a tecla Esc
+    ensinaModal.addEventListener('click', (e) => {
+        if (e.target === ensinaModal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !ensinaModal.classList.contains('hidden')) closeModal();
+    });
+}
 });
