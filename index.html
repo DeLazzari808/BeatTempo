@@ -1,217 +1,202 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatempo - Agência Publicitária Musical</title>
-    <style>
-        body {
-        }
-        #home h1, #home p {
-            line-height: 0.7;
-        }
-    </style>
-    <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
-    <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'gotham': ['Gotham', 'sans-serif']
+    <!DOCTYPE html>
+    <html lang="pt-br" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beatempo - Agência Publicitária Musical</title>
+        <style>
+            body {
+            }
+            #home h1, #home p {
+                line-height: 0.7;
+            }
+        </style>
+        <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
+        <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'gotham': ['Gotham', 'sans-serif']
+                        }
                     }
                 }
             }
-        }
-    </script>
-</head>
-<body class="bg-black text-white antialiased">
+        </script>
+    </head>
+    <body class="bg-black text-white antialiased">
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex-1">
-                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
-            </div>
-            <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
-                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
-                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
-                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
-                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
-            </div>
-            <div class="flex-1 flex justify-end">
-                 <a href="https://wa.me/5541991990409" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
-                    QUERO SER ARTISTA
-                </a>
-            </div>
-        </nav>
-    </header>
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <div class="flex-1">
+                    <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
+                </div>
+                <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
+                    <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
+                    <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
+                    <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
+                    <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
+                </div>
+                <div class="flex-1 flex justify-end">
+                    <a href="https://wa.me/5541991990409" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
+                        QUERO SER ARTISTA
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-    <main>
-        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-    
-            <div id="hero-slideshow" class="absolute inset-0 z-0">
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('assets/hero-background.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
-            </div>
+        <main>
+            <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
         
-            <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+                <div id="hero-slideshow" class="absolute inset-0 z-0">
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('assets/hero-background.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
+                </div>
             
-            <div class="relative z-20 px-4 flex flex-col items-center">
-                <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
-                    A <span class="font-black">BASE</span> DA SUA
-                </h1>
-                <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
-                    JORNADA MUSICAL
-                </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                    make the drop worth it
-                </p>
-            </div>
-        </section>
+                <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+                
+                <div class="relative z-20 px-4 flex flex-col items-center">
+                    <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
+                        A <span class="font-black">BASE</span> DA SUA
+                    </h1>
+                    <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
+                        JORNADA MUSICAL
+                    </h1>
+                    <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
+                        make the drop worth it
+                    </p>
+                </div>
+            </section>
 
-        <section id="services" class="pt-10 pb-12 bg-black">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">SERVIÇOS</h2>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
-                    <div class="pr-8 flex flex-col">
-                        <div>
-                            <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(FLEXÍVEL)</span></h3>
-                        <ul class="space-y-4 text-gray-300">
-                                <li>Gerenciamento do lançamento</li>
-                                <li>Produção de conteúdo</li>
-                                <li>Capa (diversos formatos)</li>
-                                <li>Ensaio de fotos</li>
-                                <li>Vídeoclip / Visualizer</li>
-                                <li>Estilista</li>
-                                <li>Tráfego pago / Impulsionamentos</li>
-                        </ul>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <div class="mt-auto pt-8">
-                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
-                                <a href="#contact"
-                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                    <span>SOLICITAR ORÇAMENTO</span>
-                                </a>
+            <section id="services" class="pt-10 pb-12 bg-black">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="section-title">SERVIÇOS</h2>
+                    </div>
+            
+                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-16">
+                        <div class="pr-8 flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(OPCIONAL)</span></h3>
+                                <ul class="space-y-4 text-gray-300">
+                                    <li>• Gerenciamento do lançamento</li>
+                                    <li>• Produção de conteúdo</li>
+                                    <li>• Capa (diversos formatos)</li>
+                                    <li>• Ensaio de fotos</li>
+                                    <li>• Vídeoclip / Visualizer</li>
+                                    <li>• Estilista</li>
+                                    <li>• Tráfego pago / Impulsionamentos</li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Projeto+Beatempo" class="rounded-lg shadow-2xl h-full object-cover" alt="Projeto Beatempo">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-start mb-24">
-                    <div class="md:order-2 pl-8 text-left">
-                        <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
-                        <ul class="space-y-4 text-gray-300">
-                            <li>Assessoria via WhatsApp</li>
-                            <li>Reunião Mensal</li>
-                            <li>Encontros frequentes no QG da BEATEMPO</li>
-                            <li>Definição de identidade, estética e conteúdos</li>
-                            <li>Postagens semanais (fotos, artes, reels, stories & carroseis)</li>
-                            <li>Sugestão de conteúdos adicionais</li>
-                            <li>Acompanhamento em lançamentos, estratégias e fortalecimento de imagem</li>
-                            <li>Desconto com parceiros BEATEMPO</li>
-                        </ul>
-                        <br>
-                        <div class="mt-auto pt-8">
-                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
-                                <a href="#contact"
-                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                    <span>SOLICITAR ORÇAMENTO</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:order-1">
-                        <img src="https://placehold.co/800x600/2a2a2a/ffffff?text=Agenciamento+Mensal" class="rounded-lg shadow-2xl" alt="Agenciamento Mensal">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
-    
-                    <div class="pr-8 flex flex-col">
-                        <div>
-                            <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA</h3>
-                            
-                            <div class="bg-black border-2 border-white rounded-lg">
-                                <div class="grid grid-cols-1 sm:grid-cols-2">
-                                    
-                                    <div class="p-6 border-b-2 sm:border-b-0 sm:border-r-2 border-white">
-                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
-                                        <ul class="space-y-3 text-gray-300">
-                                            <li>• Violão</li>
-                                            <li>• Guitarra</li>
-                                            <li>• Ukulele</li>
-                                            <li>• Piano</li>
-                                            <li>• Teclado</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="p-6">
-                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas e Mentorias</h4>
-                                        <ul class="space-y-3 text-gray-300">
-                                            <li>Harmonia</li>
-                                            <li>Home Production</li>
-                                            <li>Composição</li>
-                                            <li>
-                                                <button id="open-ensina-modal" class="underline hover:text-white transition-colors duration-200">
-                                                    e muito mais...
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                    
+                            <div class="mt-auto pt-8">
+                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                    <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
+                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                        <span>SOLICITAR ORÇAMENTO</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="mt-auto pt-8">
-                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                <p class="text-gray-300 mb-4 uppercase">Quer aprender com a gente?</p>
-                                <a href="#contact"
-                                   class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                    <span>SOLICITAR ORÇAMENTO</span>
-                                </a>
-                            </div>
+                        <div>
+                            <img src="assets/PROJETO-BEATEMPO.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Projeto Beatempo">
                         </div>
                     </div>
-                
-                    <div>
-                        <img src="https://placehold.co/800x600/232323/ffffff?text=Beatempo+Ensina" class="rounded-lg shadow-2xl h-full object-cover" alt="Beatempo Ensina">
+            
+                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                        <div class="md:order-2 pl-8 flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
+                                <ul class="space-y-4 text-gray-300">
+                                    <li>• Assessoria via WhatsApp</li>
+                                    <li>• Reunião Mensal</li>
+                                    <li>• Encontros frequentes no QG da BEATEMPO</li>
+                                    <li>• Definição de identidade, estética e conteúdos</li>
+                                    <li>• Postagens semanais (fotos, artes, reels, stories & carroseis)</li>
+                                    <li>• Sugestão de conteúdos adicionais</li>
+                                    <li>• Acompanhamento em lançamentos, estratégias e fortalecimento de imagem</li>
+                                    <li>• Desconto com parceiros BEATEMPO</li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto pt-8">
+                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                    <p class="text-gray-300 mb-4 uppercase">Leve sua carreira para o próximo nível.</p>
+                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                        <span>SOLICITAR ORÇAMENTO</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:order-1">
+                            <img src="assets/AGENCIAMENTO-MENSAL.JPG" class="rounded-lg shadow-2xl h-full object-cover" alt="Agenciamento Mensal">
+                        </div>
+                    </div>
+            
+                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                        <div class="pr-8 flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA</h3>
+                                <div class="bg-black border-2 border-white rounded-lg">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2">
+                                        <div class="p-6">
+                                            <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
+                                            <ul class="space-y-3 text-gray-300">
+                                                <li>• Violão</li>
+                                                <li>• Guitarra</li>
+                                                <li>• Ukulele</li>
+                                                <li>• Piano</li>
+                                                <li>• Teclado</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-6">
+                                            <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas e Mentorias</h4>
+                                            <ul class="space-y-3 text-gray-300">
+                                                <li>• Harmonia</li>
+                                                <li>• Home Production</li>
+                                                <li>• Composição</li>
+                                                <li>
+                                                    <button id="open-ensina-modal" class="underline hover:text-white transition-colors duration-200">
+                                                        e muito mais...
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-auto pt-8">
+                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                    <p class="text-gray-300 mb-4 uppercase">Quer aprender com a gente?</p>
+                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                        <span>SOLICITAR ORÇAMENTO</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assets/BEATEMPO-ENSINA.JPG" class="rounded-lg shadow-2xl h-full object-cover" alt="Beatempo Ensina">
+                        </div>
+                    </div>
+            
+                    <div class="max-w-2xl mx-auto mt-12">
+                        <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
+                            <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li>• Estúdio Musical</li>
+                                <li>• Estúdio Fotográfico</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <div class="max-w-2xl mx-auto mt-12">
-                    <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
-                        <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>Estúdio Musical</li>
-                            <li>Estúdio Fotográfico</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
         <section id="productions" class="pt-12 pb-16 bg-zinc-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -352,27 +337,27 @@
                 </p>
                 
                 <div class="mt-16 grid grid-cols-2 gap-8 md:gap-12 max-w-xl mx-auto">
-                    <div class="text-center info-trigger cursor-pointer group" data-type="ceo" data-name="Patrick Zeni" data-role="CEO" data-bio="Patrick Zeni é o CEO da Beatempo. Descrição detalhada do CEO aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick">
-                        <img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+Patrick" alt="Foto de Patrick Zeni" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <div class="text-center info-trigger cursor-pointer group" data-type="ceo" data-name="Patrick Zeni" data-role="CEO" data-bio="CEO, Publicitário & Designer." data-img="./assets/zeni-foto-ceo.jpg">
+                        <img src="./assets/zeni-foto-ceo.jpg" alt="Foto de Patrick Zeni" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">Patrick Zeni</h3>
-                        <p class="text-gray-400">CEO</p>
+                        <p class="text-gray-400">CEO </p>
                     </div>
                     
-                    <div class="text-center info-trigger cursor-pointer group" data-type="cofounder" data-name="João Celli" data-role="Co.Founder" data-bio="João Celli é o Co.Founder da Beatempo. Descrição detalhada do Co.Founder aqui." data-img="https://placehold.co/400x400/18181b/ffffff?text=Foto+João">
-                        <img src="https://placehold.co/400x400/18181b/ffffff?text=Foto+João" alt="Foto de João Celli" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <div class="text-center info-trigger cursor-pointer group" data-type="cofounder" data-name="João Celli" data-role="Co.Founder" data-bio="Co-Founder & Publicitário." data-img="./assets/celli-foto-cfo.jpg">
+                        <img src="./assets/celli-foto-cfo.jpg" alt="Foto de João Celli" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">João Celli</h3>
                         <p class="text-gray-400">Co.Founder</p>
                     </div>
                 
                     <div class="text-center">
                         <a href="#partners" class="group">
-                            <img src="https://placehold.co/400x400/18181b/ffffff?text=Parceiros" alt="Foto dos Parceiros" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                            <img src="./assets/30parceiros.jpg" alt="Foto dos Parceiros" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                             <h3 class="mt-4 text-xl font-bold">Parceiros</h3>
                         </a>
                     </div>
                 
                     <div class="text-center">
-                        <img src="https://placehold.co/400x400/18181b/ffffff?text=Marcas" alt="Foto das Marcas" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <img src="./assets/marcas15.jpg" alt="Foto das Marcas" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">Marcas</h3>
                     </div>
                 </div>
@@ -574,7 +559,12 @@
   min-height: 2rem;
 }
 </style>
-<div id="whatsapp-float" class="fixed bottom-6 right-6 z-50">
+<div id="whatsapp-float" class="fixed bottom-6 left-6 z-50">
+    <a href="https://wa.me/554123910713" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"
+       class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg transition-colors duration-200">
+      <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+  </div>
   <a href="https://wa.me/554123910713" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"
      class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg transition-colors duration-200">
     <i class="fab fa-whatsapp text-3xl text-white"></i>
