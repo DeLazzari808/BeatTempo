@@ -209,5 +209,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeModal();
             }
         });
+    }// --- LÓGICA DO SLIDESHOW DA SEÇÃO HERO ---
+    const heroSlideshow = document.getElementById('hero-slideshow');
+    if (heroSlideshow) {
+        const slides = heroSlideshow.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        const slideInterval = 5000; // Muda de imagem a cada 5 segundos
+
+        const nextSlide = () => {
+            // Esconde o slide atual
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+
+            // Calcula o próximo slide
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Mostra o próximo slide
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        };
+
+        // Inicia o slideshow
+        setInterval(nextSlide, slideInterval);
     }
 });

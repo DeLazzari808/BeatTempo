@@ -7,8 +7,6 @@
     <style>
         body {
         }
-
-        /* NOVA REGRA ESPECÍFICA PARA A SEÇÃO 'HOME' */
         #home h1, #home p {
             line-height: 0.7;
         }
@@ -52,9 +50,20 @@
     </header>
 
     <main>
-        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-cover bg-center" style="background-image: url('assets/hero-background.jpg'); background-position: center 30%;">
+        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    
+            <div id="hero-slideshow" class="absolute inset-0 z-0">
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('assets/hero-background.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
+            </div>
+        
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
-            <!-- Remover o vídeo -->
+            
             <div class="relative z-20 px-4 flex flex-col items-center">
                 <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
                     A <span class="font-black">BASE</span> DA SUA
