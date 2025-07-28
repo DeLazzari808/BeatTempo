@@ -362,13 +362,13 @@
                         <h3 class="text-2xl font-bold mb-2">Projeto Beatempo</h3>
                         <p class="text-gray-400">Ideal para o lançamento de um single ou EP, com toda a estrutura que você precisa.</p>
                     </div>
-
+        
                     <div class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-calendar-days text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Agenciamento Mensal</h3>
                         <p class="text-gray-400">Para artistas que buscam um acompanhamento contínuo e estratégico da carreira.</p>
                     </div>
-
+        
                     <div class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-graduation-cap text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Beatempo Ensina</h3>
@@ -402,7 +402,7 @@
           <h3 class="text-3xl font-bold mb-1 text-center">Solicitar Orçamento</h3>
           <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
           
-          <form id="orcamento-form" class="space-y-4">
+          <form id="orcamento-form" action="https://formspree.io/f/mgvzylpp" method="POST" class="space-y-4">
               <input type="hidden" name="servico_desejado" id="servico_desejado">
               <div>
                   <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
@@ -427,7 +427,36 @@
 
       </div>
   </div>
-
+  <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
+    <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
+        <button id="close-orcamento-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
+        <h3 class="text-3xl font-bold mb-1 text-center">Solicitar Orçamento</h3>
+        <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
+        
+        <form id="orcamento-form" class="space-y-4">
+            <input type="hidden" name="servico_desejado" id="servico_desejado">
+            <div>
+                <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+            <div>
+                <label for="telefone" class="block text-sm font-medium text-gray-300 mb-1">Telefone (WhatsApp)</label>
+                <input type="tel" id="telefone" name="telefone" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+            <div>
+                <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram (@usuario)</label>
+                <input type="text" id="instagram" name="instagram" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+            <div>
+                <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span class="text-gray-500">(Opcional)</span></label>
+                <input type="url" id="spotify" name="spotify" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+            <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                Enviar Solicitação
+            </button>
+        </form>
+    </div>
+  </div>
     <footer class="bg-black border-t border-gray-800 py-10">
       <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         <div class="flex items-center space-x-3 mb-4 md:mb-0">

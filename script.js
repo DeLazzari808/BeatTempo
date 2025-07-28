@@ -3,82 +3,81 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- LÓGICA DO HEADER ---
     const header = document.getElementById('main-header');
     const headerLogo = document.getElementById('header-logo');
-    const initialLogoSrc = 'assets/PNG_LOGO_BRANCO.png';
-    const scrolledLogoSrc = 'assets/PNG_SIMBOLO_BRANCO.png';
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-            if (headerLogo.src !== scrolledLogoSrc) {
-                headerLogo.src = scrolledLogoSrc;
+    if (header && headerLogo) {
+        const initialLogoSrc = './assets/PNG_LOGO_BRANCO.png';
+        const scrolledLogoSrc = './assets/PNG_SIMBOLO_BRANCO.png';
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                if (!headerLogo.src.includes('SIMBOLO')) {
+                    headerLogo.src = scrolledLogoSrc;
+                }
+            } else {
+                if (!headerLogo.src.includes('LOGO')) {
+                    headerLogo.src = initialLogoSrc;
+                }
             }
-        } else {
-            header.classList.remove('scrolled');
-            if (headerLogo.src !== initialLogoSrc) {
-                headerLogo.src = initialLogoSrc;
-            }
-        }
-    });
+        });
+    }
 
     // --- LÓGICA DO SLIDESHOW DO HERO ---
     const slideshow = document.getElementById('hero-slideshow');
     if (slideshow) {
         const slides = slideshow.querySelectorAll('.hero-slide');
         let currentSlide = 0;
-        
-        setInterval(() => {
-            slides[currentSlide].style.opacity = '0';
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].style.opacity = '1';
-        }, 5000); // Muda a cada 5 segundos
+        if (slides.length > 1) {
+            setInterval(() => {
+                slides[currentSlide].style.opacity = '0';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.opacity = '1';
+            }, 5000);
+        }
     }
 
-    // --- LÓGICA GERAL DOS MODAIS ---
-    const setupModal = (modalId, openTriggers, closeBtnId) => {
+    // --- LÓGICA GERAL DOS MODAIS (Reutilizável) ---
+    const setupModal = (modalId, openTriggersQuery, closeBtnId) => {
         const modal = document.getElementById(modalId);
         if (!modal) return;
         
-        const triggers = document.querySelectorAll(openTriggers);
+        const openTriggers = document.querySelectorAll(openTriggersQuery);
         const closeBtn = document.getElementById(closeBtnId);
 
-        const openModal = (data) => {
+        const openModalAction = (data) => {
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            if (data) {
-                // Preencher dados específicos do modal se necessário
+            if (data && typeof fillModalData === 'function') {
                 fillModalData(modalId, data);
             }
         };
 
-        const closeModal = () => {
+        const closeModalAction = () => {
             modal.classList.add('hidden');
             document.body.style.overflow = '';
         };
 
-        triggers.forEach(trigger => {
+        openTriggers.forEach(trigger => {
             trigger.addEventListener('click', (e) => {
                 let data = e.currentTarget.dataset;
-                openModal(data);
+                openModalAction(data);
             });
         });
 
         if (closeBtn) {
-            closeBtn.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', closeModalAction);
         }
 
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
+            if (e.target === modal) closeModalAction();
         });
         
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
+                closeModalAction();
             }
         });
     };
     
+    // Função para preencher os dados dos modais
     const fillModalData = (modalId, data) => {
         if (modalId === 'info-modal') {
             document.getElementById('modal-img').src = data.img;
@@ -86,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('modal-role').textContent = data.role;
             document.getElementById('modal-bio').textContent = data.bio;
             
-            // Lógica para mostrar/esconder links sociais
             const socialLinks = {
                 'modal-spotify': data.spotify,
                 'modal-youtube': data.youtube,
@@ -96,11 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             for (const [id, link] of Object.entries(socialLinks)) {
                 const element = document.getElementById(id);
-                if (link && link !== '#') {
-                    element.href = link;
-                    element.style.display = 'inline-block';
-                } else {
-                    element.style.display = 'none';
+                if (element) {
+                    if (link && link !== '#') {
+                        element.href = link;
+                        element.style.display = 'inline-block';
+                    } else {
+                        element.style.display = 'none';
+                    }
                 }
             }
         }
@@ -112,14 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // --- INICIALIZAÇÃO DOS MODAIS ---
+    // --- INICIALIZAÇÃO DOS MODAIS EXISTENTES ---
     setupModal('info-modal', '.info-trigger', 'close-info-modal');
     setupModal('production-modal', '.production-trigger', 'close-production-modal');
     setupModal('all-productions-modal', '#open-all-productions-modal', 'close-all-productions-modal');
     setupModal('ensina-modal', '#open-ensina-modal', 'close-ensina-modal');
 
-
-    // --- LÓGICA DO MODAL DE ORÇAMENTO ---
+    // --- LÓGICA DO MODAL DE ORÇAMENTO (VERSÃO CORRIGIDA E SEM CONFLITOS) ---
     const orcamentoModal = document.getElementById('orcamento-modal');
     if (orcamentoModal) {
         const budgetOptions = document.querySelectorAll('.budget-option');
@@ -128,14 +127,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const modalServiceTitle = document.getElementById('modal-service-title');
         const hiddenServiceInput = document.getElementById('servico_desejado');
 
-        const openModal = (serviceTitle) => {
+        const openOrcamentoModal = (serviceTitle) => {
             modalServiceTitle.textContent = serviceTitle;
             hiddenServiceInput.value = serviceTitle;
             orcamentoModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         };
 
-        const closeModal = () => {
+        const closeOrcamentoModal = () => {
             orcamentoModal.classList.add('hidden');
             document.body.style.overflow = '';
         };
@@ -143,37 +142,33 @@ document.addEventListener('DOMContentLoaded', function() {
         budgetOptions.forEach(option => {
             option.addEventListener('click', () => {
                 const serviceTitle = option.querySelector('h3').textContent;
-                openModal(serviceTitle);
+                openOrcamentoModal(serviceTitle);
             });
         });
 
         if (closeBtn) {
-          closeBtn.addEventListener('click', closeModal);
+          closeBtn.addEventListener('click', closeOrcamentoModal);
         }
 
         orcamentoModal.addEventListener('click', (e) => {
             if (e.target === orcamentoModal) {
-                closeModal();
+                closeOrcamentoModal();
             }
         });
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !orcamentoModal.classList.contains('hidden')) {
-                closeModal();
+                closeOrcamentoModal();
             }
         });
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            
-            console.log('Dados do Orçamento:', data);
-            alert(`Obrigado, ${data.nome}! Sua solicitação para "${data.servico_desejado}" foi enviada. Entraremos em contato em breve.`);
-            
-            form.reset();
-            closeModal();
-        });
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // Este listener está aqui para o caso de você querer reativar
+                // o envio via JavaScript (AJAX) no futuro. Por enquanto,
+                // para garantir a ativação do Formspree, o ideal é deixar
+                // o JavaScript não interferir no envio padrão.
+            });
+        }
     }
-
 });
