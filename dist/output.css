@@ -884,6 +884,10 @@ html {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1212,10 +1216,6 @@ html {
   padding-bottom: 5rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
-}
-
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1461,8 +1461,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-Book.woff2') format('woff2'),
-       url('assets/fonts/Gotham-Book.woff') format('woff');
+  src: url('../assets/fonts/Gotham-Book.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-Book.woff') format('woff');
 
   font-weight: 400;
 
@@ -1474,8 +1474,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-Bold.woff2') format('woff2'),
-       url('assets/fonts/Gotham-Bold.woff') format('woff');
+  src: url('../assets/fonts/Gotham-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-Bold.woff') format('woff');
 
   font-weight: 700;
 
@@ -1487,8 +1487,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-Black.woff2') format('woff2'),
-       url('assets/fonts/Gotham-Black.woff') format('woff');
+  src: url('../assets/fonts/Gotham-Black.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-Black.woff') format('woff');
 
   font-weight: 900;
 
@@ -1500,8 +1500,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-Light.woff2') format('woff2'),
-       url('assets/fonts/Gotham-Light.woff') format('woff');
+  src: url('../assets/fonts/Gotham-Light.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-Light.woff') format('woff');
 
   font-weight: 300;
 
@@ -1513,8 +1513,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-Medium.woff2') format('woff2'),
-       url('assets/fonts/Gotham-Medium.woff') format('woff');
+  src: url('../assets/fonts/Gotham-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-Medium.woff') format('woff');
 
   font-weight: 500;
 
@@ -1526,8 +1526,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-BookItalic.woff2') format('woff2'),
-       url('assets/fonts/Gotham-BookItalic.woff') format('woff');
+  src: url('../assets/fonts/Gotham-BookItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-BookItalic.woff') format('woff');
 
   font-weight: 400;
 
@@ -1539,8 +1539,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-BoldItalic.woff2') format('woff2'),
-       url('assets/fonts/Gotham-BoldItalic.woff') format('woff');
+  src: url('../assets/fonts/Gotham-BoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-BoldItalic.woff') format('woff');
 
   font-weight: 700;
 
@@ -1552,8 +1552,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-BlackItalic.woff2') format('woff2'),
-       url('assets/fonts/Gotham-BlackItalic.woff') format('woff');
+  src: url('../assets/fonts/Gotham-BlackItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-BlackItalic.woff') format('woff');
 
   font-weight: 900;
 
@@ -1565,8 +1565,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-LightItalic.woff2') format('woff2'),
-       url('assets/fonts/Gotham-LightItalic.woff') format('woff');
+  src: url('../assets/fonts/Gotham-LightItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-LightItalic.woff') format('woff');
 
   font-weight: 300;
 
@@ -1578,8 +1578,8 @@ html {
 @font-face {
   font-family: 'Gotham';
 
-  src: url('assets/fonts/Gotham-MediumItalic.woff2') format('woff2'),
-       url('assets/fonts/Gotham-MediumItalic.woff') format('woff');
+  src: url('../assets/fonts/Gotham-MediumItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gotham-MediumItalic.woff') format('woff');
 
   font-weight: 500;
 
@@ -1757,6 +1757,14 @@ html {
 
   .md\:pb-32 {
     padding-bottom: 8rem;
+  }
+
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pr-8 {
+    padding-right: 2rem;
   }
 
   .md\:pt-11 {

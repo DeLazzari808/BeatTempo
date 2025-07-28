@@ -1,185 +1,183 @@
-    <!DOCTYPE html>
-    <html lang="pt-br" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Beatempo - Agência Publicitária Musical</title>
-        <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
-        <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatempo - Agência Publicitária Musical</title>
+    <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-black text-white antialiased">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex-1">
+                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
+                <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
+                <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
+                <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
+                <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <a href="https://wa.me/554123910713" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
+                    QUERO SER ARTISTA
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    
+            <div id="hero-slideshow" class="absolute inset-0 z-0">
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./assets/hero-background.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
+            </div>
         
-        <link rel="stylesheet" href="dist/output.css">
+            <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+            
+            <div class="relative z-20 px-4 flex flex-col items-center">
+                <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
+                    A <span class="font-black">BASE</span> DA SUA
+                </h1>
+                <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
+                    JORNADA MUSICAL
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
+                    make the drop worth it
+                </p>
+            </div>
+        </section>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-    <body class="bg-black text-white antialiased">
-
-        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-                <div class="flex-1">
-                    <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
+        <section id="services" class="pt-10 pb-12 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">SERVIÇOS</h2>
                 </div>
-                <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
-                    <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
-                    <a href="#productions" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
-                    <a href="#about" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
-                    <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
-                </div>
-                <div class="flex-1 flex justify-end">
-                    <a href="https://wa.me/554123910713" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
-                        QUERO SER ARTISTA
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
         
-                <div id="hero-slideshow" class="absolute inset-0 z-0">
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('assets/hero-background.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
-                    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
-                </div>
-            
-                <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
-                
-                <div class="relative z-20 px-4 flex flex-col items-center">
-                    <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
-                        A <span class="font-black">BASE</span> DA SUA
-                    </h1>
-                    <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
-                        JORNADA MUSICAL
-                    </h1>
-                    <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-                        make the drop worth it
-                    </p>
-                </div>
-            </section>
-
-            <section id="services" class="pt-10 pb-12 bg-black">
-                <div class="container mx-auto px-6">
-                    <div class="text-center mb-16">
-                        <h2 class="section-title">SERVIÇOS</h2>
-                    </div>
-            
-                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-16">
-                        <div class="md:pr-8 flex flex-col">
-                            <div>
-                                <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(OPCIONAL)</span></h3>
-                                <ul class="space-y-4 text-gray-300">
-                                    <li>• Gerenciamento do lançamento</li>
-                                    <li>• Produção de conteúdo</li>
-                                    <li>• Capa (diversos formatos)</li>
-                                    <li>• Ensaio de fotos</li>
-                                    <li>• Vídeoclip / Visualizer</li>
-                                    <li>• Estilista</li>
-                                    <li>• Tráfego pago / Impulsionamentos</li>
-                                </ul>
-                            </div>
-                            <div class="mt-auto pt-8">
-                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                    <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
-                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                        <span>SOLICITAR ORÇAMENTO</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-16">
+                    <div class="md:pr-8 flex flex-col">
                         <div>
-                            <img src="assets/PROJETO-BEATEMPO.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Projeto Beatempo">
+                            <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(OPCIONAL)</span></h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li>• Gerenciamento do lançamento</li>
+                                <li>• Produção de conteúdo</li>
+                                <li>• Capa (diversos formatos)</li>
+                                <li>• Ensaio de fotos</li>
+                                <li>• Vídeoclip / Visualizer</li>
+                                <li>• Estilista</li>
+                                <li>• Tráfego pago / Impulsionamentos</li>
+                            </ul>
                         </div>
-                    </div>
-            
-                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
-                        <div class="md:order-2 md:pl-8 flex flex-col">
-                            <div>
-                                <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
-                                <ul class="space-y-4 text-gray-300">
-                                    <li>• Assessoria via WhatsApp</li>
-                                    <li>• Reunião Mensal</li>
-                                    <li>• Encontros frequentes no QG da BEATEMPO</li>
-                                    <li>• Definição de identidade, estética e conteúdos</li>
-                                    <li>• Postagens semanais (fotos, artes, reels, stories & carroseis)</li>
-                                    <li>• Sugestão de conteúdos adicionais</li>
-                                    <li>• Acompanhamento em lançamentos, estratégias e fortalecimento de imagem</li>
-                                    <li>• Desconto com parceiros BEATEMPO</li>
-                                </ul>
-                            </div>
-                            <div class="mt-auto pt-8">
-                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                    <p class="text-gray-300 mb-4 uppercase">Leve sua carreira para o próximo nível.</p>
-                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                        <span>SOLICITAR ORÇAMENTO</span>
-                                    </a>
-                                </div>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Pronto para começar seu projeto?</p>
+                                <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="md:order-1">
-                            <img src="assets/AGENCIAMENTO-MENSAL.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Agenciamento Mensal">
+                    </div>
+                    <div>
+                        <img src="assets/PROJETO-BEATEMPO.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Projeto Beatempo">
+                    </div>
+                </div>
+        
+                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                    <div class="md:order-2 md:pl-8 flex flex-col">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li>• Assessoria via WhatsApp</li>
+                                <li>• Reunião Mensal</li>
+                                <li>• Encontros frequentes no QG da BEATEMPO</li>
+                                <li>• Definição de identidade, estética e conteúdos</li>
+                                <li>• Postagens semanais (fotos, artes, reels, stories & carroseis)</li>
+                                <li>• Sugestão de conteúdos adicionais</li>
+                                <li>• Acompanhamento em lançamentos, estratégias e fortalecimento de imagem</li>
+                                <li>• Desconto com parceiros BEATEMPO</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Leve sua carreira para o próximo nível.</p>
+                                <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-            
-                    <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
-                        <div class="pr-8 flex flex-col">
-                            <div>
-                                <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA</h3>
-                                <div class="bg-black border-2 border-white rounded-lg">
-                                    <div class="grid grid-cols-1 sm:grid-cols-2">
-                                        <div class="p-6">
-                                            <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
-                                            <ul class="space-y-3 text-gray-300">
-                                                <li>• Violão</li>
-                                                <li>• Guitarra</li>
-                                                <li>• Ukulele</li>
-                                                <li>• Piano</li>
-                                                <li>• Teclado</li>
-                                            </ul>
-                                        </div>
-                                        <div class="p-6">
-                                            <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas e Mentorias</h4>
-                                            <ul class="space-y-3 text-gray-300">
-                                                <li>• Harmonia</li>
-                                                <li>• Home Production</li>
-                                                <li>• Composição</li>
-                                                <li>
-                                                    <button id="open-ensina-modal" class="underline hover:text-white transition-colors duration-200">
-                                                        e muito mais...
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
+                    <div class="md:order-1">
+                        <img src="assets/AGENCIAMENTO-MENSAL.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Agenciamento Mensal">
+                    </div>
+                </div>
+        
+                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                    <div class="pr-8 flex flex-col">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA</h3>
+                            <div class="bg-black border-2 border-white rounded-lg">
+                                <div class="grid grid-cols-1 sm:grid-cols-2">
+                                    <div class="p-6">
+                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
+                                        <ul class="space-y-3 text-gray-300">
+                                            <li>• Violão</li>
+                                            <li>• Guitarra</li>
+                                            <li>• Ukulele</li>
+                                            <li>• Piano</li>
+                                            <li>• Teclado</li>
+                                        </ul>
+                                    </div>
+                                    <div class="p-6">
+                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas e Mentorias</h4>
+                                        <ul class="space-y-3 text-gray-300">
+                                            <li>• Harmonia</li>
+                                            <li>• Home Production</li>
+                                            <li>• Composição</li>
+                                            <li>
+                                                <button id="open-ensina-modal" class="underline hover:text-white transition-colors duration-200">
+                                                    e muito mais...
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-auto pt-8">
-                                <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                    <p class="text-gray-300 mb-4 uppercase">Quer aprender com a gente?</p>
-                                    <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                        <span>SOLICITAR ORÇAMENTO</span>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="mt-auto pt-8">
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase">Quer aprender com a gente?</p>
+                                <a href="#contact" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>SOLICITAR ORÇAMENTO</span>
+                                </a>
                             </div>
                         </div>
-                        <div>
-                            <img src="assets/BEATEMPO-ENSINA.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Beatempo Ensina">
-                        </div>
                     </div>
-            
-                    <div class="max-w-2xl mx-auto mt-12">
-                        <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
-                            <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
-                            <ul class="space-y-2 text-gray-400">
-                                <li>• Estúdio Musical</li>
-                                <li>• Estúdio Fotográfico</li>
-                            </ul>
-                        </div>
+                    <div>
+                        <img src="assets/BEATEMPO-ENSINA.JPG" class="rounded-lg shadow-2xl h-full object-contain" alt="Beatempo Ensina">
                     </div>
                 </div>
-            </section>
+        
+                <div class="max-w-2xl mx-auto mt-12">
+                    <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
+                        <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>• Estúdio Musical</li>
+                            <li>• Estúdio Fotográfico</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="productions" class="pt-12 pb-16 bg-zinc-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -284,8 +282,7 @@
                 
             </div>
         </section>
-        <section id="artists" class="hidden py-20 md:py-32"> <!-- Standby: Oculto por requisito do cliente -->
-            <div class="container mx-auto px-6">
+        <section id="artists" class="hidden py-20 md:py-32"> <div class="container mx-auto px-6">
                 <div class="text-center mb-16"><h2 class="section-title">Os Nossos Artistas</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Talentos que confiam na Beatempo para construir as suas carreiras.</p></div>
                 <div id="artists-carousel-container" class="relative w-full overflow-hidden">
                     <div id="artists-carousel" class="flex">
@@ -298,8 +295,7 @@
                 </div>
             </div>
         </section>
-        <section id="partners" class="hidden py-20 md:py-32 bg-zinc-900"> <!-- Standby: Oculto por requisito do cliente -->
-            <div class="container mx-auto px-6">
+        <section id="partners" class="hidden py-20 md:py-32 bg-zinc-900"> <div class="container mx-auto px-6">
                 <div class="text-center mb-16"><h2 class="section-title">Os Nossos Parceiros</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">A rede de profissionais que torna tudo possível.</p></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Sonkei37" data-role="Beatmaker & Produtor" data-bio="Salv salv, Eu sou o Sonkei do 37 estúdio, Beatmaker e produtor musical brasileiro..." data-img="https://placehold.co/400x400/18181b/ffffff?text=S37" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=S37" alt="Foto de Sonkei37" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Sonkei37</h3><p class="text-gray-400">Beatmaker</p></div>
@@ -358,42 +354,29 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="section-title">ORÇAMENTO</h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Clique numa das opções abaixo para ver os detalhes e solicitar um orçamento.</p>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Selecione o serviço desejado para iniciar seu projeto musical conosco.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <div id="btn-projeto" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
-                        <i class="fa-solid fa-rocket text-4xl mb-4"></i><h3 class="text-xl font-bold">Projeto Beatempo</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+                        <i class="fa-solid fa-rocket text-4xl mb-4 text-white"></i>
+                        <h3 class="text-2xl font-bold mb-2">Projeto Beatempo</h3>
+                        <p class="text-gray-400">Ideal para o lançamento de um single ou EP, com toda a estrutura que você precisa.</p>
                     </div>
-                    <div id="btn-agenciamento" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
-                        <i class="fa-solid fa-calendar-days text-4xl mb-4"></i><h3 class="text-xl font-bold">Agenciamento Mensal</h3>
-                    </div>
-                    <div id="btn-ensina" class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
-                        <i class="fa-solid fa-graduation-cap text-4xl mb-4"></i><h3 class="text-xl font-bold">Beatempo Ensina</h3>
-                    </div>
-                    <a href="https://wa.me/554123910713" target="_blank" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-transparent hover:border-white transition-all min-w-[260px]">
-                        <i class="fab fa-whatsapp text-4xl mb-4"></i><h3 class="text-xl font-bold">Contato via WhatsApp</h3>
-                    </a>
-                </div>
 
-                <div id="details-projeto" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold mb-4">Selecione os serviços para o seu Projeto:</h3>
-                    <div class="space-y-2 text-lg"><label class="flex items-center"><input type="checkbox" class="h-5 w-5 mr-3 bg-gray-700 border-gray-600 rounded">Gerenciamento do Lançamento</label></div>
-                    <div class="space-y-2 text-lg"><label class="flex items-center"><input type="checkbox" class="h-5 w-5 mr-3 bg-gray-700 border-gray-600 rounded">Produção de Conteúdo</label></div>
-                    <button class="mt-6 bg-white text-black font-bold py-3 px-6 rounded-lg">Solicitar Orçamento</button>
-                </div>
-                <div id="details-agenciamento" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold mb-4">Nosso Agenciamento Mensal inclui:</h3>
-                    <p class="text-gray-300">Assessoria completa para sua carreira. Entre em contato para mais detalhes.</p>
-                     <a href="https://wa.me/5541991990409" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Falar com um especialista</a>
-                </div>
-                <div id="details-ensina" class="hidden mt-12 bg-black p-8 rounded-2xl max-w-4xl mx-auto">
-                     <h3 class="text-2xl font-bold mb-4">Nossas Aulas e Mentorias:</h3>
-                     <p class="text-gray-300">Desenvolva suas habilidades com nossos profissionais. Entre em contato para saber mais.</p>
-                      <a href="https://wa.me/5541991990409" target="_blank" class="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-lg">Saber Mais</a>
+                    <div class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+                        <i class="fa-solid fa-calendar-days text-4xl mb-4 text-white"></i>
+                        <h3 class="text-2xl font-bold mb-2">Agenciamento Mensal</h3>
+                        <p class="text-gray-400">Para artistas que buscam um acompanhamento contínuo e estratégico da carreira.</p>
+                    </div>
+
+                    <div class="budget-option bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+                        <i class="fa-solid fa-graduation-cap text-4xl mb-4 text-white"></i>
+                        <h3 class="text-2xl font-bold mb-2">Beatempo Ensina</h3>
+                        <p class="text-gray-400">Aulas e mentorias para aprimorar suas habilidades musicais e de produção.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Seção: Onde Estamos -->
         <section id="onde-estamos" class="py-20 bg-black">
           <div class="container mx-auto px-6 text-center">
             <h2 class="section-title mb-6">Onde Estamos</h2>
@@ -412,6 +395,38 @@
           </div>
         </section>
     </main>
+
+    <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
+      <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
+          <button id="close-orcamento-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
+          <h3 class="text-3xl font-bold mb-1 text-center">Solicitar Orçamento</h3>
+          <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
+          
+          <form id="orcamento-form" class="space-y-4">
+              <input type="hidden" name="servico_desejado" id="servico_desejado">
+              <div>
+                  <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                  <input type="text" id="nome" name="nome" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+              </div>
+              <div>
+                  <label for="telefone" class="block text-sm font-medium text-gray-300 mb-1">Telefone (WhatsApp)</label>
+                  <input type="tel" id="telefone" name="telefone" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+              </div>
+              <div>
+                  <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram (@usuario)</label>
+                  <input type="text" id="instagram" name="instagram" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+              </div>
+              <div>
+                  <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span class="text-gray-500">(Opcional)</span></label>
+                  <input type="url" id="spotify" name="spotify" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+              </div>
+              <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                  Enviar Solicitação
+              </button>
+          </form>
+
+      </div>
+  </div>
 
     <footer class="bg-black border-t border-gray-800 py-10">
       <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
