@@ -8,14 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrolledLogoSrc = './assets/PNG_SIMBOLO_BRANCO.png';
         
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                if (!headerLogo.src.includes('SIMBOLO')) {
-                    headerLogo.src = scrolledLogoSrc;
+            try {
+                if (window.scrollY > 50) {
+                    if (!headerLogo.src.includes('SIMBOLO')) {
+                        headerLogo.src = scrolledLogoSrc;
+                    }
+                } else {
+                    if (!headerLogo.src.includes('LOGO')) {
+                        headerLogo.src = initialLogoSrc;
+                    }
                 }
-            } else {
-                if (!headerLogo.src.includes('LOGO')) {
-                    headerLogo.src = initialLogoSrc;
-                }
+            } catch (error) {
+                console.error("Erro na lógica do header:", error);
             }
         });
     }
@@ -24,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideshow = document.getElementById('hero-slideshow');
     if (slideshow) {
         const slides = slideshow.querySelectorAll('.hero-slide');
-        let currentSlide = 0;
         if (slides.length > 1) {
+            let currentSlide = 0;
             setInterval(() => {
                 slides[currentSlide].style.opacity = '0';
                 currentSlide = (currentSlide + 1) % slides.length;
@@ -80,10 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para preencher os dados dos modais
     const fillModalData = (modalId, data) => {
         if (modalId === 'info-modal') {
-            document.getElementById('modal-img').src = data.img;
-            document.getElementById('modal-name').textContent = data.name;
-            document.getElementById('modal-role').textContent = data.role;
-            document.getElementById('modal-bio').textContent = data.bio;
+            const elements = {
+                img: document.getElementById('modal-img'),
+                name: document.getElementById('modal-name'),
+                role: document.getElementById('modal-role'),
+                bio: document.getElementById('modal-bio'),
+            };
+            if(elements.img) elements.img.src = data.img || '';
+            if(elements.name) elements.name.textContent = data.name || '';
+            if(elements.role) elements.role.textContent = data.role || '';
+            if(elements.bio) elements.bio.textContent = data.bio || '';
             
             const socialLinks = {
                 'modal-spotify': data.spotify,
@@ -95,20 +105,22 @@ document.addEventListener('DOMContentLoaded', function() {
             for (const [id, link] of Object.entries(socialLinks)) {
                 const element = document.getElementById(id);
                 if (element) {
-                    if (link && link !== '#') {
-                        element.href = link;
-                        element.style.display = 'inline-block';
-                    } else {
-                        element.style.display = 'none';
-                    }
+                    element.style.display = (link && link !== '#') ? 'inline-block' : 'none';
+                    if (link && link !== '#') element.href = link;
                 }
             }
         }
         if (modalId === 'production-modal') {
-            document.getElementById('modal-production-title').textContent = data.title;
-            document.getElementById('modal-production-description').textContent = data.description || '';
-            document.getElementById('modal-spotify-link').href = data.spotifyLink || '#';
-            document.getElementById('modal-youtube-link').href = data.youtubeLink || '#';
+             const elements = {
+                title: document.getElementById('modal-production-title'),
+                description: document.getElementById('modal-production-description'),
+                spotify: document.getElementById('modal-spotify-link'),
+                youtube: document.getElementById('modal-youtube-link')
+            };
+            if(elements.title) elements.title.textContent = data.title || '';
+            if(elements.description) elements.description.textContent = data.description || '';
+            if(elements.spotify) elements.spotify.href = data.spotifyLink || '#';
+            if(elements.youtube) elements.youtube.href = data.youtubeLink || '#';
         }
     };
     
@@ -118,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupModal('all-productions-modal', '#open-all-productions-modal', 'close-all-productions-modal');
     setupModal('ensina-modal', '#open-ensina-modal', 'close-ensina-modal');
 
-    // --- LÓGICA DO MODAL DE ORÇAMENTO (VERSÃO CORRIGIDA E SEM CONFLITOS) ---
+    // --- LÓGICA DO MODAL DE ORÇAMENTO (VERSÃO FINAL E FUNCIONAL) ---
     const orcamentoModal = document.getElementById('orcamento-modal');
     if (orcamentoModal) {
         const budgetOptions = document.querySelectorAll('.budget-option');
@@ -128,8 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const hiddenServiceInput = document.getElementById('servico_desejado');
 
         const openOrcamentoModal = (serviceTitle) => {
-            modalServiceTitle.textContent = serviceTitle;
-            hiddenServiceInput.value = serviceTitle;
+            if(modalServiceTitle) modalServiceTitle.textContent = serviceTitle;
+            if(hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
             orcamentoModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         };
@@ -164,10 +176,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (form) {
             form.addEventListener('submit', function(e) {
-                // Este listener está aqui para o caso de você querer reativar
-                // o envio via JavaScript (AJAX) no futuro. Por enquanto,
-                // para garantir a ativação do Formspree, o ideal é deixar
-                // o JavaScript não interferir no envio padrão.
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const action = e.target.action;
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerHTML;
+
+                if (!action) {
+                    console.error("Formspree 'action' URL não está definida no formulário HTML.");
+                    alert("Erro de configuração: O formulário não pode ser enviado.");
+                    return;
+                }
+
+                submitButton.innerHTML = `Enviando...`;
+                submitButton.disabled = true;
+
+                fetch(action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                }).then(response => {
+                    if (response.ok) {
+                        alert(`Obrigado! Sua solicitação foi enviada com sucesso.`);
+                        form.reset();
+                        closeOrcamentoModal();
+                        document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                alert(data["errors"].map(error => error["message"]).join(", "));
+                            } else {
+                                alert('Oops! Ocorreu um problema ao enviar seu formulário. Tente novamente.');
+                            }
+                        });
+                    }
+                }).catch(error => {
+                    alert('Oops! Ocorreu um problema de conexão. Tente novamente.');
+                }).finally(() => {
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                });
             });
         }
     }
