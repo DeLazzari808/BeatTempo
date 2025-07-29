@@ -38,41 +38,110 @@ document.addEventListener('DOMContentLoaded', function() {
         if (modal) {
             modal.classList.remove('hidden');
             document.body.classList.add('modal-open');
+            
+            // Animar entrada do modal
+            const modalContent = modal.querySelector('.modal-content');
+            if (modalContent) {
+                modalContent.style.animation = 'modalFadeIn 0.3s ease-out forwards';
+            }
         }
     }
 
     function closeModal(modal) {
         if (modal) {
-            modal.classList.add('hidden');
-            if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
-                document.body.classList.remove('modal-open');
+            const modalContent = modal.querySelector('.modal-content');
+            if (modalContent) {
+                modalContent.classList.add('closing');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modalContent.classList.remove('closing');
+                    if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
+                        document.body.classList.remove('modal-open');
+                    }
+                }, 300);
+            } else {
+                modal.classList.add('hidden');
+                if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
+                    document.body.classList.remove('modal-open');
+                }
             }
         }
     }
+    function fillModalData(modalId, data) {
+        if (modalId === 'info-modal') {
+            const elements = {
+                img: document.getElementById('modal-img'),
+                name: document.getElementById('modal-name'),
+                role: document.getElementById('modal-role'),
+                bio: document.getElementById('modal-bio'),
+            };
+            if(elements.img) elements.img.src = data.img || '';
+            if(elements.name) elements.name.textContent = data.name || '';
+            if(elements.role) elements.role.textContent = data.role || '';
+            if(elements.bio) elements.bio.textContent = data.bio || '';
+            
+            const socialLinks = {
+                'modal-spotify': data.spotify,
+                'modal-youtube': data.youtube,
+                'modal-soundcloud': data.soundcloud,
+                'modal-instagram': data.instagram
+            };
 
-    // --- LÓGICA DOS MODAIS SIMPLES (Info, Produções, etc.) ---
-    const simpleModalTriggers = {
-        'info-modal': '.info-trigger',
-        'production-modal': '.production-trigger',
-        'all-productions-modal': '#open-all-productions-modal',
-    };
-
-    for (const modalId in simpleModalTriggers) {
-        const modal = document.getElementById(modalId);
-        const triggerQuery = simpleModalTriggers[modalId];
-        const triggers = document.querySelectorAll(triggerQuery);
-        const closeButton = modal?.querySelector('.close-details-modal, #close-info-modal, #close-production-modal, #close-all-productions-modal');
-
-        if (modal && triggers.length > 0) {
-            triggers.forEach(trigger => trigger.addEventListener('click', () => openModal(modal)));
+            for (const [id, link] of Object.entries(socialLinks)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.style.display = (link && link !== '#') ? 'inline-block' : 'none';
+                    if (link && link !== '#') element.href = link;
+                }
+            }
         }
+        if (modalId === 'production-modal') {
+             const elements = {
+                img: document.getElementById('modal-production-img'),
+                title: document.getElementById('modal-production-title'),
+                description: document.getElementById('modal-production-description'),
+                spotify: document.getElementById('modal-spotify-link'),
+                youtube: document.getElementById('modal-youtube-link')
+            };
+            if(elements.img) elements.img.src = data.img || '';
+            if(elements.title) elements.title.textContent = data.title || '';
+            if(elements.description) elements.description.textContent = data.description || '';
+            if(elements.spotify) elements.spotify.href = data.spotifyLink || data['spotify-link'] || '#';
+            if(elements.youtube) elements.youtube.href = data.youtubeLink || data['youtube-link'] || '#';
+        }
+    }
+// --- LÓGICA DOS MODAIS SIMPLES (Info, Produções, etc.) ---
+const simpleModalTriggers = {
+    'info-modal': '.info-trigger',
+    'production-modal': '.production-trigger',
+    'all-productions-modal': '#open-all-productions-modal',
+};
+
+for (const modalId in simpleModalTriggers) {
+    const modal = document.getElementById(modalId);
+    const triggerQuery = simpleModalTriggers[modalId];
+    const triggers = document.querySelectorAll(triggerQuery);
+    if (modal && triggers.length > 0) {
+        const closeButton = modal.querySelector('#close-' + modalId);
+        
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                const data = e.currentTarget.dataset;
+                fillModalData(modalId, data); // Preenche os dados
+                openModal(modal); // Abre o modal
+            });
+        });
+
         if (closeButton) {
             closeButton.addEventListener('click', () => closeModal(modal));
         }
-        modal?.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal(modal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
         });
     }
+}
 
     // --- LÓGICA DO FLUXO DE ORÇAMENTO (COM MÚLTIPLOS MODAIS) ---
     const detailsProjetoModal = document.getElementById('details-projeto-modal');

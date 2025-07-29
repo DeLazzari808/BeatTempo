@@ -1914,3 +1914,133 @@ body.modal-open {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
+
+/* Garantir que os cards de produção apareçam corretamente */
+.production-trigger {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.production-trigger img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Garantir que o aspect-square funcione corretamente */
+.aspect-square {
+  aspect-ratio: 1 / 1 !important;
+}
+
+/* Melhorar a visibilidade dos cards */
+.production-trigger.relative {
+  position: relative !important;
+  min-height: 200px !important;
+}
+
+/* Forçar exibição de todos os cards */
+.grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Animações do Modal de Produções */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+.modal-content.closing {
+  animation: modalFadeOut 0.3s ease-in forwards;
+}
+
+/* Melhorar o backdrop blur */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Gradientes para texto */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+/* Melhorar responsividade do modal */
+@media (max-width: 1024px) {
+  .modal-content {
+    margin: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal-content img {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    padding: 1rem;
+  }
+  
+  .modal-content img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Melhorar acessibilidade */
+.modal-content:focus {
+  outline: none;
+}
+
+.modal-content button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}

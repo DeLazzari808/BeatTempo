@@ -395,4 +395,73 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #52525b #18181b
 }
+
+/* Garantir que os cards de produção apareçam corretamente */
+.production-trigger {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.production-trigger img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Garantir que o aspect-square funcione corretamente */
+.aspect-square {
+    aspect-ratio: 1 / 1 !important;
+}
+
+/* Melhorar a visibilidade dos cards */
+.production-trigger.relative {
+    position: relative !important;
+    min-height: 200px !important;
+}
+
+/* Forçar exibição de todos os cards */
+.grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Garantir que as imagens sejam visíveis */
+.production-trigger img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Garantir que os cards de produção apareçam corretamente */
+.production-trigger {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.production-trigger img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Garantir que o aspect-square funcione corretamente */
+.aspect-square {
+    aspect-ratio: 1 / 1 !important;
+}
+
+/* Melhorar a visibilidade dos cards */
+.production-trigger.relative {
+    position: relative !important;
+    min-height: 200px !important;
+}
 /* All other tailwind classes are included in the initial block */
