@@ -38,186 +38,137 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- LÓGICA GERAL DOS MODAIS (Reutilizável) ---
-    const setupModal = (modalId, openTriggersQuery, closeBtnId) => {
+    // --- LÓGICA GERAL DOS MODAIS SIMPLES (info, produções, etc.) ---
+    function setupSimpleModal(modalId, openTriggersQuery, closeBtnId) {
         const modal = document.getElementById(modalId);
         if (!modal) return;
         
         const openTriggers = document.querySelectorAll(openTriggersQuery);
         const closeBtn = document.getElementById(closeBtnId);
 
-        const openModalAction = (data) => {
+        const open = () => {
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            if (data && typeof fillModalData === 'function') {
-                fillModalData(modalId, data);
-            }
         };
-
-        const closeModalAction = () => {
+        const close = () => {
             modal.classList.add('hidden');
             document.body.style.overflow = '';
         };
 
-        openTriggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                let data = e.currentTarget.dataset;
-                openModalAction(data);
-            });
-        });
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeModalAction);
-        }
-
+        openTriggers.forEach(trigger => trigger.addEventListener('click', open));
+        if (closeBtn) closeBtn.addEventListener('click', close);
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModalAction();
+            if (e.target === modal) close();
         });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModalAction();
-            }
-        });
-    };
-    
-    // Função para preencher os dados dos modais
-    const fillModalData = (modalId, data) => {
-        if (modalId === 'info-modal') {
-            const elements = {
-                img: document.getElementById('modal-img'),
-                name: document.getElementById('modal-name'),
-                role: document.getElementById('modal-role'),
-                bio: document.getElementById('modal-bio'),
-            };
-            if(elements.img) elements.img.src = data.img || '';
-            if(elements.name) elements.name.textContent = data.name || '';
-            if(elements.role) elements.role.textContent = data.role || '';
-            if(elements.bio) elements.bio.textContent = data.bio || '';
-            
-            const socialLinks = {
-                'modal-spotify': data.spotify,
-                'modal-youtube': data.youtube,
-                'modal-soundcloud': data.soundcloud,
-                'modal-instagram': data.instagram
-            };
+    }
 
-            for (const [id, link] of Object.entries(socialLinks)) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.style.display = (link && link !== '#') ? 'inline-block' : 'none';
-                    if (link && link !== '#') element.href = link;
-                }
-            }
-        }
-        if (modalId === 'production-modal') {
-             const elements = {
-                title: document.getElementById('modal-production-title'),
-                description: document.getElementById('modal-production-description'),
-                spotify: document.getElementById('modal-spotify-link'),
-                youtube: document.getElementById('modal-youtube-link')
-            };
-            if(elements.title) elements.title.textContent = data.title || '';
-            if(elements.description) elements.description.textContent = data.description || '';
-            if(elements.spotify) elements.spotify.href = data.spotifyLink || '#';
-            if(elements.youtube) elements.youtube.href = data.youtubeLink || '#';
-        }
-    };
-    
-    // --- INICIALIZAÇÃO DOS MODAIS EXISTENTES ---
-    setupModal('info-modal', '.info-trigger', 'close-info-modal');
-    setupModal('production-modal', '.production-trigger', 'close-production-modal');
-    setupModal('all-productions-modal', '#open-all-productions-modal', 'close-all-productions-modal');
-    setupModal('ensina-modal', '#open-ensina-modal', 'close-ensina-modal');
+    setupSimpleModal('info-modal', '.info-trigger', 'close-info-modal');
+    setupSimpleModal('production-modal', '.production-trigger', 'close-production-modal');
+    setupSimpleModal('all-productions-modal', '#open-all-productions-modal', 'close-all-productions-modal');
+    setupSimpleModal('ensina-modal', '#open-ensina-modal', 'close-ensina-modal');
 
-    // --- LÓGICA DO MODAL DE ORÇAMENTO (VERSÃO FINAL E FUNCIONAL) ---
+
+    // --- LÓGICA DO FLUXO DE ORÇAMENTO (COM MÚLTIPLOS MODAIS) ---
+    const detailsProjetoModal = document.getElementById('details-projeto-modal');
+    const detailsAgenciamentoModal = document.getElementById('details-agenciamento-modal');
+    const detailsEnsinaModal = document.getElementById('details-ensina-modal');
     const orcamentoModal = document.getElementById('orcamento-modal');
-    if (orcamentoModal) {
-        const budgetOptions = document.querySelectorAll('.budget-option');
-        const closeBtn = document.getElementById('close-orcamento-modal');
-        const form = document.getElementById('orcamento-form');
-        const modalServiceTitle = document.getElementById('modal-service-title');
-        const hiddenServiceInput = document.getElementById('servico_desejado');
+    const allDetailModals = [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal];
 
-        const openOrcamentoModal = (serviceTitle) => {
-            if(modalServiceTitle) modalServiceTitle.textContent = serviceTitle;
-            if(hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
-            orcamentoModal.classList.remove('hidden');
+    // Função para fechar todos os modais de detalhes
+    function closeAllDetailModals() {
+        allDetailModals.forEach(m => m?.classList.add('hidden'));
+    }
+
+    // 1. Abrir os modais de DETALHES
+    document.getElementById('btn-projeto')?.addEventListener('click', () => {
+        closeAllDetailModals();
+        detailsProjetoModal?.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('btn-agenciamento')?.addEventListener('click', () => {
+        closeAllDetailModals();
+        detailsAgenciamentoModal?.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('btn-ensina')?.addEventListener('click', () => {
+        closeAllDetailModals();
+        detailsEnsinaModal?.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // 2. Abrir o FORMULÁRIO a partir das opções FINAIS
+    document.querySelectorAll('.budget-option-final').forEach(option => {
+        option.addEventListener('click', () => {
+            const h4 = option.querySelector('h4');
+            const serviceTitle = h4 ? h4.textContent.trim() : 'Serviço Personalizado';
+            
+            closeAllDetailModals();
+            
+            const modalServiceTitle = document.getElementById('modal-service-title');
+            const hiddenServiceInput = document.getElementById('servico_desejado');
+            if (modalServiceTitle) modalServiceTitle.textContent = serviceTitle;
+            if (hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
+            
+            orcamentoModal?.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-        };
-
-        const closeOrcamentoModal = () => {
-            orcamentoModal.classList.add('hidden');
-            document.body.style.overflow = '';
-        };
-
-        budgetOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const serviceTitle = option.querySelector('h3').textContent;
-                openOrcamentoModal(serviceTitle);
-            });
         });
+    });
 
-        if (closeBtn) {
-          closeBtn.addEventListener('click', closeOrcamentoModal);
+    // 3. Lógica para fechar TODOS os modais
+    function closeAllModals() {
+        closeAllDetailModals();
+        orcamentoModal?.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.close-details-modal').forEach(btn => {
+        btn.addEventListener('click', closeAllModals);
+    });
+    document.getElementById('close-orcamento-modal')?.addEventListener('click', closeAllModals);
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllModals();
         }
+    });
 
-        orcamentoModal.addEventListener('click', (e) => {
-            if (e.target === orcamentoModal) {
-                closeOrcamentoModal();
+    // 4. Lógica de envio do FORMULÁRIO para o Formspree
+    const form = document.getElementById('orcamento-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const action = e.target.action;
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            if (!action || action.includes("xxxxxxxx")) {
+                alert("Erro: O URL de envio do formulário não está configurado corretamente no HTML.");
+                return;
             }
-        });
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !orcamentoModal.classList.contains('hidden')) {
-                closeOrcamentoModal();
-            }
-        });
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = `Enviando...`;
+            submitButton.disabled = true;
 
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const formData = new FormData(form);
-                const action = e.target.action;
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton.innerHTML;
-
-                if (!action) {
-                    console.error("Formspree 'action' URL não está definida no formulário HTML.");
-                    alert("Erro de configuração: O formulário não pode ser enviado.");
-                    return;
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Obrigado! Sua solicitação foi enviada com sucesso.');
+                    form.reset();
+                    closeAllModals();
+                } else {
+                    alert('Ocorreu um problema ao enviar seu formulário. Por favor, tente novamente.');
                 }
-
-                submitButton.innerHTML = `Enviando...`;
-                submitButton.disabled = true;
-
-                fetch(action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                }).then(response => {
-                    if (response.ok) {
-                        alert(`Obrigado! Sua solicitação foi enviada com sucesso.`);
-                        form.reset();
-                        closeOrcamentoModal();
-                        document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                alert(data["errors"].map(error => error["message"]).join(", "));
-                            } else {
-                                alert('Oops! Ocorreu um problema ao enviar seu formulário. Tente novamente.');
-                            }
-                        });
-                    }
-                }).catch(error => {
-                    alert('Oops! Ocorreu um problema de conexão. Tente novamente.');
-                }).finally(() => {
-                    submitButton.innerHTML = originalButtonText;
-                    submitButton.disabled = false;
-                });
+            }).catch(error => {
+                alert('Ocorreu um problema de conexão. Por favor, verifique sua internet e tente novamente.');
+            }).finally(() => {
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
             });
-        }
+        });
     }
 });
