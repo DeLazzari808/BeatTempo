@@ -247,4 +247,30 @@ for (const modalId in simpleModalTriggers) {
             });
         });
     }
+
+    // 5. Animação dos cards de agenciamento mensal
+    const agenciamentoCards = document.querySelectorAll('.agenciamento-card');
+    
+    agenciamentoCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            // Remove a borda de todos os outros cards
+            agenciamentoCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('border-green-500', 'border-blue-500', 'border-purple-500');
+                    otherCard.classList.add('border-transparent');
+                }
+            });
+            
+            // Adiciona a borda colorida ao card atual
+            const color = this.getAttribute('data-color');
+            this.classList.remove('border-transparent');
+            this.classList.add(`border-${color}-500`);
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            // Remove a borda do card atual
+            this.classList.remove('border-green-500', 'border-blue-500', 'border-purple-500');
+            this.classList.add('border-transparent');
+        });
+    });
 });

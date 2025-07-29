@@ -2007,6 +2007,18 @@ body.modal-open {
 }
 
 /* Melhorar responsividade do modal */
+@media (min-width: 1024px) {
+  .modal-content {
+    max-width: 28rem !important; /* max-w-lg */
+    margin: 0 auto;
+  }
+  
+  .modal-content img {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .modal-content {
     margin: 1rem;
@@ -2032,6 +2044,19 @@ body.modal-open {
   
   .modal-content h3 {
     font-size: 1.5rem !important;
+  }
+  
+  /* Ajustes para layout mobile minimalista */
+  .modal-content .flex.flex-col.md\:flex-row {
+    align-items: center !important;
+  }
+  
+  .modal-content .text-center.md\:text-left {
+    text-align: center !important;
+  }
+  
+  .modal-content .justify-center.md\:justify-start {
+    justify-content: center !important;
   }
 }
 
@@ -2068,4 +2093,121 @@ body.modal-open {
 
 .hover\:border-purple-400:hover {
   border-color: #a78bfa !important;
+}
+
+/* Animação dos cards de agenciamento */
+.agenciamento-card {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.agenciamento-card.border-transparent {
+  border-color: transparent !important;
+}
+
+.agenciamento-card.border-green-500 {
+  border-color: #10b981 !important;
+}
+
+.agenciamento-card.border-blue-500 {
+  border-color: #3b82f6 !important;
+}
+
+.agenciamento-card.border-purple-500 {
+  border-color: #8b5cf6 !important;
+}
+
+/* Garantir tamanhos consistentes dos cards */
+.agenciamento-card {
+  min-height: 400px !important;
+  max-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.agenciamento-card ul {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.agenciamento-card button {
+  margin-top: auto !important;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .agenciamento-card {
+    min-height: auto !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  .agenciamento-card ul {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Estilo minimalista para os botões dos cards de agenciamento */
+.agenciamento-card button {
+  background: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+  text-transform: uppercase !important;
+  font-size: 0.875rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.agenciamento-card button:hover {
+  background: white !important;
+  color: black !important;
+  transform: scale(1.02) !important;
+}
+
+/* Garantir alinhamento consistente dos botões nos cards de agenciamento */
+.agenciamento-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 500px !important;
+  max-height: 500px !important;
+}
+
+.agenciamento-card ul {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.agenciamento-card button {
+  margin-top: auto !important;
+  align-self: stretch !important;
+}
+
+/* Ajustar tamanho do modal "Todos os Lançamentos" no PC */
+@media (min-width: 1024px) {
+  #all-productions-modal .modal-content {
+    max-width: 48rem !important; /* max-w-3xl */
+    margin: 0 auto;
+  }
+}
+
+/* Ajustar tamanho do modal de agenciamento mensal */
+@media (min-width: 1024px) {
+  #details-agenciamento-modal .modal-content {
+    max-width: 80rem !important; /* max-w-7xl */
+    margin: 0 auto;
+    padding: 2rem !important;
+  }
+  
+  #details-agenciamento-modal .grid {
+    gap: 2rem !important;
+  }
+  
+  #details-agenciamento-modal .agenciamento-card {
+    padding: 1.5rem !important;
+  }
 }
