@@ -91,3 +91,33 @@
     font-family: 'Gotham', ui-sans-serif, system-ui, sans-serif;
   }
 }
+/* Adicionado para um controle de scroll mais robusto nos modais */
+body.modal-open {
+  overflow: hidden;
+}
+/* Estilos para a checklist customizada */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #3f3f46; /* bg-zinc-700 */
+  border: 1px solid #52525b; /* border-gray-600 */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-checkbox:checked {
+  background-color: #ffffff; /* bg-white */
+  border-color: #ffffff; /* border-white */
+}
+
+.custom-checkbox:checked::after {
+  content: '✔';
+  font-size: 1.1rem;
+  color: #000000; /* text-black */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+} 

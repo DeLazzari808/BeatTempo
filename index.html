@@ -366,13 +366,13 @@
                     <div id="btn-agenciamento" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-calendar-days text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Agenciamento Mensal</h3>
-                        <p class="text-gray-400">Acompanhamento contínuo e estratégico da <strong>carreira</strong>.</p>
+                        <p class="text-gray-400">Acompanhamento <strong>contínuo</strong> e <strong>estratégico</strong> da <strong>carreira</strong>.</p>
                     </div>
                     
                     <div id="btn-ensina" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-graduation-cap text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Beatempo Ensina</h3>
-                        <p class="text-gray-400"><strong>Aulas e mentorias</strong> para aprimorar suas habilidades.</p>
+                        <p class="text-gray-400"><strong>Aulas</strong> e <strong>mentorias</strong> para aprimorar suas habilidades <strong>musicais</strong> e de <strong>produção</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -381,52 +381,70 @@
             <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
                 <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
                 <h3 class="text-3xl font-bold mb-6 text-center">Projeto Beatempo</h3>
-                <div class="space-y-4">
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <i class="fa-solid fa-rocket text-2xl text-white w-8 text-center mr-4"></i>
-                        <h4 class="text-lg font-semibold">Gerenciamento de Lançamento</h4>
-                    </div>
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <i class="fa-solid fa-palette text-2xl text-white w-8 text-center mr-4"></i>
-                        <h4 class="text-lg font-semibold">Identidade Visual Completa</h4>
-                    </div>
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <i class="fa-solid fa-video text-2xl text-white w-8 text-center mr-4"></i>
-                        <h4 class="text-lg font-semibold">Produção de Videoclipe</h4>
-                    </div>
+                <div id="projeto-checklist" class="space-y-4">
+                    <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Gerenciamento de Lançamento" checked class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Gerenciamento de Lançamento</span>
+                    </label>
+                    <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Identidade Visual Completa" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Identidade Visual Completa</span>
+                    </label>
+                    <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Produção de Videoclipe" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Produção de Videoclipe</span>
+                    </label>
                 </div>
+                <button id="solicitar-projeto-btn" class="mt-8 w-full bg-white text-black font-bold py-3 px-6 rounded-lg uppercase">Solicitar Orçamento</button>
             </div>
         </div>
         
         <div id="details-agenciamento-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-            <div class="bg-zinc-900 rounded-2xl max-w-5xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
+            <div class="bg-zinc-900 rounded-2xl max-w-5xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
                 <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
                 <h3 class="text-3xl font-bold text-center mb-4">Agenciamento Mensal</h3>
                 <p class="text-center text-gray-400 mb-8">Planos de acompanhamento contínuo para sua carreira.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="budget-option-final bg-black p-6 rounded-xl border border-gray-800 flex flex-col text-center">
-                        <h4 class="text-xl font-bold mb-1 text-green-400">Básico</h4>
-                        <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                            <li>Placeholder para tópico 1</li>
-                        </ul>
-                        <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
-                    </div>
-                    <div class="budget-option-final bg-black p-6 rounded-xl border border-blue-400 flex flex-col text-center">
-                        <h4 class="text-xl font-bold mb-1 text-blue-400">Profissional</h4>
-                        <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                            <li>Placeholder para tópico 1</li>
-                            <li>Placeholder para tópico 2</li>
-                        </ul>
-                        <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
-                    </div>
-                    <div class="budget-option-final bg-black p-6 rounded-xl border border-gray-800 flex flex-col text-center">
-                        <h4 class="text-xl font-bold mb-1 text-purple-400">Premium</h4>
-                        <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                            <li>Placeholder para tópico 1</li>
-                            <li>Placeholder para tópico 2</li>
-                            <li>Placeholder para tópico 3</li>
-                        </ul>
-                        <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
+                <div class="overflow-y-auto pr-4 scroll-container">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-black p-6 rounded-2xl border border-gray-800 flex flex-col text-center">
+                            <h4 class="text-xl font-bold mb-1 text-green-400">BÁSICO</h4>
+                            <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião mensal para alinhamento.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de conteúdo e estética.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>2 Postagens por semana (8/mês).</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de legendas e adaptações.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Sugestões de conteúdo extra para stories.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Assessoria via WhatsApp.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Acompanhamento em lançamentos.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Gestão de impulsionamento.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Desconto com parceiros Beatempo.</li>
+                            </ul>
+                            <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Básico</h4>Solicitar</button>
+                        </div>
+                        <div class="bg-black p-6 rounded-2xl border-2 border-blue-400 flex flex-col text-center">
+                            <h4 class="text-xl font-bold mb-1 text-blue-400">PROFISSIONAL</h4>
+                            <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
+                                <li class="font-bold">Tudo do Plano Básico +</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>3 Postagens por semana (12/mês).</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>3 roteiros e captação de conteúdo por mês.</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Análise mensal de desempenho.</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Sugestões estratégicas para lançamentos.</li>
+                            </ul>
+                            <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Profissional</h4>Solicitar</button>
+                        </div>
+                        <div class="bg-black p-6 rounded-2xl border border-gray-800 flex flex-col text-center">
+                            <h4 class="text-xl font-bold mb-1 text-purple-400">PREMIUM</h4>
+                            <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
+                                <li class="font-bold">Tudo do Plano Profissional +</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Captação profissional de conteúdo 1x/mês.</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>4 postagens por semana (16/mês).</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Edição de até 6 vídeos mensais.</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Relatório de métricas detalhado.</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Reunião estratégica extra para lançamentos.</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Prioridade na agenda da equipe e parceiros.</li>
+                            </ul>
+                            <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Premium</h4>Solicitar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,122 +470,14 @@
                 </div>
             </div>
         </div>
-        
-        <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
-            <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
-                <button id="close-orcamento-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-                <h3 class="text-3xl font-bold mb-1 text-center">Solicitar Orçamento</h3>
-                <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
-                <form id="orcamento-form" action="https://formspree.io/f/mgvzylpp" method="POST" class="space-y-4">
-                    <input type="hidden" name="servico_desejado" id="servico_desejado">
-                    <div>
-                        <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                    </div>
-                    <div>
-                        <label for="telefone" class="block text-sm font-medium text-gray-300 mb-1">Telefone (WhatsApp)</label>
-                        <input type="tel" id="telefone" name="telefone" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                    </div>
-                    <div>
-                        <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram (@usuario)</label>
-                        <input type="text" id="instagram" name="instagram" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                    </div>
-                    <div>
-                        <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span class="text-gray-500">(Opcional)</span></label>
-                        <input type="url" id="spotify" name="spotify" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                        Enviar Solicitação
-                    </button>
-                </form>
-            </div>
-        </div>
     </main>
-    <div id="details-projeto-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-        <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
-            <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-            <h3 class="text-3xl font-bold mb-6 text-center">Projeto Beatempo</h3>
-            <div class="space-y-4">
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-rocket text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Gerenciamento de Lançamento</h4>
-                </div>
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-palette text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Identidade Visual Completa</h4>
-                </div>
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-video text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Produção de Videoclipe</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="details-agenciamento-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-        <div class="bg-zinc-900 rounded-2xl max-w-5xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
-            <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-            <h3 class="text-3xl font-bold text-center mb-4">Agenciamento Mensal</h3>
-            <p class="text-center text-gray-400 mb-8">Planos de acompanhamento contínuo para sua carreira.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="budget-option-final bg-black p-6 rounded-xl border border-gray-800 flex flex-col text-center">
-                    <h4 class="text-xl font-bold mb-1 text-green-400">Básico</h4>
-                    <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                        <li>Placeholder para tópico 1</li>
-                        <li>Placeholder para tópico 2</li>
-                    </ul>
-                    <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
-                </div>
-                <div class="budget-option-final bg-black p-6 rounded-xl border border-blue-400 flex flex-col text-center">
-                    <h4 class="text-xl font-bold mb-1 text-blue-400">Profissional</h4>
-                    <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                        <li>Placeholder para tópico 1</li>
-                        <li>Placeholder para tópico 2</li>
-                        <li>Placeholder para tópico 3</li>
-                    </ul>
-                    <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
-                </div>
-                <div class="budget-option-final bg-black p-6 rounded-xl border border-gray-800 flex flex-col text-center">
-                    <h4 class="text-xl font-bold mb-1 text-purple-400">Premium</h4>
-                    <ul class="space-y-2 text-gray-300 flex-grow text-left list-disc list-inside my-4">
-                        <li>Placeholder para tópico 1</li>
-                        <li>Placeholder para tópico 2</li>
-                        <li>Placeholder para tópico 3</li>
-                        <li>Placeholder para tópico 4</li>
-                    </ul>
-                    <button class="mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase">Solicitar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="details-ensina-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-         <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
-            <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-            <h3 class="text-3xl font-bold mb-6 text-center">Beatempo Ensina</h3>
-            <div class="space-y-4">
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-guitar text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Aulas de Instrumentos</h4>
-                </div>
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-microphone-lines text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Aulas de Produção Musical</h4>
-                </div>
-                <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                    <i class="fa-solid fa-lightbulb text-2xl text-white w-8 text-center mr-4"></i>
-                    <h4 class="text-lg font-semibold">Mentoria de Carreira</h4>
-                </div>
-            </div>
-        </div>
-    </div>
   <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
     <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
         <button id="close-orcamento-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
         <h3 class="text-3xl font-bold mb-1 text-center">Solicitar Orçamento</h3>
         <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
         
-        <form id="orcamento-form" class="space-y-4">
+        <form id="orcamento-form" action="https://formspree.io/f/mgvzylpp" method="POST" class="space-y-4">
             <input type="hidden" name="servico_desejado" id="servico_desejado">
             <div>
                 <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>

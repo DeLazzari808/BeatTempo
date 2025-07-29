@@ -6,17 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (header && headerLogo) {
         const initialLogoSrc = './assets/PNG_LOGO_BRANCO.png';
         const scrolledLogoSrc = './assets/PNG_SIMBOLO_BRANCO.png';
-        
         window.addEventListener('scroll', () => {
             try {
                 if (window.scrollY > 50) {
-                    if (!headerLogo.src.includes('SIMBOLO')) {
-                        headerLogo.src = scrolledLogoSrc;
-                    }
+                    if (!headerLogo.src.includes('SIMBOLO')) headerLogo.src = scrolledLogoSrc;
                 } else {
-                    if (!headerLogo.src.includes('LOGO')) {
-                        headerLogo.src = initialLogoSrc;
-                    }
+                    if (!headerLogo.src.includes('LOGO')) headerLogo.src = initialLogoSrc;
                 }
             } catch (error) {
                 console.error("Erro na lógica do header:", error);
@@ -38,35 +33,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- LÓGICA GERAL DOS MODAIS SIMPLES (info, produções, etc.) ---
-    function setupSimpleModal(modalId, openTriggersQuery, closeBtnId) {
-        const modal = document.getElementById(modalId);
-        if (!modal) return;
-        
-        const openTriggers = document.querySelectorAll(openTriggersQuery);
-        const closeBtn = document.getElementById(closeBtnId);
-
-        const open = () => {
+    // --- FUNÇÕES GLOBAIS PARA CONTROLE DE MODAIS ---
+    function openModal(modal) {
+        if (modal) {
             modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        };
-        const close = () => {
-            modal.classList.add('hidden');
-            document.body.style.overflow = '';
-        };
-
-        openTriggers.forEach(trigger => trigger.addEventListener('click', open));
-        if (closeBtn) closeBtn.addEventListener('click', close);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) close();
-        });
+            document.body.classList.add('modal-open');
+        }
     }
 
-    setupSimpleModal('info-modal', '.info-trigger', 'close-info-modal');
-    setupSimpleModal('production-modal', '.production-trigger', 'close-production-modal');
-    setupSimpleModal('all-productions-modal', '#open-all-productions-modal', 'close-all-productions-modal');
-    setupSimpleModal('ensina-modal', '#open-ensina-modal', 'close-ensina-modal');
+    function closeModal(modal) {
+        if (modal) {
+            modal.classList.add('hidden');
+            if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
+                document.body.classList.remove('modal-open');
+            }
+        }
+    }
 
+    // --- LÓGICA DOS MODAIS SIMPLES (Info, Produções, etc.) ---
+    const simpleModalTriggers = {
+        'info-modal': '.info-trigger',
+        'production-modal': '.production-trigger',
+        'all-productions-modal': '#open-all-productions-modal',
+    };
+
+    for (const modalId in simpleModalTriggers) {
+        const modal = document.getElementById(modalId);
+        const triggerQuery = simpleModalTriggers[modalId];
+        const triggers = document.querySelectorAll(triggerQuery);
+        const closeButton = modal?.querySelector('.close-details-modal, #close-info-modal, #close-production-modal, #close-all-productions-modal');
+
+        if (modal && triggers.length > 0) {
+            triggers.forEach(trigger => trigger.addEventListener('click', () => openModal(modal)));
+        }
+        if (closeButton) {
+            closeButton.addEventListener('click', () => closeModal(modal));
+        }
+        modal?.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal(modal);
+        });
+    }
 
     // --- LÓGICA DO FLUXO DE ORÇAMENTO (COM MÚLTIPLOS MODAIS) ---
     const detailsProjetoModal = document.getElementById('details-projeto-modal');
@@ -75,61 +81,62 @@ document.addEventListener('DOMContentLoaded', function() {
     const orcamentoModal = document.getElementById('orcamento-modal');
     const allDetailModals = [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal];
 
-    // Função para fechar todos os modais de detalhes
-    function closeAllDetailModals() {
-        allDetailModals.forEach(m => m?.classList.add('hidden'));
-    }
-
     // 1. Abrir os modais de DETALHES
-    document.getElementById('btn-projeto')?.addEventListener('click', () => {
-        closeAllDetailModals();
-        detailsProjetoModal?.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
-    document.getElementById('btn-agenciamento')?.addEventListener('click', () => {
-        closeAllDetailModals();
-        detailsAgenciamentoModal?.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
-    document.getElementById('btn-ensina')?.addEventListener('click', () => {
-        closeAllDetailModals();
-        detailsEnsinaModal?.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
+    document.getElementById('btn-projeto')?.addEventListener('click', () => openModal(detailsProjetoModal));
+    document.getElementById('btn-agenciamento')?.addEventListener('click', () => openModal(detailsAgenciamentoModal));
+    document.getElementById('btn-ensina')?.addEventListener('click', () => openModal(detailsEnsinaModal));
 
     // 2. Abrir o FORMULÁRIO a partir das opções FINAIS
     document.querySelectorAll('.budget-option-final').forEach(option => {
         option.addEventListener('click', () => {
             const h4 = option.querySelector('h4');
             const serviceTitle = h4 ? h4.textContent.trim() : 'Serviço Personalizado';
+            const parentModal = option.closest('.fixed.inset-0');
             
-            closeAllDetailModals();
+            closeModal(parentModal);
             
             const modalServiceTitle = document.getElementById('modal-service-title');
             const hiddenServiceInput = document.getElementById('servico_desejado');
             if (modalServiceTitle) modalServiceTitle.textContent = serviceTitle;
             if (hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
             
-            orcamentoModal?.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+            openModal(orcamentoModal);
         });
     });
 
-    // 3. Lógica para fechar TODOS os modais
-    function closeAllModals() {
-        closeAllDetailModals();
-        orcamentoModal?.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
+    // 2.1 Lógica do botão da CHECKLIST
+    document.getElementById('solicitar-projeto-btn')?.addEventListener('click', () => {
+        const checklist = document.getElementById('projeto-checklist');
+        if (checklist) {
+            const selectedItems = Array.from(checklist.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+            const serviceTitle = "Projeto Beatempo: " + (selectedItems.length > 0 ? selectedItems.join(', ') : "Nenhum item selecionado");
+            
+            closeModal(detailsProjetoModal);
 
-    document.querySelectorAll('.close-details-modal').forEach(btn => {
-        btn.addEventListener('click', closeAllModals);
+            const modalServiceTitle = document.getElementById('modal-service-title');
+            const hiddenServiceInput = document.getElementById('servico_desejado');
+            if (modalServiceTitle) modalServiceTitle.textContent = "Projeto Beatempo";
+            if (hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
+
+            openModal(orcamentoModal);
+        }
     });
-    document.getElementById('close-orcamento-modal')?.addEventListener('click', closeAllModals);
     
+    // 3. Lógica para fechar TODOS os modais com botão 'X', clique fora ou tecla ESC
+    const allModals = document.querySelectorAll('.fixed.inset-0');
+    allModals.forEach(modal => {
+        const closeButton = modal.querySelector('.close-details-modal, #close-orcamento-modal');
+        if (closeButton) {
+            closeButton.addEventListener('click', () => closeModal(modal));
+        }
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal(modal);
+        });
+    });
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeAllModals();
+            allModals.forEach(modal => closeModal(modal));
         }
     });
 
@@ -141,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(form);
             const action = e.target.action;
             const submitButton = form.querySelector('button[type="submit"]');
-            
+
             if (!action || action.includes("xxxxxxxx")) {
                 alert("Erro: O URL de envio do formulário não está configurado corretamente no HTML.");
                 return;
@@ -159,12 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     alert('Obrigado! Sua solicitação foi enviada com sucesso.');
                     form.reset();
-                    closeAllModals();
+                    closeModal(orcamentoModal);
                 } else {
-                    alert('Ocorreu um problema ao enviar seu formulário. Por favor, tente novamente.');
+                    alert('Ocorreu um problema ao enviar seu formulário. Tente novamente.');
                 }
             }).catch(error => {
-                alert('Ocorreu um problema de conexão. Por favor, verifique sua internet e tente novamente.');
+                alert('Ocorreu um problema de conexão. Tente novamente.');
             }).finally(() => {
                 submitButton.innerHTML = originalButtonText;
                 submitButton.disabled = false;
