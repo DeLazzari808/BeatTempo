@@ -2190,9 +2190,33 @@ body.modal-open {
 /* Ajustar tamanho do modal "Todos os Lançamentos" no PC */
 @media (min-width: 1024px) {
   #all-productions-modal .modal-content {
-    max-width: 48rem !important; /* max-w-3xl */
+    max-width: 72rem !important; /* max-w-6xl */
     margin: 0 auto;
+    overflow-x: hidden !important;
+    padding: 2rem !important;
   }
+  
+  #all-productions-modal .grid {
+    overflow-x: hidden !important;
+    gap: 1.5rem !important;
+  }
+  
+  #all-productions-modal .bg-black.p-4.rounded-lg {
+    padding: 1rem !important;
+  }
+}
+
+/* Garantir que não haja scroll horizontal */
+#all-productions-modal {
+  overflow-x: hidden !important;
+}
+
+#all-productions-modal .modal-content {
+  overflow-x: hidden !important;
+}
+
+#all-productions-modal .overflow-y-auto {
+  overflow-x: hidden !important;
 }
 
 /* Ajustar tamanho do modal de agenciamento mensal */
@@ -2210,4 +2234,36 @@ body.modal-open {
   #details-agenciamento-modal .agenciamento-card {
     padding: 1.5rem !important;
   }
+}
+
+/* Melhorar layout do modal de produção */
+@media (min-width: 1024px) {
+  #production-modal .modal-content {
+    max-width: 32rem !important; /* max-w-lg */
+    margin: 0 auto;
+  }
+  
+  #production-modal .grid {
+    gap: 1.5rem !important;
+  }
+}
+
+/* Garantir alinhamento harmonioso dos elementos do modal de produção */
+#production-modal .flex.flex-col.md\:flex-row {
+  align-items: flex-start !important;
+}
+
+#production-modal .grid.grid-cols-2 {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+#production-modal .flex.items-center.space-x-3 {
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+#production-modal .flex.items-center.justify-center.space-x-3 {
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
 }

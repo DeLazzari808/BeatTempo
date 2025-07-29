@@ -249,6 +249,7 @@
                                     <p class="text-gray-300 text-sm">Tento</p>
                                 </div>
                             </div>
+
                         </div>
                         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div class="flex flex-row items-center gap-4">
@@ -563,44 +564,30 @@
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
             
-            <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+            <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
                 <!-- Album Art Section -->
                 <div class="relative group flex-shrink-0">
-                    <img id="modal-production-img" src="" alt="Capa da música" class="w-32 h-32 md:w-40 md:h-40 rounded-xl object-cover shadow-xl border-2 border-white/10 group-hover:border-white/20 transition-all duration-300">
+                    <img id="modal-production-img" src="" alt="Capa da música" class="w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover shadow-xl border-2 border-white/20 group-hover:border-white/30 transition-all duration-300">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
                 <!-- Content Section -->
-                <div class="flex-1 flex flex-col justify-between h-32 md:h-40">
-                    <!-- Title Section - Alinhado com o topo da imagem -->
-                    <div class="space-y-2">
-                        <h3 id="modal-production-title" class="text-xl md:text-2xl font-black bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight"></h3>
-                        <div class="w-16 h-0.5 bg-gradient-to-r from-white to-gray-600 mx-auto md:mx-0 rounded-full"></div>
+                <div class="flex-1 flex flex-col justify-between h-40 md:h-48">
+                    <!-- Title Section - Alinhado com o topo do álbum -->
+                    <div class="space-y-3">
+                        <h3 id="modal-production-title" class="text-2xl md:text-3xl font-black text-white leading-tight"></h3>
+                        <div class="w-20 h-0.5 bg-gradient-to-r from-white to-gray-600 rounded-full"></div>
                     </div>
                     
-                    <!-- Stats Section - Centralizado ao lado da imagem -->
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4 py-2">
-                        <div class="flex items-center space-x-2 text-gray-400">
-                            <i class="fa-solid fa-play text-green-500"></i>
-                            <span class="text-xs font-medium">Disponível em streaming</span>
-                        </div>
-                        <div class="flex items-center space-x-2 text-gray-400">
-                            <i class="fa-solid fa-music text-blue-500"></i>
-                            <span class="text-xs font-medium">Produção Beatempo</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Action Buttons - Minimalistas como na segunda imagem -->
-                    <div class="flex justify-center md:justify-start gap-3">
+                    <!-- Action Buttons - Apenas ícones -->
+                    <div class="flex justify-center md:justify-start gap-6">
                         <a id="modal-spotify-link" href="#" target="_blank" 
-                           class="flex items-center space-x-2 text-white hover:text-green-400 transition-colors">
-                            <i class="fab fa-spotify text-lg"></i>
-                            <span class="text-sm">Ouvir no Spotify</span>
+                           class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+                            <i class="fab fa-spotify text-2xl"></i>
                         </a>
                         <a id="modal-youtube-link" href="#" target="_blank" 
-                           class="flex items-center space-x-2 text-white hover:text-red-400 transition-colors">
-                            <i class="fab fa-youtube text-lg"></i>
-                            <span class="text-sm">Ver no YouTube</span>
+                           class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+                            <i class="fab fa-youtube text-2xl"></i>
                         </a>
                     </div>
                 </div>
@@ -609,11 +596,11 @@
         </div>
     </div>
     <div id="all-productions-modal" class="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 hidden">
-        <div class="bg-zinc-900 rounded-2xl max-w-4xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
+        <div class="bg-zinc-900 rounded-2xl max-w-6xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
             <button id="close-all-productions-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
             <h3 class="text-3xl font-bold mb-6 text-center">Todos os Lançamentos</h3>
-            <div class="overflow-y-auto pr-4 scroll-container">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-y-auto overflow-x-hidden pr-4 scroll-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
                     <div class="bg-black p-4 rounded-lg">
                         <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa Dilema (remix funk)" class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">Dilema (remix funk)</h4>
