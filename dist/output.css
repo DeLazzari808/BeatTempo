@@ -2044,3 +2044,28 @@ body.modal-open {
   outline: 2px solid white;
   outline-offset: 2px;
 }
+
+/* Contornos dos cards de agenciamento */
+.border-green-500 {
+  border-color: #10b981 !important;
+}
+
+.border-blue-500 {
+  border-color: #3b82f6 !important;
+}
+
+.border-purple-500 {
+  border-color: #8b5cf6 !important;
+}
+
+.hover\:border-green-400:hover {
+  border-color: #4ade80 !important;
+}
+
+.hover\:border-blue-400:hover {
+  border-color: #60a5fa !important;
+}
+
+.hover\:border-purple-400:hover {
+  border-color: #a78bfa !important;
+}

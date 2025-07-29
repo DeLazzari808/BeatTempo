@@ -188,7 +188,7 @@
                     
                     <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger" 
                          data-title="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                         data-description="Último Lançamento da Beatempo."
+                         data-description="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
                          data-img="./assets/capas/capa-dilema-remix.jpg"
                          data-spotify-link="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
                          data-youtube-link="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv">
@@ -201,11 +201,12 @@
                     
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
-                                 data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci" 
-                                 data-img="./assets/capas/capa-dilema.jpg"
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7" 
-                                 data-youtube-link="https://www.youtube.com/watch?v=jl0bf3Ow77A">
+                                                <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
+                         data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci" 
+                         data-description="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
+                         data-img="./assets/capas/capa-dilema.jpg"
+                         data-spotify-link="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7" 
+                         data-youtube-link="https://www.youtube.com/watch?v=jl0bf3Ow77A">
                                 <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <h4 class="text-white text-lg font-bold">Dilema</h4>
@@ -214,6 +215,7 @@
                             </div>
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
                                  data-title="QVSDN? - Munha"
+                                 data-description="QVSDN? - Munha"
                                  data-img="./assets/capas/capa-qvsdn.jpg" 
                                  data-spotify-link="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c" 
                                  data-youtube-link="https://www.youtube.com/watch?v=YAPV2vOCglQ">
@@ -225,6 +227,7 @@
                             </div>
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
                                  data-title="Sentimentos - Born"
+                                 data-description="Sentimentos - Born"
                                  data-img="./assets/capas/capa-sentimentos.jpg" 
                                  data-spotify-link="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0" 
                                  data-youtube-link="https://www.youtube.com/watch?v=66BTEjMgf-E">
@@ -236,6 +239,7 @@
                             </div>
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
                                  data-title="Lei da Atração - Tento"
+                                 data-description="Lei da Atração - Tento"
                                  data-img="./assets/capas/capa-lei-da-atracao.jpg" 
                                  data-spotify-link="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ" 
                                  data-youtube-link="https://www.youtube.com/watch?v=0Jw0b58uNI0&list=PLsQSYYnJHwH0DKN79lInoetTH04jTugrx">
@@ -386,8 +390,8 @@
         <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
         <h3 class="text-3xl font-bold mb-6 text-center">Projeto Beatempo</h3>
         <div id="projeto-checklist" class="space-y-4">
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Gerenciamento do Lançamento" checked class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors border-2 border-green-500">
+                <input type="checkbox" value="Gerenciamento do Lançamento" checked disabled class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
                 <span class="text-lg font-semibold text-left">Gerenciamento do Lançamento 🔒</span>
             </label>
             <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
@@ -426,42 +430,38 @@
                 <p class="text-center text-gray-400 mb-8">Planos de acompanhamento contínuo para sua carreira.</p>
                 <div class="overflow-y-auto pr-4 scroll-container">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-black p-6 rounded-2xl border border-gray-800 flex flex-col text-center">
+                        <div class="bg-black p-6 rounded-2xl border-2 border-green-500 hover:border-green-400 transition-colors flex flex-col text-center">
                             <h4 class="text-xl font-bold mb-1 text-green-400">BÁSICO</h4>
                             <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião mensal para alinhamento.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de conteúdo e estética.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>2 Postagens por semana (8/mês).</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de legendas e adaptações.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Sugestões de conteúdo extra para stories.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Assessoria via WhatsApp.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Acompanhamento em lançamentos.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Gestão de impulsionamento.</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Desconto com parceiros Beatempo.</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Reunião mensal</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Conteúdo</strong> e <strong>estética</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>2</strong> (8/mês)</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Legendas</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Sugestões</strong> extra</li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Assessoria</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Lançamentos</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Impulsionamento</strong></li>
+                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Desconto</strong> parceiros</li>
                             </ul>
                             <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Básico</h4>Solicitar</button>
                         </div>
-                        <div class="bg-black p-6 rounded-2xl border-2 border-blue-400 flex flex-col text-center">
+                        <div class="bg-black p-6 rounded-2xl border-2 border-blue-500 hover:border-blue-400 transition-colors flex flex-col text-center">
                             <h4 class="text-xl font-bold mb-1 text-blue-400">PROFISSIONAL</h4>
                             <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
                                 <li class="font-bold">Tudo do Plano Básico +</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>3 Postagens por semana (12/mês).</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>3 roteiros e captação de conteúdo por mês.</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Análise mensal de desempenho.</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Sugestões estratégicas para lançamentos.</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>3</strong> (12/mês)</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>Análise mensal</strong> desempenho</li>
+                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>Sessões semanais</strong> no estúdio Beatempo - Em breve</li>
                             </ul>
                             <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Profissional</h4>Solicitar</button>
                         </div>
-                        <div class="bg-black p-6 rounded-2xl border border-gray-800 flex flex-col text-center">
+                        <div class="bg-black p-6 rounded-2xl border-2 border-purple-500 hover:border-purple-400 transition-colors flex flex-col text-center">
                             <h4 class="text-xl font-bold mb-1 text-purple-400">PREMIUM</h4>
                             <ul class="space-y-3 text-gray-300 flex-grow text-left text-sm mt-4">
-                                <li class="font-bold">Tudo do Plano Profissional +</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Captação profissional de conteúdo 1x/mês.</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>4 postagens por semana (16/mês).</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Edição de até 6 vídeos mensais.</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Relatório de métricas detalhado.</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Reunião estratégica extra para lançamentos.</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Prioridade na agenda da equipe e parceiros.</li>
+                                <li class="font-bold">Tudo do Plano Básico +</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>4</strong> (16/mês)</li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Relatório</strong> <strong>métricas</strong></li>
+                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Prioridade</strong> <strong>equipe</strong> <strong>parceiros</strong></li>
                             </ul>
                             <button class="budget-option-final mt-6 w-full bg-white text-black font-bold py-2 px-4 rounded-lg text-sm uppercase"><h4 class="hidden">Agenciamento Mensal - Premium</h4>Solicitar</button>
                         </div>
