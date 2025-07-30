@@ -273,4 +273,5 @@ for (const modalId in simpleModalTriggers) {
             this.classList.add('border-transparent');
         });
     });
+
 });

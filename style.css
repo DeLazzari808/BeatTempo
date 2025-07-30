@@ -464,4 +464,6 @@ body {
     position: relative !important;
     min-height: 200px !important;
 }
-/* All other tailwind classes are included in the initial block */
+
+/* Remover estilos antigos do modal Beatempo Ensina que causam conflito ou espicham para cima */
+/* Remover todas as regras antigas que afetam #ensina-modal ou .custom-ensina-modal para não limitar o grid ou causar scroll lateral. */

@@ -2267,3 +2267,100 @@ body.modal-open {
   justify-content: center !important;
   gap: 0.75rem !important;
 }
+
+/* Estilos específicos para o modal BEATEMPO ENSINA */
+#ensina-modal .modal-content {
+  animation: modalFadeIn 0.4s ease-out forwards;
+}
+
+#ensina-modal .group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+#ensina-modal .hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Melhorar gradientes dos ícones */
+#ensina-modal .bg-gradient-to-r {
+  background: linear-gradient(135deg, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Efeito de hover nos cards do modal ensina */
+#ensina-modal .group:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade específica para o modal ensina */
+@media (max-width: 640px) {
+  #ensina-modal .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  #ensina-modal .text-3xl {
+    font-size: 1.875rem !important;
+  }
+  
+  #ensina-modal .text-4xl {
+    font-size: 2.25rem !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  #ensina-modal .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #ensina-modal .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Melhorar o scroll do modal ensina */
+#ensina-modal .overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+#ensina-modal .overflow-y-auto::-webkit-scrollbar-track {
+  background: #18181b;
+  border-radius: 10px;
+}
+
+#ensina-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #52525b;
+  border-radius: 10px;
+}
+
+#ensina-modal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: #71717a;
+}
+
+/* Animação suave para os ícones */
+#ensina-modal .w-14.h-14 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Melhorar o botão de orçamento */
+#ensina-modal #ensina-orcamento-btn {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#ensina-modal #ensina-orcamento-btn:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Melhorar as tags informativas */
+#ensina-modal .bg-gray-800 {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  transition: all 0.3s ease;
+}
+
+#ensina-modal .bg-gray-800:hover {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  transform: translateY(-1px);
+}
