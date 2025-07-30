@@ -25,11 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const slides = slideshow.querySelectorAll('.hero-slide');
         if (slides.length > 1) {
             let currentSlide = 0;
-            setInterval(() => {
+            setTimeout(() => {
                 slides[currentSlide].style.opacity = '0';
                 currentSlide = (currentSlide + 1) % slides.length;
                 slides[currentSlide].style.opacity = '1';
-            }, 5000);
+                setInterval(() => {
+                    slides[currentSlide].style.opacity = '0';
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].style.opacity = '1';
+                }, 5000);
+            }, 2000);
         }
     }
 
