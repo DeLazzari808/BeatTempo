@@ -140,9 +140,9 @@
                                     <div class="p-6">
                                         <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas e Mentorias</h4>
                                         <ul class="space-y-3 text-gray-300">
-                                            <li>• Harmonia</li>
-                                            <li>• Home Production</li>
-                                            <li>• Composição</li>
+                                            <li>• Aulas de Instrumentos</li>
+                                            <li>• Aulas de Produção Musical</li>
+                                            <li>• Mentoria de Carreira</li>
                                             <li>• e muito mais...</li>
                                         </ul>
                                     </div>
@@ -521,7 +521,16 @@
                 <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram (@usuario)</label>
                 <input type="text" id="instagram" name="instagram" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
             </div>
-            <div>
+            <!-- Seletor de modalidade Beatempo Ensina, oculto por padrão -->
+            <div id="modalidade-container" style="display:none;">
+                <label for="modalidade" class="block text-sm font-medium text-gray-300 mb-1">Modalidade</label>
+                <select id="modalidade" name="modalidade" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                    <option value="">Selecione a modalidade</option>
+                    <!-- Opções dinâmicas via JS -->
+                </select>
+            </div>
+            <!-- Campo Spotify, só aparece para outros serviços -->
+            <div id="spotify-container">
                 <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span class="text-gray-500">(Opcional)</span></label>
                 <input type="url" id="spotify" name="spotify" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
             </div>

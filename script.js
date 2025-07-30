@@ -274,4 +274,57 @@ for (const modalId in simpleModalTriggers) {
         });
     });
 
+    // --- LÓGICA DO FORMULÁRIO DINÂMICO PARA BEATEMPO ENSINA ---
+    const modalidadeContainer = document.getElementById('modalidade-container');
+    const modalidadeSelect = document.getElementById('modalidade');
+    const spotifyContainer = document.getElementById('spotify-container');
+    const beatempoEnsinaModalidades = {
+        'Aulas de Instrumentos': [
+            'Violão', 'Guitarra', 'Ukulele', 'Piano', 'Teclado'
+        ],
+        'Aulas de Produção Musical': [
+            'Produção de Beats', 'Mixagem', 'Masterização', 'Home Studio'
+        ],
+        'Mentoria de Carreira': [
+            'Planejamento de Carreira', 'Direcionamento Artístico', 'Consultoria de Lançamento'
+        ]
+    };
+
+    // Intercepta a abertura do modal Beatempo Ensina e ajusta o formulário
+    if (detailsEnsinaModal) {
+        detailsEnsinaModal.querySelectorAll('.budget-option-final').forEach(option => {
+            option.addEventListener('click', function() {
+                const h4 = this.querySelector('h4');
+                const serviceTitle = h4 ? h4.textContent.trim() : '';
+                // Se for uma das opções do Beatempo Ensina, mostra o seletor
+                if (beatempoEnsinaModalidades[serviceTitle]) {
+                    modalidadeContainer.style.display = '';
+                    spotifyContainer.style.display = 'none';
+                    // Preenche as opções do select
+                    modalidadeSelect.innerHTML = '<option value="">Selecione a modalidade</option>' +
+                        beatempoEnsinaModalidades[serviceTitle].map(m => `<option value="${m}">${m}</option>`).join('');
+                } else {
+                    modalidadeContainer.style.display = 'none';
+                    spotifyContainer.style.display = '';
+                }
+            });
+        });
+    }
+    // Ao abrir o modal de orçamento por outros caminhos, sempre esconde o seletor
+    [detailsProjetoModal, detailsAgenciamentoModal].forEach(modal => {
+        if (modal) {
+            modal.querySelectorAll('.budget-option-final').forEach(option => {
+                option.addEventListener('click', function() {
+                    modalidadeContainer.style.display = 'none';
+                    spotifyContainer.style.display = '';
+                });
+            });
+        }
+    });
+    // Também esconde ao abrir via checklist
+    document.getElementById('solicitar-projeto-btn')?.addEventListener('click', () => {
+        modalidadeContainer.style.display = 'none';
+        spotifyContainer.style.display = '';
+    });
+
 });
