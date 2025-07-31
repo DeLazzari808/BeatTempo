@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    // --- VARIÁVEIS GLOBAIS ---
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
     // --- LÓGICA DO HEADER ---
     const header = document.getElementById('main-header');
     const headerLogo = document.getElementById('header-logo');
@@ -54,22 +57,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeModal(modal) {
         if (modal) {
-            const modalContent = modal.querySelector('.modal-content');
-            if (modalContent) {
-                modalContent.classList.add('closing');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                    modalContent.classList.remove('closing');
-                    if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
-                        document.body.classList.remove('modal-open');
-                    }
-                }, 300);
-            } else {
+            // Adiciona animação de saída
+            modal.classList.add('animate-fadeOut');
+            setTimeout(() => {
                 modal.classList.add('hidden');
-                if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
-                    document.body.classList.remove('modal-open');
-                }
+                modal.classList.remove('animate-fadeOut');
+                document.body.classList.remove('modal-open');
+            }, 200);
+            
+            // Remove event listeners de touch
+            modal.removeEventListener('touchstart', handleTouchStart);
+            modal.removeEventListener('touchmove', handleTouchMove);
+            modal.removeEventListener('touchend', handleTouchEnd);
+        }
+    }
+
+    // --- FUNÇÕES DE MANIPULAÇÃO TOUCH ---
+    function handleTouchStart(e) {
+        touchStartY = e.touches[0].clientY;
+    }
+
+    function handleTouchMove(e) {
+        touchEndY = e.touches[0].clientY;
+        
+        // Previne scroll se estiver no topo do modal
+        const modalContent = e.currentTarget.querySelector('.modal-content');
+        if (modalContent.scrollTop === 0 && touchEndY > touchStartY) {
+            e.preventDefault();
+        }
+    }
+
+    function handleTouchEnd(e) {
+        const swipeDistance = touchEndY - touchStartY;
+        
+        // Se o swipe for maior que 100px para baixo, fecha o modal
+        if (swipeDistance > 100) {
+            const modal = e.currentTarget.closest('.modal');
+            if (modal) closeModal(modal);
+        }
+    }
+
+    // --- SETUP DE MODAIS ---
+    function setupModal(modal) {
+        if (!modal) return;
+
+        // Adiciona event listeners de touch
+        modal.addEventListener('touchstart', handleTouchStart, { passive: true });
+        modal.addEventListener('touchmove', handleTouchMove, { passive: false });
+        modal.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+        // Melhora área de toque dos botões
+        const buttons = modal.querySelectorAll('button');
+        buttons.forEach(btn => {
+            if (!btn.classList.contains('touch-target')) {
+                btn.classList.add('touch-target');
             }
+        });
+
+        // Adiciona feedback tátil em dispositivos que suportam
+        if ('vibrate' in navigator) {
+            modal.querySelectorAll('.action-button').forEach(btn => {
+                btn.addEventListener('click', () => navigator.vibrate(50));
+            });
         }
     }
     function fillModalData(modalId, data) {

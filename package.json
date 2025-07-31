@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./tailwind.css -o ./dist/output.css",
+    "build:mobile": "tailwindcss -i ./tailwind.css -o ./dist/mobile.css --config tailwind.mobile.config.js",
+    "watch:css": "tailwindcss -i ./tailwind.css -o ./dist/output.css --watch",
+    "watch:mobile": "tailwindcss -i ./tailwind.css -o ./dist/mobile.css --watch --config tailwind.mobile.config.js"
   },
   "repository": {
     "type": "git",

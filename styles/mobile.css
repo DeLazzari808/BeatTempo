@@ -1,0 +1,150 @@
+/* Mobile Specific Styles */
+@media screen and (max-width: 768px) {
+    /* Card Premium */
+    .premium-card {
+        position: relative;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        background: #18181b;
+    }
+
+    .premium-card .action-button {
+        width: 100%;
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        transition: transform 0.2s ease;
+    }
+
+    .premium-card .action-button:active {
+        transform: scale(0.98);
+    }
+
+    /* Form Improvements */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        min-height: 44px;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background: #27272a;
+        border: 1px solid #3f3f46;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
+
+    /* Touch Areas */
+    .touch-area {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Modal Scrolling */
+    .modal-scroll {
+        max-height: 85vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .modal-scroll::-webkit-scrollbar-track {
+        background: #27272a;
+    }
+
+    .modal-scroll::-webkit-scrollbar-thumb {
+        background: #52525b;
+        border-radius: 2px;
+    }
+
+    /* Animations */
+    .modal-enter {
+        animation: modalEnter 0.3s ease-out forwards;
+    }
+
+    .modal-leave {
+        animation: modalLeave 0.2s ease-in forwards;
+    }
+
+    @keyframes modalEnter {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes modalLeave {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    }
+
+    /* Performance Optimizations */
+    .hardware-accelerated {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    /* Accessibility Improvements */
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    /* Focus States */
+    :focus-visible {
+        outline: 2px solid #6366f1;
+        outline-offset: 2px;
+    }
+
+    /* Loading States */
+    .loading {
+        position: relative;
+        pointer-events: none;
+    }
+
+    .loading::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: inherit;
+    }
+}
