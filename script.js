@@ -1,28 +1,3 @@
-// Menu hamburguer mobile
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeMobileMenu = document.getElementById('close-mobile-menu');
-if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  });
-}
-if (closeMobileMenu && mobileMenu) {
-  closeMobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-  });
-}
-// Fecha menu ao clicar em link
-if (mobileMenu) {
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    });
-  });
-}
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- LÓGICA DO HEADER ---
