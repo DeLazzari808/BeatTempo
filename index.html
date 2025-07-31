@@ -14,7 +14,11 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex-1">
-                <a href="#home"><img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto"></a>
+                <a href="#home">
+                  <img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto">
+                  <!-- Logo extensa só no mobile, escondida no desktop -->
+                  <img id="header-logo-mobile" src="assets/PNG_LOGO_BRANCO.png" alt="Logotipo Beatempo Extensa" class="h-10 w-auto mt-2 mx-auto block md:hidden lg:hidden xl:hidden 2xl:hidden" style="display:none;">
+                </a>
             </div>
             <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
                 <a href="#services" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
@@ -23,7 +27,7 @@
                 <a href="#contact" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
             </div>
             <div class="flex-1 flex justify-end">
-                <a href="https://wa.me/554123910713" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm">
+                <a href="https://wa.me/554123910713" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm whitespace-nowrap text-base md:text-sm">
                     QUERO SER ARTISTA
                 </a>
             </div>
@@ -43,7 +47,7 @@
                 <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
             </div>
         
-            <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10 p-4 md:p-0"></div>
             
             <div class="relative z-20 px-4 flex flex-col items-center">
                 <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
@@ -346,9 +350,9 @@
                 </div>
 
                 <div class="mt-16 bg-zinc-900 rounded-2xl p-8 max-w-4xl mx-auto">
-                    <h3 class="text-2xl font-bold">Nossa Missão</h3>
+                    <h3 class="text-2xl font-bold">Nosso Propósito</h3>
                     <p class="mt-4 text-gray-300">
-                        Nossa missão é impulsionar <strong>artistas independentes</strong> por meio de <strong>estratégias criativas</strong>, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um <strong>ecossistema colaborativo</strong> que conecta <strong>talentos, marcas e oportunidades</strong> para fortalecer a <strong>cena artística e musical</strong>. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
+                        Nosso propósito é impulsionar <strong>artistas independentes</strong> por meio de <strong>estratégias criativas</strong>, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um <strong>ecossistema colaborativo</strong> que conecta <strong>talentos, marcas e oportunidades</strong> para fortalecer a <strong>cena artística e musical</strong>. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
                     </p>
                 </div>
             </div>
@@ -426,10 +430,10 @@
                 <h3 class="text-3xl font-bold text-center mb-4">Agenciamento Mensal</h3>
                 <p class="text-center text-gray-400 mb-8">Planos de acompanhamento contínuo para sua carreira.</p>
                 <div class="overflow-y-auto pr-4 scroll-container">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-green-500 transition-all duration-300 flex flex-col text-center h-[500px]" data-color="green">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible justify-center md:justify-items-stretch">
+                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-green-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[300px] max-w-xs sm:max-w-sm w-full md:min-w-0 mx-auto md:mx-0" data-color="green">
                             <h4 class="text-xl font-bold mb-4 text-green-400">BÁSICO</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-sm">
+                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
                                 <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
                                 <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
                                 <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
@@ -441,11 +445,11 @@
                             </ul>
                             <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-4 rounded-lg text-sm uppercase hover:bg-white hover:text-black transition-all duration-300"><h4 class="hidden">Agenciamento Mensal - Básico</h4>Solicitar</button>
                         </div>
-                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all duration-300 flex flex-col text-center h-[500px]" data-color="blue">
+                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[300px] max-w-xs sm:max-w-sm w-full md:min-w-0 mx-auto md:mx-0" data-color="blue">
                             <h4 class="text-xl font-bold mb-4 text-blue-400">PROFISSIONAL</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-sm">
+                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
                                 <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
+                                <li class="whitespace-nowrap"><i class="fa-solid fa-check text-blue-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
                                 <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>2</strong> Postagens por Semana <strong>(8/mês)</strong></li>
                                 <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
                                 <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>Sugestões</strong> de <strong>Conteúdo Extra</strong> para Stories</li>
@@ -457,11 +461,11 @@
                             </ul>
                             <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-4 rounded-lg text-sm uppercase hover:bg-white hover:text-black transition-all duration-300"><h4 class="hidden">Agenciamento Mensal - Profissional</h4>Solicitar</button>
                         </div>
-                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-purple-500 transition-all duration-300 flex flex-col text-center h-[500px]" data-color="purple">
+                        <div class="agenciamento-card bg-black p-6 rounded-2xl border-2 border-transparent hover:border-purple-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[300px] max-w-xs sm:max-w-sm w-full md:min-w-0 mx-auto md:mx-0" data-color="purple">
                             <h4 class="text-xl font-bold mb-4 text-purple-400">PREMIUM</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-sm">
+                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
+                                <li class="whitespace-nowrap"><i class="fa-solid fa-check text-purple-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>4</strong> Postagens por Semana <strong>(16/mês)</strong></li>
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Sugestões</strong> de <strong>Conteúdo Extra</strong> para Stories</li>
@@ -471,7 +475,7 @@
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Desconto</strong> com <strong>Parceiros</strong> Beatempo</li>
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Relatório</strong> de <strong>Métricas Detalhado</strong></li>
                                 <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Prioridade</strong> na <strong>Agenda da Equipe</strong> e <strong>Parceiros</strong></li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Assessoria</strong> para <strong>Shows</strong> - <em>Em breve</em></li>
+                                <li class="mb-4"><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Assessoria</strong> para <strong>Shows</strong> - <em>Em breve</em></li>
                             </ul>
                             <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-4 rounded-lg text-sm uppercase hover:bg-white hover:text-black transition-all duration-300"><h4 class="hidden">Agenciamento Mensal - Premium</h4>Solicitar</button>
                         </div>
