@@ -1,8 +1,136 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- VARIÁVEIS GLOBAIS ---
-    let touchStartY = 0;
-    let touchEndY = 0;
+
+    // --- SISTEMA DE ROTEAMENTO HÍBRIDO ---
+    function handleRouting() {
+        const path = window.location.pathname;
+        const hash = window.location.hash;
+        
+        // Mapeamento de URLs para IDs das seções
+        const routeMap = {
+            '/': 'home',
+            '/servicos': 'services',
+            '/producoes': 'productions', 
+            '/sobre': 'about',
+            '/orcamento': 'contact'
+        };
+
+        // Se há path amigável, fazer scroll para a seção correspondente
+        if (path !== '/' && routeMap[path]) {
+            const targetSection = document.getElementById(routeMap[path]);
+            if (targetSection) {
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        }
+        // Se há hash, fazer scroll para a seção correspondente
+        else if (hash) {
+            const targetSection = document.getElementById(hash.substring(1));
+            if (targetSection) {
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        }
+    }
+
+    // Executar roteamento na carga inicial
+    handleRouting();
+
+    // Interceptar cliques em links internos para navegação suave
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href) {
+            const url = new URL(link.href);
+            const path = url.pathname;
+            const hash = url.hash;
+            
+            // Se é um link interno (não externo) e não é um link externo (WhatsApp, etc.)
+            if (link.href.includes(window.location.origin) && 
+                !link.href.includes('wa.me') && 
+                !link.href.includes('open.spotify.com') && 
+                !link.href.includes('youtube.com')) {
+                
+                // Mapeamento de URLs para IDs das seções
+                const routeMap = {
+                    '/': 'home',
+                    '/servicos': 'services',
+                    '/producoes': 'productions',
+                    '/sobre': 'about', 
+                    '/orcamento': 'contact'
+                };
+
+                // Se é uma URL amigável, usar o sistema de roteamento
+                if (path !== window.location.pathname && routeMap[path]) {
+                    e.preventDefault();
+                    
+                    const targetSection = document.getElementById(routeMap[path]);
+                    if (targetSection) {
+                        // Verificar se já estamos na seção correta
+                        const currentPath = window.location.pathname;
+                        const currentSection = currentPath === '/' ? 'home' : routeMap[currentPath];
+                        
+                        if (currentSection === routeMap[path]) {
+                            // Se já estamos na seção correta, apenas fazer scroll
+                            targetSection.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        } else {
+                            // Se não estamos na seção correta, atualizar URL e fazer scroll
+                            window.history.pushState({}, '', link.href);
+                            setTimeout(() => {
+                                targetSection.scrollIntoView({ 
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }, 50);
+                        }
+                    }
+                }
+                // Se tem hash (âncora), fazer scroll suave
+                else if (hash) {
+                    e.preventDefault();
+                    const targetSection = document.getElementById(hash.substring(1));
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Atualizar URL com hash (apenas se não for uma URL amigável)
+                        if (window.location.pathname === '/') {
+                            window.history.pushState({}, '', link.href);
+                        } else {
+                            // Se estamos em uma URL amigável, atualizar para a URL amigável correspondente
+                            const hashToPath = {
+                                '#services': '/servicos',
+                                '#productions': '/producoes',
+                                '#about': '/sobre',
+                                '#contact': '/orcamento'
+                            };
+                            const newPath = hashToPath[hash];
+                            if (newPath) {
+                                window.history.pushState({}, '', newPath);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // Lidar com navegação do browser (botões voltar/avançar)
+    window.addEventListener('popstate', handleRouting);
     
+    // Lidar com mudanças no hash da URL
+    window.addEventListener('hashchange', handleRouting);
+
     // --- LÓGICA DO HEADER ---
     const header = document.getElementById('main-header');
     const headerLogo = document.getElementById('header-logo');
@@ -21,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+
 
     // --- LÓGICA DO SLIDESHOW DO HERO ---
     const slideshow = document.getElementById('hero-slideshow');
@@ -57,68 +187,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeModal(modal) {
         if (modal) {
-            // Adiciona animação de saída
-            modal.classList.add('animate-fadeOut');
-            setTimeout(() => {
+            const modalContent = modal.querySelector('.modal-content');
+            if (modalContent) {
+                modalContent.classList.add('closing');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modalContent.classList.remove('closing');
+                    if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
+                        document.body.classList.remove('modal-open');
+                    }
+                }, 300);
+            } else {
                 modal.classList.add('hidden');
-                modal.classList.remove('animate-fadeOut');
-                document.body.classList.remove('modal-open');
-            }, 200);
-            
-            // Remove event listeners de touch
-            modal.removeEventListener('touchstart', handleTouchStart);
-            modal.removeEventListener('touchmove', handleTouchMove);
-            modal.removeEventListener('touchend', handleTouchEnd);
-        }
-    }
-
-    // --- FUNÇÕES DE MANIPULAÇÃO TOUCH ---
-    function handleTouchStart(e) {
-        touchStartY = e.touches[0].clientY;
-    }
-
-    function handleTouchMove(e) {
-        touchEndY = e.touches[0].clientY;
-        
-        // Previne scroll se estiver no topo do modal
-        const modalContent = e.currentTarget.querySelector('.modal-content');
-        if (modalContent.scrollTop === 0 && touchEndY > touchStartY) {
-            e.preventDefault();
-        }
-    }
-
-    function handleTouchEnd(e) {
-        const swipeDistance = touchEndY - touchStartY;
-        
-        // Se o swipe for maior que 100px para baixo, fecha o modal
-        if (swipeDistance > 100) {
-            const modal = e.currentTarget.closest('.modal');
-            if (modal) closeModal(modal);
-        }
-    }
-
-    // --- SETUP DE MODAIS ---
-    function setupModal(modal) {
-        if (!modal) return;
-
-        // Adiciona event listeners de touch
-        modal.addEventListener('touchstart', handleTouchStart, { passive: true });
-        modal.addEventListener('touchmove', handleTouchMove, { passive: false });
-        modal.addEventListener('touchend', handleTouchEnd, { passive: true });
-
-        // Melhora área de toque dos botões
-        const buttons = modal.querySelectorAll('button');
-        buttons.forEach(btn => {
-            if (!btn.classList.contains('touch-target')) {
-                btn.classList.add('touch-target');
+                if (document.querySelectorAll('.fixed.inset-0:not(.hidden)').length === 0) {
+                    document.body.classList.remove('modal-open');
+                }
             }
-        });
-
-        // Adiciona feedback tátil em dispositivos que suportam
-        if ('vibrate' in navigator) {
-            modal.querySelectorAll('.action-button').forEach(btn => {
-                btn.addEventListener('click', () => navigator.vibrate(50));
-            });
         }
     }
     function fillModalData(modalId, data) {

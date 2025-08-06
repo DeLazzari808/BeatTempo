@@ -4,10 +4,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwindcss -i ./tailwind.css -o ./dist/output.css",
-    "build:mobile": "tailwindcss -i ./tailwind.css -o ./dist/mobile.css --config tailwind.mobile.config.js",
-    "watch:css": "tailwindcss -i ./tailwind.css -o ./dist/output.css --watch",
-    "watch:mobile": "tailwindcss -i ./tailwind.css -o ./dist/mobile.css --watch --config tailwind.mobile.config.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +23,8 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
