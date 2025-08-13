@@ -347,28 +347,59 @@ for (const modalId in simpleModalTriggers) {
         }
     });
 
-    // 4. Lógica de envio do FORMULÁRIO para o Formspree
+    // 4. Lógica de envio do FORMULÁRIO para o webhook personalizado
     const form = document.getElementById('orcamento-form');
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const formData = new FormData(form);
-            const action = e.target.action;
             const submitButton = form.querySelector('button[type="submit"]');
 
-            if (!action || action.includes("xxxxxxxx")) {
-                alert("Erro: O URL de envio do formulário não está configurado corretamente no HTML.");
+            // Coletar dados do formulário
+            const formData = new FormData(form);
+            const nome = formData.get('nome') || '';
+            const telefone = formData.get('telefone') || '';
+            const servico = formData.get('servico_desejado') || '';
+            const modalidade = formData.get('modalidade') || '';
+            const spotify = formData.get('spotify') || '';
+            const mensagem = formData.get('mensagem') || '';
+
+            // Validar campos obrigatórios
+            if (!nome || !telefone) {
+                alert('Por favor, preencha nome e telefone.');
                 return;
             }
+
+            // Formatar telefone (apenas números com 55 no início)
+            let phoneFormatted = telefone.replace(/\D/g, ''); // Remove tudo que não é número
+            if (!phoneFormatted.startsWith('55')) {
+                phoneFormatted = '55' + phoneFormatted;
+            }
+
+            // Criar resumo com informações relevantes
+            let resumo = `Serviço: ${servico}`;
+            if (modalidade) resumo += ` | Modalidade: ${modalidade}`;
+            if (spotify) resumo += ` | Spotify: ${spotify}`;
+            if (mensagem) resumo += ` | Mensagem: ${mensagem}`;
+
+            // Dados para enviar no formato especificado
+            const payload = {
+                phone: phoneFormatted,
+                full_name: nome,
+                resum: resumo
+            };
 
             const originalButtonText = submitButton.innerHTML;
             submitButton.innerHTML = `Enviando...`;
             submitButton.disabled = true;
 
-            fetch(action, {
+            // Enviar para o webhook personalizado
+            fetch('https://n8n.codecentauri.com/webhook/cfffe695-1b3c-43b9-bee6-7f7a5816519d', {
                 method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'd413eae0-45cd-4fb3-b77d-a572af7d713b'
+                },
+                body: JSON.stringify(payload)
             }).then(response => {
                 if (response.ok) {
                     alert('Obrigado! Sua solicitação foi enviada com sucesso.');
@@ -378,6 +409,7 @@ for (const modalId in simpleModalTriggers) {
                     alert('Ocorreu um problema ao enviar seu formulário. Tente novamente.');
                 }
             }).catch(error => {
+                console.error('Erro no envio:', error);
                 alert('Ocorreu um problema de conexão. Tente novamente.');
             }).finally(() => {
                 submitButton.innerHTML = originalButtonText;
