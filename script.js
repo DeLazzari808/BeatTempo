@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     '/': 'home',
                     '/servicos': 'services',
                     '/producoes': 'productions',
-                    '/sobre': 'about', 
+                    '/sobre': 'about',
                     '/orcamento': 'contact'
                 };
 
@@ -497,4 +497,89 @@ for (const modalId in simpleModalTriggers) {
         spotifyContainer.style.display = '';
     });
 
+    // --- SISTEMA DE FORMULÁRIO DE ORÇAMENTO ---
+    const form = document.getElementById('orcamento-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode adicionar lógica para enviar o formulário
+            // Por exemplo, enviar para um servidor ou WhatsApp
+            
+            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+            closeModal(orcamentoModal);
+        });
+    }
+
+    // --- ANIMAÇÕES E EFEITOS ---
+    
+    // 1. Animação dos cards de agenciamento mensal
+    const agenciamentoCards = document.querySelectorAll('.agenciamento-card');
+    if (agenciamentoCards.length > 0) {
+        agenciamentoCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                agenciamentoCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.style.transform = 'scale(0.95)';
+                        otherCard.style.opacity = '0.7';
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                agenciamentoCards.forEach(otherCard => {
+                    otherCard.style.transform = 'scale(1)';
+                    otherCard.style.opacity = '1';
+                });
+            });
+        });
+    }
+
+    // 2. Animação de scroll suave para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // 3. Animação de fade-in para elementos quando aparecem na tela
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Aplicar animação aos elementos que devem aparecer
+    document.querySelectorAll('.section-title, .grid > div').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
+
+    // 4. Fechar modais de detalhes ao pressionar ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal].forEach(modal => {
+                if (modal && !modal.classList.contains('hidden')) {
+                    closeModal(modal);
+                }
+            });
+        }
+    });
 });
