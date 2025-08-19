@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname));
 
 // Rota para todas as URLs amigáveis - redirecionar para index.html
-app.get(['/servicos', '/ia', '/financas', '/producoes', '/sobre', '/orcamento'], (req, res) => {
+app.get(['/servicos', '/producoes', '/sobre', '/orcamento'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 

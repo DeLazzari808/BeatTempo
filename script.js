@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const routeMap = {
             '/': 'home',
             '/servicos': 'services',
-            '/ia': 'ai-beatempo',
-            '/financas': 'financas',
             '/producoes': 'productions', 
             '/sobre': 'about',
             '/orcamento': 'contact'
@@ -63,10 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const routeMap = {
                     '/': 'home',
                     '/servicos': 'services',
-                    '/ia': 'ai-beatempo',
-                    '/financas': 'financas',
                     '/producoes': 'productions',
-                    '/sobre': 'about', 
+                    '/sobre': 'about',
                     '/orcamento': 'contact'
                 };
 
@@ -501,184 +497,89 @@ for (const modalId in simpleModalTriggers) {
         spotifyContainer.style.display = '';
     });
 
-    // --- SISTEMA DE IA BEATEMPO ---
-    function initAIBeatempo() {
-        const testAIBtn = document.getElementById('test-ai-btn');
-        if (testAIBtn) {
-            testAIBtn.addEventListener('click', function() {
-                // Simular teste da IA
-                showAIDemo();
-                
-                // Track do evento no Google Analytics
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'ai_test_clicked', {
-                        'event_category': 'AI',
-                        'event_label': 'Test AI Button'
-                    });
-                }
-            });
-        }
-    }
-    
-    function showAIDemo() {
-        // Criar modal de demonstração da IA
-        const aiModal = document.createElement('div');
-        aiModal.className = 'fixed inset-0 bg-black/80 z-[80] flex items-center justify-center p-4';
-        aiModal.innerHTML = `
-            <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative border border-gray-700">
-                <button class="close-ai-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
-                </button>
-                <div class="text-center mb-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full mx-auto flex items-center justify-center mb-4">
-                        <i class="fa-solid fa-brain text-3xl text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">IA Beatempo em Ação</h3>
-                    <p class="text-gray-400">Experimente nossa inteligência artificial</p>
-                </div>
-                
-                <div class="space-y-4 mb-6">
-                    <div class="bg-black p-4 rounded-lg border border-purple-500/30">
-                        <h4 class="font-bold text-purple-400 mb-2">Análise de Tendências</h4>
-                        <p class="text-sm text-gray-300">Sua música está alinhada com as tendências atuais do mercado. Recomendamos focar em conteúdo relacionado a "festas" e "verão".</p>
-                    </div>
-                    
-                    <div class="bg-black p-4 rounded-lg border border-blue-500/30">
-                        <h4 class="font-bold text-blue-400 mb-2">Horário Ideal de Postagem</h4>
-                        <p class="text-sm text-gray-300">Seu público está mais ativo às 19h-21h. Programe suas postagens nesse horário para máximo engajamento.</p>
-                    </div>
-                    
-                    <div class="bg-black p-4 rounded-lg border border-green-500/30">
-                        <h4 class="font-bold text-green-400 mb-2">Hashtags Recomendadas</h4>
-                        <p class="text-sm text-gray-300">Use: #música #arte #cultura #independente #beatempo #curitiba</p>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <p class="text-gray-400 text-sm mb-4">Esta é apenas uma demonstração. A IA real analisa dados em tempo real.</p>
-                    <a href="/orcamento" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-200 hover:scale-105">
-                        <i class="fa-solid fa-rocket"></i>
-                        COMEÇAR COM IA COMPLETA
-                    </a>
-                </div>
-            </div>
-        `;
-        
-        document.body.appendChild(aiModal);
-        
-        // Fechar modal
-        const closeBtn = aiModal.querySelector('.close-ai-modal');
-        closeBtn.addEventListener('click', () => {
-            aiModal.remove();
-        });
-        
-        // Fechar ao clicar fora
-        aiModal.addEventListener('click', (e) => {
-            if (e.target === aiModal) {
-                aiModal.remove();
-            }
-        });
-    }
-    
-    // --- SISTEMA DE ANALYTICS AVANÇADO ---
-    function initAdvancedAnalytics() {
-        // Track de eventos personalizados
-        trackPageViews();
-        trackUserInteractions();
-        trackFormSubmissions();
-    }
-    
-    function trackPageViews() {
-        // Track de visualizações de página
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'page_view', {
-                'page_title': document.title,
-                'page_location': window.location.href
-            });
-        }
-    }
-    
-    function trackUserInteractions() {
-        // Track de cliques em botões importantes
-        const importantButtons = document.querySelectorAll('a[href="/orcamento"], .budget-option-final, #test-ai-btn');
-        importantButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'button_click', {
-                        'event_category': 'Engagement',
-                        'event_label': this.textContent.trim() || 'Button Click',
-                        'value': 1
-                    });
-                }
-            });
-        });
-        
-        // Track de tempo na página
-        let startTime = Date.now();
-        window.addEventListener('beforeunload', function() {
-            const timeSpent = Math.round((Date.now() - startTime) / 1000);
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'time_on_page', {
-                    'event_category': 'Engagement',
-                    'value': timeSpent
-                });
-            }
-        });
-    }
-    
-    function trackFormSubmissions() {
-        const orcamentoForm = document.getElementById('orcamento-form');
-        if (orcamentoForm) {
-            orcamentoForm.addEventListener('submit', function(e) {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'form_submit', {
-                        'event_category': 'Lead Generation',
-                        'event_label': 'Orçamento Form',
-                        'value': 1
-                    });
-                }
-            });
-        }
-    }
-    
-    // --- SISTEMA DE PAINEL DE FINANÇAS ---
-    function initFinancePanel() {
-        // Animar os gráficos quando a seção estiver visível
-        const financeSection = document.getElementById('financas');
-        if (financeSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateFinanceCharts();
-                    }
-                });
-            });
-            observer.observe(financeSection);
-        }
-    }
-    
-    function animateFinanceCharts() {
-        // Animar as barras do gráfico
-        const bars = document.querySelectorAll('#financas .bg-green-500\\/60');
-        bars.forEach((bar, index) => {
-            setTimeout(() => {
-                bar.style.transition = 'height 0.8s ease-out';
-                bar.style.height = bar.style.height || '0px';
-            }, index * 100);
-        });
-        
-        // Animar as barras de progresso
-        const progressBars = document.querySelectorAll('#financas .bg-green-500, #financas .bg-blue-500, #financas .bg-purple-500');
-        progressBars.forEach((bar, index) => {
-            setTimeout(() => {
-                bar.style.transition = 'width 1s ease-out';
-                bar.style.width = bar.style.width || '0%';
-            }, index * 200);
+    // --- SISTEMA DE FORMULÁRIO DE ORÇAMENTO ---
+    const form = document.getElementById('orcamento-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode adicionar lógica para enviar o formulário
+            // Por exemplo, enviar para um servidor ou WhatsApp
+            
+            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+            closeModal(orcamentoModal);
         });
     }
 
-    // Inicializar todas as funcionalidades
-    initAIBeatempo();
-    initAdvancedAnalytics();
-    initFinancePanel();
+    // --- ANIMAÇÕES E EFEITOS ---
+    
+    // 1. Animação dos cards de agenciamento mensal
+    const agenciamentoCards = document.querySelectorAll('.agenciamento-card');
+    if (agenciamentoCards.length > 0) {
+        agenciamentoCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                agenciamentoCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.style.transform = 'scale(0.95)';
+                        otherCard.style.opacity = '0.7';
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                agenciamentoCards.forEach(otherCard => {
+                    otherCard.style.transform = 'scale(1)';
+                    otherCard.style.opacity = '1';
+                });
+            });
+        });
+    }
+
+    // 2. Animação de scroll suave para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // 3. Animação de fade-in para elementos quando aparecem na tela
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Aplicar animação aos elementos que devem aparecer
+    document.querySelectorAll('.section-title, .grid > div').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
+
+    // 4. Fechar modais de detalhes ao pressionar ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal].forEach(modal => {
+                if (modal && !modal.classList.contains('hidden')) {
+                    closeModal(modal);
+                }
+            });
+        }
+    });
 });
