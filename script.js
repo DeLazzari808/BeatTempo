@@ -52,10 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const hash = url.hash;
             
             // Se é um link interno (não externo) e não é um link externo (WhatsApp, etc.)
+            // IMPORTANTE: Verificar se não estamos tentando navegar para a mesma seção
             if (link.href.includes(window.location.origin) && 
                 !link.href.includes('wa.me') && 
                 !link.href.includes('open.spotify.com') && 
-                !link.href.includes('youtube.com')) {
+                !link.href.includes('youtube.com') &&
+                link.href !== window.location.href) { // Evita links para a mesma página
                 
                 // Mapeamento de URLs para IDs das seções
                 const routeMap = {
@@ -67,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 };
 
                 // Se é uma URL amigável, usar o sistema de roteamento
-                if (path !== window.location.pathname && routeMap[path]) {
+                // IMPORTANTE: Evitar navegação para a mesma seção
+                if (path !== window.location.pathname && routeMap[path] && path !== '/') {
                     e.preventDefault();
                     
                     const targetSection = document.getElementById(routeMap[path]);
@@ -76,12 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         const currentPath = window.location.pathname;
                         const currentSection = currentPath === '/' ? 'home' : routeMap[currentPath];
                         
-                        if (currentSection === routeMap[path]) {
-                            // Se já estamos na seção correta, apenas fazer scroll
+                        // Proteção adicional: se já estamos na seção, apenas scroll
+                        if (currentSection === routeMap[path] || currentPath === path) {
+                            // Se já estamos na seção correta, apenas fazer scroll suave
                             targetSection.scrollIntoView({ 
                                 behavior: 'smooth',
                                 block: 'start'
                             });
+                            return; // Evita qualquer outra lógica
                         } else {
                             // Se não estamos na seção correta, atualizar URL e fazer scroll
                             window.history.pushState({}, '', link.href);
@@ -99,6 +104,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     e.preventDefault();
                     const targetSection = document.getElementById(hash.substring(1));
                     if (targetSection) {
+                        // Verificar se já estamos na seção correta para evitar navegação desnecessária
+                        const currentPath = window.location.pathname;
+                        const hashToPath = {
+                            '#services': '/servicos',
+                            '#productions': '/producoes',
+                            '#about': '/sobre',
+                            '#contact': '/orcamento'
+                        };
+                        const targetPath = hashToPath[hash];
+                        
+                        // Se já estamos na seção correta, apenas scroll
+                        if (currentPath === targetPath) {
+                            targetSection.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            return; // Evita atualização de URL
+                        }
+                        
                         targetSection.scrollIntoView({ 
                             behavior: 'smooth',
                             block: 'start'
@@ -108,15 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             window.history.pushState({}, '', link.href);
                         } else {
                             // Se estamos em uma URL amigável, atualizar para a URL amigável correspondente
-                            const hashToPath = {
-                                '#services': '/servicos',
-                                '#productions': '/producoes',
-                                '#about': '/sobre',
-                                '#contact': '/orcamento'
-                            };
-                            const newPath = hashToPath[hash];
-                            if (newPath) {
-                                window.history.pushState({}, '', newPath);
+                            if (targetPath) {
+                                window.history.pushState({}, '', targetPath);
                             }
                         }
                     }
