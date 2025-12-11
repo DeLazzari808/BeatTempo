@@ -11,6 +11,11 @@ app.get(['/servicos', '/producoes', '/sobre', '/orcamento'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Rota para a página de Drop/Merch
+app.get('/drop', (req, res) => {
+    res.sendFile(path.join(__dirname, 'drop.html'));
+});
+
 // Rota padrão
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));

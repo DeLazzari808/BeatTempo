@@ -326,13 +326,15 @@ for (const modalId in simpleModalTriggers) {
     const detailsProjetoModal = document.getElementById('details-projeto-modal');
     const detailsAgenciamentoModal = document.getElementById('details-agenciamento-modal');
     const detailsEnsinaModal = document.getElementById('details-ensina-modal');
+    const detailsEstudioModal = document.getElementById('details-estudio-modal');
     const orcamentoModal = document.getElementById('orcamento-modal');
-    const allDetailModals = [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal];
+    const allDetailModals = [detailsProjetoModal, detailsAgenciamentoModal, detailsEnsinaModal, detailsEstudioModal];
 
     // 1. Abrir os modais de DETALHES
     document.getElementById('btn-projeto')?.addEventListener('click', () => openModal(detailsProjetoModal));
     document.getElementById('btn-agenciamento')?.addEventListener('click', () => openModal(detailsAgenciamentoModal));
     document.getElementById('btn-ensina')?.addEventListener('click', () => openModal(detailsEnsinaModal));
+    document.getElementById('btn-estudio')?.addEventListener('click', () => openModal(detailsEstudioModal));
 
     // 2. Abrir o FORMULÁRIO a partir das opções FINAIS
     document.querySelectorAll('.budget-option-final').forEach(option => {
@@ -353,22 +355,43 @@ for (const modalId in simpleModalTriggers) {
     });
 
     // 2.1 Lógica do botão da CHECKLIST
-    document.getElementById('solicitar-projeto-btn')?.addEventListener('click', () => {
-        const checklist = document.getElementById('projeto-checklist');
-        if (checklist) {
-            const selectedItems = Array.from(checklist.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
-            const serviceTitle = "Projeto Beatempo: " + (selectedItems.length > 0 ? selectedItems.join(', ') : "Nenhum item selecionado");
-            
-            closeModal(detailsProjetoModal);
+    function handleChecklistSubmit(buttonId, checklistId, modalToClose, servicePrefix) {
+        document.getElementById(buttonId)?.addEventListener('click', () => {
+            const checklist = document.getElementById(checklistId);
+            if (checklist) {
+                const selectedItems = Array.from(checklist.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+                const serviceTitle = servicePrefix + ": " + (selectedItems.length > 0 ? selectedItems.join(', ') : "Nenhum item selecionado");
+                
+                closeModal(modalToClose);
 
-            const modalServiceTitle = document.getElementById('modal-service-title');
-            const hiddenServiceInput = document.getElementById('servico_desejado');
-            if (modalServiceTitle) modalServiceTitle.textContent = "Projeto Beatempo";
-            if (hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
+                const modalServiceTitle = document.getElementById('modal-service-title');
+                const hiddenServiceInput = document.getElementById('servico_desejado');
+                const servicosExtrasContainer = document.getElementById('servicos-extras-container');
+                const modalidadeContainer = document.getElementById('modalidade-container');
+                const spotifyContainer = document.getElementById('spotify-container');
 
-            openModal(orcamentoModal);
-        }
-    });
+                if (modalServiceTitle) modalServiceTitle.textContent = servicePrefix;
+                if (hiddenServiceInput) hiddenServiceInput.value = serviceTitle;
+
+                // Lógica de visibilidade dos campos
+                if (servicePrefix === 'Estúdio Musical') {
+                    if (servicosExtrasContainer) servicosExtrasContainer.style.display = 'block';
+                    if (modalidadeContainer) modalidadeContainer.style.display = 'none';
+                    if (spotifyContainer) spotifyContainer.style.display = 'none';
+                } else if (servicePrefix === 'Assessoria Mensal' || servicePrefix === 'Projeto Beatempo') {
+                    if (servicosExtrasContainer) servicosExtrasContainer.style.display = 'none';
+                    if (modalidadeContainer) modalidadeContainer.style.display = 'none';
+                    if (spotifyContainer) spotifyContainer.style.display = 'block';
+                }
+
+                openModal(orcamentoModal);
+            }
+        });
+    }
+
+    handleChecklistSubmit('solicitar-projeto-btn', 'projeto-checklist', detailsProjetoModal, 'Projeto Beatempo');
+    handleChecklistSubmit('solicitar-assessoria-btn', 'assessoria-checklist', detailsAgenciamentoModal, 'Assessoria Mensal');
+    handleChecklistSubmit('solicitar-estudio-btn', 'estudio-checklist', detailsEstudioModal, 'Estúdio Musical');
     
     // 3. Lógica para fechar TODOS os modais com botão 'X', clique fora ou tecla ESC
     const allModals = document.querySelectorAll('.fixed.inset-0');
@@ -404,6 +427,9 @@ for (const modalId in simpleModalTriggers) {
             const spotify = formData.get('spotify') || '';
             const mensagem = formData.get('mensagem') || '';
 
+            // Coletar serviços extras
+            const servicosExtras = formData.getAll('servicos_extras').join(', ');
+
             // Validar campos obrigatórios
             if (!nome || !telefone) {
                 alert('Por favor, preencha nome e telefone.');
@@ -418,6 +444,7 @@ for (const modalId in simpleModalTriggers) {
 
             // Criar resumo com informações relevantes
             let resumo = `Serviço: ${servico}`;
+            if (servicosExtras) resumo += ` | Extras: ${servicosExtras}`;
             if (modalidade) resumo += ` | Modalidade: ${modalidade}`;
             if (spotify) resumo += ` | Spotify: ${spotify}`;
             if (mensagem) resumo += ` | Mensagem: ${mensagem}`;
@@ -459,7 +486,8 @@ for (const modalId in simpleModalTriggers) {
         });
     }
 
-    // 5. Animação dos cards de agenciamento mensal
+    // 5. Animação dos cards de agenciamento mensal (OBSOLETO - Removido na refatoração)
+    /*
     const agenciamentoCards = document.querySelectorAll('.agenciamento-card');
     
     agenciamentoCards.forEach(card => {
@@ -484,11 +512,13 @@ for (const modalId in simpleModalTriggers) {
             this.classList.add('border-transparent');
         });
     });
+    */
 
     // --- LÓGICA DO FORMULÁRIO DINÂMICO PARA BEATEMPO ENSINA ---
     const modalidadeContainer = document.getElementById('modalidade-container');
     const modalidadeSelect = document.getElementById('modalidade');
     const spotifyContainer = document.getElementById('spotify-container');
+    const servicosExtrasContainer = document.getElementById('servicos-extras-container');
     const beatempoEnsinaModalidades = {
         'Aulas de Instrumentos': [
             'Violão', 'Guitarra', 'Ukulele', 'Piano', 'Teclado'
@@ -507,6 +537,10 @@ for (const modalId in simpleModalTriggers) {
             option.addEventListener('click', function() {
                 const h4 = this.querySelector('h4');
                 const serviceTitle = h4 ? h4.textContent.trim() : '';
+                
+                // Sempre esconder extras ao entrar via Ensina
+                if (servicosExtrasContainer) servicosExtrasContainer.style.display = 'none';
+
                 // Se for uma das opções do Beatempo Ensina, mostra o seletor
                 if (beatempoEnsinaModalidades[serviceTitle]) {
                     modalidadeContainer.style.display = '';
@@ -526,16 +560,22 @@ for (const modalId in simpleModalTriggers) {
         if (modal) {
             modal.querySelectorAll('.budget-option-final').forEach(option => {
                 option.addEventListener('click', function() {
-                    modalidadeContainer.style.display = 'none';
-                    spotifyContainer.style.display = '';
+                    if (modalidadeContainer) modalidadeContainer.style.display = 'none';
+                    if (spotifyContainer) spotifyContainer.style.display = '';
                 });
             });
         }
     });
-    // Também esconde ao abrir via checklist
+    // Também esconde ao abrir via checklist (o handleChecklistSubmit já trata, mas aqui garante limpeza se algo mudar)
+    // OBS: O handleChecklistSubmit é mais específico e roda depois deste listener se ambos existissem, 
+    // mas aqui estamos limpando listeners antigos se houver.
+    // O código abaixo estava apenas para o projeto-btn antigo, agora é redundante pois handleChecklistSubmit cuida de tudo.
+    // Mantendo limpo:
+    /* 
     document.getElementById('solicitar-projeto-btn')?.addEventListener('click', () => {
         modalidadeContainer.style.display = 'none';
         spotifyContainer.style.display = '';
-    });
+    }); 
+    */
 
 });

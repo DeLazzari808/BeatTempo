@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,44 @@
     <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1C6RBP52"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NK1C6RBP52');
+    </script>
 </head>
+
 <body class="bg-black text-white antialiased">
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+    <header id="main-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex-1">
                 <a href="/">
-                  <img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo" class="h-32 w-auto">
-                  <!-- Logo extensa só no mobile, escondida no desktop -->
-                  <img id="header-logo-mobile" src="assets/PNG_LOGO_BRANCO.png" alt="Logotipo Beatempo Extensa" class="h-10 w-auto mt-2 mx-auto block md:hidden lg:hidden xl:hidden 2xl:hidden" style="display:none;">
+                    <img id="header-logo" src="assets/PNG_LOGO_BRANCO.png" alt="Logótipo da Beatempo"
+                        class="h-32 w-auto">
+                    <!-- Logo extensa só no mobile, escondida no desktop -->
+                    <img id="header-logo-mobile" src="assets/PNG_LOGO_BRANCO.png" alt="Logotipo Beatempo Extensa"
+                        class="h-10 w-auto mt-2 mx-auto block md:hidden lg:hidden xl:hidden 2xl:hidden"
+                        style="display:none;">
                 </a>
             </div>
             <div class="hidden md:flex flex-1 justify-center items-center space-x-2 text-gray-300">
-                <a href="/servicos" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
-                <a href="/producoes" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
+                <a href="/servicos"
+                    class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SERVIÇOS</a>
+                <a href="/producoes"
+                    class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">PRODUÇÕES</a>
                 <a href="/sobre" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">SOBRE</a>
-                <a href="/orcamento" class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
+                <a href="/orcamento"
+                    class="px-4 py-2 rounded-md hover:bg-gray-800 transition-colors font-bold">ORÇAMENTO</a>
             </div>
             <div class="flex-1 flex justify-end items-center">
-                <a href="https://wa.me/554123910713" target="_blank" class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm whitespace-nowrap text-base md:text-sm">
+                <a href="https://wa.me/554123910713" target="_blank"
+                    class="bg-white text-black hover:bg-gray-200 font-black px-5 py-2 rounded-lg transition-colors text-sm whitespace-nowrap text-base md:text-sm">
                     COMEÇAR MINHA JORNADA
                 </a>
             </div>
@@ -36,25 +55,35 @@
     </header>
 
     <main>
-        <section id="home" class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-    
+        <section id="home"
+            class="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+
             <div id="hero-slideshow" class="absolute inset-0 z-0">
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('./assets/hero-background.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background1.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background2.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background3.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background4.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background5.jpg');"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('assets/hero-background6.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100"
+                    style="background-image: url('./assets/hero-background.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background1.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background2.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background3.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background4.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background5.jpg');"></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                    style="background-image: url('assets/hero-background6.jpg');"></div>
             </div>
-        
+
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10 p-4 md:p-0"></div>
-            
+
             <div class="relative z-20 px-4 flex flex-col items-center">
-                <h1 class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
+                <h1
+                    class="text-4xl md:text-7xl font-thin font-gotham uppercase tracking-tighter leading-tight text-white">
                     A <span class="font-black">BASE</span> DA SUA
                 </h1>
-                <h1 class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
+                <h1
+                    class="text-4xl md:text-7xl font-black font-gotham uppercase tracking-tighter leading-tight text-white mt-4">
                     JORNADA MUSICAL
                 </h1>
                 <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
@@ -68,11 +97,13 @@
                 <div class="text-center mb-16">
                     <h2 class="section-title">SERVIÇOS</h2>
                 </div>
-        
+
+                <!-- Bloco: PROJETO BEATEMPO (Referência) -->
                 <div class="grid md:grid-cols-2 gap-12 items-stretch mb-16">
                     <div class="md:pr-8 flex flex-col">
                         <div>
-                            <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span class="text-xs font-normal">(OPCIONAL)</span></h3>
+                            <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span
+                                    class="text-xs font-normal">(OPCIONAL)</span></h3>
                             <ul class="space-y-4 text-gray-300">
                                 <li>• Gerenciamento do Lançamento</li>
                                 <li>• Produção de Conteúdos</li>
@@ -86,54 +117,56 @@
                         <div class="mt-auto pt-8">
                             <div class="bg-zinc-900 p-6 rounded-lg text-center border-gray-700">
                                 <p class="text-gray-300 mb-4 uppercase font-medium">PRONTO PARA COMEÇAR SEU PROJETO?</p>
-                                <a href="/orcamento" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                <a href="/orcamento"
+                                    class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                     <span>QUERO LANÇAR UM PROJETO COM A BT!</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="h-auto md:h-full">
-                        <img src="assets/PROJETO-BEATEMPO.jpg" class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain" alt="Projeto Beatempo">
+                        <img src="assets/PROJETO-BEATEMPO.png"
+                            class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain"
+                            alt="Projeto Beatempo">
                     </div>
                 </div>
-        
+
                 <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
                     <div class="md:order-2 md:pl-8 flex flex-col">
                         <div>
-                            <h3 class="text-3xl font-bold mb-4">AGENCIAMENTO MENSAL</h3>
+                            <h3 class="text-3xl font-bold mb-4">ASSESSORIA MENSAL</h3>
                             <ul class="space-y-4 text-gray-300">
-                                <li>• Assessoria via WhatsApp</li>
-                                <li>• Reunião Mensal</li>
-                                <li>• Encontros Frequentes no QG da BEATEMPO</li>
-                                <li>• Definição de Identidade, Estética e Conteúdos</li>
-                                <li>• Postagens Semanais (fotos, artes, reels, stories & carroseis)</li>
-                                <li>• Sugestão de Conteúdos Adicionais</li>
-                                <li>• Acompanhamento em Lançamentos, Estratégias e Fortalecimento de Imagem</li>
-                                <li>• Desconto com Parceiros BEATEMPO</li>
+                                <li>• Acompanhamento de Gravações</li>
+                                <li>• Edição de Vídeos</li>
+                                <li>• Assessorias Semanais e/ou Mensais</li>
                             </ul>
                         </div>
                         <div class="mt-auto pt-8">
                             <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
-                                <p class="text-gray-300 mb-4 uppercase font-medium">LEVE SUA CARREIRA PARA O PRÓXIMO NÍVEL!</p>
-                                <a href="/orcamento" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                                    <span>QUERO MINHA CARREIRA GERENCIADA COM VISÃO!</span>
+                                <p class="text-gray-300 mb-4 uppercase font-medium">LEVE SUA CARREIRA PARA O PRÓXIMO
+                                    NÍVEL!</p>
+                                <a href="/orcamento"
+                                    class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>QUERO MINHA ASSESSORIA MENSAL!</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="md:order-1 h-auto md:h-full">
-                        <img src="assets/AGENCIAMENTO-MENSAL.jpg" class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain" alt="Agenciamento Mensal">
+                        <img src="assets/ASSESSORIA-MENSAL.png"
+                            class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain"
+                            alt="Assessoria Mensal">
                     </div>
                 </div>
-        
+
                 <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
                     <div class="pr-8 flex flex-col">
                         <div>
                             <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA <span class="text-xs font-normal">(PRESENCIAL E ONLINE)</span></h3>
-                            <div class="bg-black border-2 border-white rounded-lg">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
-                                    <div class="p-6">
-                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
+                                                        <div class="bg-black border-2 border-white rounded-lg">
+                                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                                <div class="p-6">
+                                                                    <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
                                         <ul class="space-y-3 text-gray-300">
                                             <li>• Violão</li>
                                             <li>• Guitarra</li>
@@ -157,95 +190,131 @@
                         <div class="mt-auto pt-8">
                             <div class="bg-zinc-900 p-6 rounded-lg text-center border border-gray-700">
                                 <p class="text-gray-300 mb-4 uppercase font-medium">QUER APRENDER COM A GENTE?</p>
-                                <a href="/orcamento" class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                <a href="/orcamento"
+                                    class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                     <span>QUERO APRENDER MÚSICA DO JEITO CERTO!</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="h-auto md:h-full">
-                        <img src="assets/BEATEMPO-ENSINA.jpg" class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain" alt="Beatempo Ensina">
+                        <img src="assets/BEATEMPO-ENSINA.jpg"
+                            class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain"
+                            alt="Beatempo Ensina">
                     </div>
                 </div>
-        
-                <div class="max-w-2xl mx-auto mt-12">
-                    <div class="bg-zinc-900 p-6 rounded-2xl text-center border border-dashed border-gray-600">
-                        <h4 class="text-xl font-bold mb-2 text-gray-200">EM BREVE</h4>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>• Estúdio Musical</li>
-                            <li>• Estúdio Fotográfico</li>
-                        </ul>
+
+                <!-- Bloco: ESTÚDIO MUSICAL -->
+                <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                    <div class="md:pr-8 flex flex-col">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4">ESTÚDIO MUSICAL</h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li>• Estúdio Independente</li>
+                                <li>• Captação</li>
+                                <li>• Beat</li>
+                                <li>• Mixagem</li>
+                                <li>• Masterização</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto pt-8">
+                            <!-- Classes do Card CTA idênticas ao Projeto Beatempo -->
+                            <div class="bg-zinc-900 p-6 rounded-lg text-center border-gray-700">
+                                <p class="text-gray-300 mb-4 uppercase font-medium">PRONTO PARA GRAVAR SEU HIT?</p>
+                                <a href="/orcamento"
+                                    class="inline-flex items-center justify-center gap-3 w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                    <span>QUERO GRAVAR NO ESTÚDIO!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-auto md:h-full">
+                        <img src="assets/ESTUDIO-MUSICAL.png"
+                            class="rounded-lg shadow-2xl w-full h-auto md:h-full object-cover md:object-contain"
+                            alt="Estúdio Musical">
                     </div>
                 </div>
             </div>
         </section>
-        <section id="productions" class="pt-12 pb-16 bg-zinc-900">
+        <section id="productions" class="pt-12 pb-16 bg-black">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="section-title">NOSSAS PRODUÇÕES</h2>
                 </div>
-                
+
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
-                    
-                    <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger" 
-                         data-title="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                         data-description="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                         data-img="./assets/capas/capa-dilema-remix.jpg"
-                         data-spotify-link="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
-                         data-youtube-link="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv">
-                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa da música Dilema Remix" class="w-full rounded-lg shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300" loading="eager">
+
+                    <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger"
+                        data-title="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
+                        data-description="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
+                        data-img="./assets/capas/capa-dilema-remix.jpg"
+                        data-spotify-link="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
+                        data-youtube-link="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv">
+                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa da música Dilema Remix"
+                            class="w-full rounded-lg shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
+                            loading="eager">
                         <div>
                             <p class="text-gray-400 font-semibold">Último Lançamento</p>
                             <h3 class="text-4xl font-extrabold mt-2">Dilema (remix funk)</h3>
                         </div>
                     </div>
-                    
+
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                                <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
-                                 data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci" 
-                         data-description="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                         data-img="./assets/capas/capa-dilema.jpg"
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7" 
-                                 data-youtube-link="https://www.youtube.com/watch?v=jl0bf3Ow77A">
-                                <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
+                                data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
+                                data-description="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
+                                data-img="./assets/capas/capa-dilema.jpg"
+                                data-spotify-link="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7"
+                                data-youtube-link="https://www.youtube.com/watch?v=jl0bf3Ow77A">
+                                <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    loading="eager">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <h4 class="text-white text-lg font-bold">Dilema</h4>
-                                    <p class="text-gray-300 text-sm">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci</p>
+                                    <p class="text-gray-300 text-sm">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota &
+                                        Dialucci</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
-                                 data-title="QVSDN? - Munha"
-                                 data-description="QVSDN? - Munha"
-                                 data-img="./assets/capas/capa-qvsdn.jpg" 
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c" 
-                                 data-youtube-link="https://www.youtube.com/watch?v=YAPV2vOCglQ">
-                                <img src="assets/capas/capa-qvsdn.jpg" alt="Capa da música QVSDN" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
+                                data-title="QVSDN? - Munha" data-description="QVSDN? - Munha"
+                                data-img="./assets/capas/capa-qvsdn.jpg"
+                                data-spotify-link="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c"
+                                data-youtube-link="https://www.youtube.com/watch?v=YAPV2vOCglQ">
+                                <img src="assets/capas/capa-qvsdn.jpg" alt="Capa da música QVSDN"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    loading="eager">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <h4 class="text-white text-lg font-bold">QVSDN?</h4>
                                     <p class="text-gray-300 text-sm">Munha</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
-                                 data-title="Sentimentos - Born" 
-                                 data-description="Sentimentos - Born"
-                                 data-img="./assets/capas/capa-sentimentos.jpg" 
-                                 data-spotify-link="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0" 
-                                 data-youtube-link="https://www.youtube.com/watch?v=66BTEjMgf-E">
-                                <img src="assets/capas/capa-sentimentos.jpg" alt="Capa da música Sentimentos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
+                                data-title="Sentimentos - Born" data-description="Sentimentos - Born"
+                                data-img="./assets/capas/capa-sentimentos.jpg"
+                                data-spotify-link="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0"
+                                data-youtube-link="https://www.youtube.com/watch?v=66BTEjMgf-E">
+                                <img src="assets/capas/capa-sentimentos.jpg" alt="Capa da música Sentimentos"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    loading="eager">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <h4 class="text-white text-lg font-bold">Sentimentos</h4>
                                     <p class="text-gray-300 text-sm">Born</p>
                                 </div>
                             </div>
-                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square" 
-                                 data-title="Lei da Atração - Tento" 
-                                 data-description="Lei da Atração - Tento"
-                                 data-img="./assets/capas/capa-lei-da-atracao.jpg" 
-                                 data-spotify-link="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ" 
-                                 data-youtube-link="https://www.youtube.com/watch?v=0Jw0b58uNI0&list=PLsQSYYnJHwH0DKN79lInoetTH04jTugrx">
-                                <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa da música Lei da Atração" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                            <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
+                                data-title="Lei da Atração - Tento" data-description="Lei da Atração - Tento"
+                                data-img="./assets/capas/capa-lei-da-atracao.jpg"
+                                data-spotify-link="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ"
+                                data-youtube-link="https://www.youtube.com/watch?v=0Jw0b58uNI0&list=PLsQSYYnJHwH0DKN79lInoetTH04jTugrx">
+                                <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa da música Lei da Atração"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    loading="eager">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <h4 class="text-white text-lg font-bold">Lei da Atração</h4>
                                     <p class="text-gray-300 text-sm">Tento</p>
                                 </div>
@@ -254,12 +323,12 @@
                         </div>
                         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div class="flex flex-row items-center gap-4">
-                                <a href="https://open.spotify.com/playlist/6c4gbHXzq40aNzTGMCeD8f" target="_blank" 
-                                   class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
+                                <a href="https://open.spotify.com/playlist/6c4gbHXzq40aNzTGMCeD8f" target="_blank"
+                                    class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
                                     <i class="fab fa-spotify text-3xl text-green-500"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@Beatempo-ag/" target="_blank" 
-                                   class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
+                                <a href="https://www.youtube.com/@Beatempo-ag/" target="_blank"
+                                    class="flex items-center justify-center w-14 h-14 bg-zinc-800 hover:bg-zinc-700 rounded-full transition-colors duration-200">
                                     <i class="fab fa-youtube text-3xl text-red-600"></i>
                                 </a>
                             </div>
@@ -273,79 +342,199 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="max-w-xl mx-auto mt-16 md:mt-24">
                     <div class="bg-black/80 rounded-2xl p-8 text-center shadow-lg border border-gray-700">
                         <h3 class="text-2xl font-bold mb-4 text-white uppercase">VAMOS CONVERSAR?</h3>
-                        <p class="text-gray-400 mb-8">Para quem quer <strong>impulsionar</strong> sua <strong>carreira</strong> no <strong>ramo musical</strong></p>
+                        <p class="text-gray-400 mb-8">Para quem quer <strong>impulsionar</strong> sua
+                            <strong>carreira</strong> no <strong>ramo musical</strong></p>
                         <div class="flex flex-col gap-4">
                             <a href="https://wa.me/554123910713" target="_blank"
-                               class="w-full text-center bg-white text-black font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                class="w-full text-center bg-white text-black font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                 QUERO VIVER DE MÚSICA!
                             </a>
                             <a href="https://wa.me/554123910713" target="_blank"
-                               class="w-full text-center border border-white text-white font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                                class="w-full text-center border border-white text-white font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
                                 QUERO SER PARCEIRO DA BT
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
-        <section id="artists" class="hidden py-20 md:py-32"> <div class="container mx-auto px-6">
-                <div class="text-center mb-16"><h2 class="section-title">Os Nossos Artistas</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Talentos que confiam na Beatempo para construir as suas carreiras.</p></div>
+        <section id="artists" class="hidden py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Os Nossos Artistas</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">Talentos que confiam na
+                        Beatempo para construir as suas carreiras.</p>
+                </div>
                 <div id="artists-carousel-container" class="relative w-full overflow-hidden">
                     <div id="artists-carousel" class="flex">
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Sao Tchelli" data-role="Artista e Sócio" data-bio="Sao Tchelli é um artista independente que há 4 anos iniciou a sua carreira musical como compositor e cantor..." data-img="https://placehold.co/400x400/18181b/ffffff?text=ST" data-spotify="https://open.spotify.com/intl-pt/artist/1AUjwkJjroCocJanbEIPxK?si=cIGJDXkySqiHq6fqmMbFpg" data-youtube="https://www.youtube.com/@saotchelli" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=ST" alt="Foto de Sao Tchelli" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Sao Tchelli</h3><p class="text-gray-400">Artista</p></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Born" data-role="Artista" data-bio="Born, um rapper de 18 anos, teve seu primeiro contato com a música ainda na infância..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Born" data-spotify="https://open.spotify.com/artist/4Kvf72k3rrlkT0T12biiEP?si=8xEvFMz2TLmble-g80N6TA" data-youtube="https://youtube.com/@born.prodigio?si=_JHP2DRrMPlW4MD0" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Born" alt="Foto de Born" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Born</h3><p class="text-gray-400">Artista</p></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Munha" data-role="Artista" data-bio="Descrição do artista Munha a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Munha" data-spotify="https://open.spotify.com/artist/75jxy3Cya8iRKMfeKPNVJn?si=FnzllzjcRBHcmqDPzTCHA" data-youtube="https://youtube.com/@guilhermesteve1?si=3zQ24XDNaQAd0X3C" data-soundcloud="https://on.soundcloud.com/ZyczfJJWgy2dUaij9" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Munha" alt="Foto de Munha" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Munha</h3><p class="text-gray-400">Artista</p></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Tento" data-role="Artista" data-bio="Descrição do artista Tento a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-spotify="#" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Tento</h3><p class="text-gray-400">Artista</p></div>
-                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger" data-type="artist" data-name="Bega" data-role="Artista" data-bio="Gabriel Ramos é curitibano, mas passou a maior parte da vida na região metropolitana..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Bega" data-spotify="https://open.spotify.com/artist/6GEQGQIi5OdqCWJdqzZhzf?si=8cJliTkuTvWoLVLa8xt3cA" data-youtube="#" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Bega" alt="Foto de Bega" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300"><h3 class="mt-4 text-xl font-bold">Bega</h3><p class="text-gray-400">Artista</p></div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger"
+                            data-type="artist" data-name="Sao Tchelli" data-role="Artista e Sócio"
+                            data-bio="Sao Tchelli é um artista independente que há 4 anos iniciou a sua carreira musical como compositor e cantor..."
+                            data-img="https://placehold.co/400x400/18181b/ffffff?text=ST"
+                            data-spotify="https://open.spotify.com/intl-pt/artist/1AUjwkJjroCocJanbEIPxK?si=cIGJDXkySqiHq6fqmMbFpg"
+                            data-youtube="https://www.youtube.com/@saotchelli" data-instagram="#"><img
+                                src="https://placehold.co/400x400/18181b/ffffff?text=ST" alt="Foto de Sao Tchelli"
+                                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300">
+                            <h3 class="mt-4 text-xl font-bold">Sao Tchelli</h3>
+                            <p class="text-gray-400">Artista</p>
+                        </div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger"
+                            data-type="artist" data-name="Born" data-role="Artista"
+                            data-bio="Born, um rapper de 18 anos, teve seu primeiro contato com a música ainda na infância..."
+                            data-img="https://placehold.co/400x400/18181b/ffffff?text=Born"
+                            data-spotify="https://open.spotify.com/artist/4Kvf72k3rrlkT0T12biiEP?si=8xEvFMz2TLmble-g80N6TA"
+                            data-youtube="https://youtube.com/@born.prodigio?si=_JHP2DRrMPlW4MD0" data-instagram="#">
+                            <img src="https://placehold.co/400x400/18181b/ffffff?text=Born" alt="Foto de Born"
+                                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300">
+                            <h3 class="mt-4 text-xl font-bold">Born</h3>
+                            <p class="text-gray-400">Artista</p>
+                        </div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger"
+                            data-type="artist" data-name="Munha" data-role="Artista"
+                            data-bio="Descrição do artista Munha a ser preenchida."
+                            data-img="https://placehold.co/400x400/18181b/ffffff?text=Munha"
+                            data-spotify="https://open.spotify.com/artist/75jxy3Cya8iRKMfeKPNVJn?si=FnzllzjcRBHcmqDPzTCHA"
+                            data-youtube="https://youtube.com/@guilhermesteve1?si=3zQ24XDNaQAd0X3C"
+                            data-soundcloud="https://on.soundcloud.com/ZyczfJJWgy2dUaij9" data-instagram="#"><img
+                                src="https://placehold.co/400x400/18181b/ffffff?text=Munha" alt="Foto de Munha"
+                                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300">
+                            <h3 class="mt-4 text-xl font-bold">Munha</h3>
+                            <p class="text-gray-400">Artista</p>
+                        </div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger"
+                            data-type="artist" data-name="Tento" data-role="Artista"
+                            data-bio="Descrição do artista Tento a ser preenchida."
+                            data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-spotify="#"
+                            data-youtube="#" data-instagram="#"><img
+                                src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento"
+                                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300">
+                            <h3 class="mt-4 text-xl font-bold">Tento</h3>
+                            <p class="text-gray-400">Artista</p>
+                        </div>
+                        <div class="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/5 p-4 artist-item info-trigger"
+                            data-type="artist" data-name="Bega" data-role="Artista"
+                            data-bio="Gabriel Ramos é curitibano, mas passou a maior parte da vida na região metropolitana..."
+                            data-img="https://placehold.co/400x400/18181b/ffffff?text=Bega"
+                            data-spotify="https://open.spotify.com/artist/6GEQGQIi5OdqCWJdqzZhzf?si=8cJliTkuTvWoLVLa8xt3cA"
+                            data-youtube="#" data-instagram="#"><img
+                                src="https://placehold.co/400x400/18181b/ffffff?text=Bega" alt="Foto de Bega"
+                                class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-transparent group-hover:border-white transition-all duration-300">
+                            <h3 class="mt-4 text-xl font-bold">Bega</h3>
+                            <p class="text-gray-400">Artista</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="partners" class="hidden py-20 md:py-32 bg-zinc-900"> <div class="container mx-auto px-6">
-                <div class="text-center mb-16"><h2 class="section-title">Os Nossos Parceiros</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">A rede de profissionais que torna tudo possível.</p></div>
+        <section id="partners" class="hidden py-20 md:py-32 bg-zinc-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Os Nossos Parceiros</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">A rede de profissionais
+                        que torna tudo possível.</p>
+                </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Sonkei37" data-role="Beatmaker & Produtor" data-bio="Salv salv, Eu sou o Sonkei do 37 estúdio, Beatmaker e produtor musical brasileiro..." data-img="https://placehold.co/400x400/18181b/ffffff?text=S37" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=S37" alt="Foto de Sonkei37" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Sonkei37</h3><p class="text-gray-400">Beatmaker</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Gabi Munhoz" data-role="Estilista & Consultora de Imagem" data-bio="Muito prazer, sou Gabi Munhoz, artista, designer e consultora de estilo e imagem pessoal..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Gabi" data-instagram="https://www.instagram.com/gabimunhoz.art/"><img src="https://placehold.co/400x400/18181b/ffffff?text=Gabi" alt="Foto de Gabi" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Gabi Munhoz</h3><p class="text-gray-400">Estilista</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Joluho" data-role="Fotógrafo" data-bio="Me chamo João Lucas Horvath, mais conhecido como Joluho. Sou fotógrafo de pessoas..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Joluho" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Joluho" alt="Foto de Joluho" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Joluho</h3><p class="text-gray-400">Fotógrafo</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Lukfile" data-role="Fotógrafo & Videomaker" data-bio="Lucas, conhecido no mundo artístico como Lukfiles, é um verdadeiro apaixonado por retratos..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Luk" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Luk" alt="Foto de Lukfile" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Lukfile</h3><p class="text-gray-400">Fotógrafo</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Anna Beatriz" data-role="Relações Públicas" data-bio="Meu nome é Anna Beatriz, faço faculdade de Relações Públicas e sou apaixonada pela área de eventos..." data-img="https://placehold.co/400x400/18181b/ffffff?text=Anna" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Anna" alt="Foto de Anna Beatriz" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Anna Beatriz</h3><p class="text-gray-400">Relações Públicas</p></div>
-                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger" data-type="partner" data-name="Tento" data-role="Eng. de Produção" data-bio="Descrição do parceiro Tento a ser preenchida." data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-instagram="#"><img src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors"><h3 class="text-xl font-bold">Tento</h3><p class="text-gray-400">Eng. de Produção</p></div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Sonkei37" data-role="Beatmaker & Produtor"
+                        data-bio="Salv salv, Eu sou o Sonkei do 37 estúdio, Beatmaker e produtor musical brasileiro..."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=S37" data-instagram="#"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=S37" alt="Foto de Sonkei37"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Sonkei37</h3>
+                        <p class="text-gray-400">Beatmaker</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Gabi Munhoz" data-role="Estilista & Consultora de Imagem"
+                        data-bio="Muito prazer, sou Gabi Munhoz, artista, designer e consultora de estilo e imagem pessoal..."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=Gabi"
+                        data-instagram="https://www.instagram.com/gabimunhoz.art/"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=Gabi" alt="Foto de Gabi"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Gabi Munhoz</h3>
+                        <p class="text-gray-400">Estilista</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Joluho" data-role="Fotógrafo"
+                        data-bio="Me chamo João Lucas Horvath, mais conhecido como Joluho. Sou fotógrafo de pessoas..."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=Joluho" data-instagram="#"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=Joluho" alt="Foto de Joluho"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Joluho</h3>
+                        <p class="text-gray-400">Fotógrafo</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Lukfile" data-role="Fotógrafo & Videomaker"
+                        data-bio="Lucas, conhecido no mundo artístico como Lukfiles, é um verdadeiro apaixonado por retratos..."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=Luk" data-instagram="#"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=Luk" alt="Foto de Lukfile"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Lukfile</h3>
+                        <p class="text-gray-400">Fotógrafo</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Anna Beatriz" data-role="Relações Públicas"
+                        data-bio="Meu nome é Anna Beatriz, faço faculdade de Relações Públicas e sou apaixonada pela área de eventos..."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=Anna" data-instagram="#"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=Anna" alt="Foto de Anna Beatriz"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Anna Beatriz</h3>
+                        <p class="text-gray-400">Relações Públicas</p>
+                    </div>
+                    <div class="bg-black p-8 rounded-2xl text-center cursor-pointer group info-trigger"
+                        data-type="partner" data-name="Tento" data-role="Eng. de Produção"
+                        data-bio="Descrição do parceiro Tento a ser preenchida."
+                        data-img="https://placehold.co/400x400/18181b/ffffff?text=Tento" data-instagram="#"><img
+                            src="https://placehold.co/400x400/18181b/ffffff?text=Tento" alt="Foto de Tento"
+                            class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-gray-700 group-hover:border-white transition-colors">
+                        <h3 class="text-xl font-bold">Tento</h3>
+                        <p class="text-gray-400">Eng. de Produção</p>
+                    </div>
                 </div>
             </div>
         </section>
-        
+
         <section id="about" class="pt-9 pb-20 md:pb-32">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title">SOBRE A BEATEMPO</h2>
                 <p class="mt-4 max-w-3xl mx-auto text-base md:text-lg text-gray-400">
-                    A <strong>Beatempo</strong> é de <strong>Curitiba</strong> e vive o corre da cena. A gente fortalece <strong>artistas</strong> com visão, identidade e estratégia pra fazer o som bater e a <strong>carreira crescer.</strong>  Lançamento, conteúdo, estética, presença e posicionamento. Se você leva sua <strong>música a sério</strong>,<br> cola com a <strong>BT!</strong>.<br>
+                    A <strong>Beatempo</strong> é de <strong>Curitiba</strong> e vive o corre da cena. A gente fortalece
+                    <strong>artistas</strong> com visão, identidade e estratégia pra fazer o som bater e a
+                    <strong>carreira crescer.</strong> Lançamento, conteúdo, estética, presença e posicionamento. Se
+                    você leva sua <strong>música a sério</strong>,<br> cola com a <strong>BT!</strong>.<br>
                 </p>
-                
+
                 <div class="mt-16 grid grid-cols-2 gap-8 md:gap-12 max-w-xl mx-auto">
-                    <div class="text-center info-trigger cursor-pointer group" data-type="ceo" data-name="Patrick Zeni" data-role="CEO" data-bio="CEO, Publicitário & Designer." data-img="./assets/zeni-foto-ceo.jpg">
-                        <img src="./assets/zeni-foto-ceo.jpg" alt="Foto de Patrick Zeni" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <div class="text-center info-trigger cursor-pointer group" data-type="ceo" data-name="Patrick Zeni"
+                        data-role="CEO" data-bio="CEO, Publicitário & Designer." data-img="./assets/zeni-foto-ceo.jpg">
+                        <img src="./assets/zeni-foto-ceo.jpg" alt="Foto de Patrick Zeni"
+                            class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">Patrick Zeni</h3>
                         <p class="text-gray-400">CEO </p>
                     </div>
-                    
-                    <div class="text-center info-trigger cursor-pointer group" data-type="cofounder" data-name="João Celli" data-role="Co.Founder" data-bio="Co-Founder & Publicitário." data-img="./assets/celli-foto-cfo.jpg">
-                        <img src="./assets/celli-foto-cfo.jpg" alt="Foto de João Celli" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+
+                    <div class="text-center info-trigger cursor-pointer group" data-type="cofounder"
+                        data-name="João Celli" data-role="Co.Founder" data-bio="Co-Founder & Publicitário."
+                        data-img="./assets/celli-foto-cfo.jpg">
+                        <img src="./assets/celli-foto-cfo.jpg" alt="Foto de João Celli"
+                            class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">João Celli</h3>
                         <p class="text-gray-400">Co.Founder</p>
                     </div>
-                
+
                     <div class="text-center group">
-                        <img src="./assets/30parceiros.jpg" alt="Foto dos Parceiros" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
-                        <h3 class="mt-4 text-xl font-bold">Parceiros</h3> 
+                        <img src="./assets/40parceiros.png" alt="Foto dos Parceiros"
+                            class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <h3 class="mt-4 text-xl font-bold">Parceiros</h3>
                     </div>
-                
+
                     <div class="text-center group">
-                        <img src="./assets/marcas15.jpg" alt="Foto das Marcas" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <img src="./assets/marcas15.jpg" alt="Foto das Marcas"
+                            class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg group-hover:scale-105 transition-transform duration-300">
                         <h3 class="mt-4 text-xl font-bold">Marcas</h3>
                     </div>
                 </div>
@@ -353,344 +542,515 @@
                 <div class="mt-16 bg-zinc-900 rounded-2xl p-8 max-w-4xl mx-auto">
                     <h3 class="text-2xl font-bold">Nosso Propósito</h3>
                     <p class="mt-4 text-gray-300">
-                        Nosso propósito é impulsionar <strong>artistas independentes</strong> por meio de <strong>estratégias criativas</strong>, produção de conteúdo, identidade visual, eventos e direcionamento artístico. Estamos construindo um <strong>ecossistema colaborativo</strong> que conecta <strong>talentos, marcas e oportunidades</strong> para fortalecer a <strong>cena artística e musical</strong>. Valorizamos a autenticidade, a inovação, a comunidade e o desenvolvimento sustentável da cultura.
+                        Nosso propósito é impulsionar <strong>artistas independentes</strong> por meio de
+                        <strong>estratégias criativas</strong>, produção de conteúdo, identidade visual, eventos e
+                        direcionamento artístico. Estamos construindo um <strong>ecossistema colaborativo</strong> que
+                        conecta <strong>talentos, marcas e oportunidades</strong> para fortalecer a <strong>cena
+                            artística e musical</strong>. Valorizamos a autenticidade, a inovação, a comunidade e o
+                        desenvolvimento sustentável da cultura.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="pt-16 md:pt-20 pb-20 md:pb-32 bg-zinc-900">
+        <section id="contact" class="pt-16 md:pt-20 pb-20 md:pb-32 bg-gray-950">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="section-title">ORÇAMENTO</h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Selecione o serviço ideal para o seu momento e vamos construir juntos.</p>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Selecione o serviço ideal para o seu momento
+                        e vamos construir juntos.</p>
                 </div>
-        
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div id="btn-projeto" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+
+                <!-- Grid atualizado para 4 colunas -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <div id="btn-projeto"
+                        class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-rocket text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Projeto Beatempo</h3>
                         <p class="text-gray-400">Ideal para o lançamento de um <strong>single ou EP</strong>.</p>
                     </div>
-        
-                    <div id="btn-agenciamento" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+
+                    <div id="btn-agenciamento"
+                        class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-calendar-days text-4xl mb-4 text-white"></i>
-                        <h3 class="text-2xl font-bold mb-2">Agenciamento Mensal</h3>
-                        <p class="text-gray-400">Acompanhamento <strong>contínuo</strong> e <strong>estratégico</strong> da <strong>carreira</strong>.</p>
+                                                    <h3 class="text-2xl font-bold mb-2">Assessoria Mensal</h3>                        <p class="text-gray-400">Acompanhamento <strong>contínuo</strong> e <strong>estratégico</strong>
+                            da <strong>carreira</strong>.</p>
                     </div>
-                    
-                    <div id="btn-ensina" class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+
+                    <div id="btn-ensina"
+                        class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-graduation-cap text-4xl mb-4 text-white"></i>
                         <h3 class="text-2xl font-bold mb-2">Beatempo Ensina</h3>
-                        <p class="text-gray-400"><strong>Aulas</strong> e <strong>mentorias</strong> para aprimorar suas habilidades <strong>musicais</strong> e de <strong>produção</strong>.</p>
+                        <p class="text-gray-400"><strong>Aulas</strong> e <strong>mentorias</strong> para aprimorar suas
+                            habilidades <strong>musicais</strong> e de <strong>produção</strong>.</p>
+                    </div>
+
+                    <div id="btn-estudio"
+                        class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
+                        <i class="fa-solid fa-microphone-lines text-4xl mb-4 text-white"></i>
+                        <h3 class="text-2xl font-bold mb-2">Estúdio Musical</h3>
+                        <p class="text-gray-400">Gravação, Mix e Master para o seu <strong>hit</strong>.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="details-projeto-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-    <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
-        <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-        <h3 class="text-3xl font-bold mb-6 text-center">Projeto Beatempo</h3>
-        <div id="projeto-checklist" class="space-y-4">
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors border-2 border-green-500">
-                <input type="checkbox" value="Gerenciamento do Lançamento" checked disabled class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Gerenciamento do Lançamento 🔒</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Produção de Conteúdos" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Produção de Conteúdos</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Capa (diversos formatos)" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Capa (diversos formatos)</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Ensaio de Fotos" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Ensaio de Fotos</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Vídeoclipe / Visualizer" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Vídeoclipe / Visualizer</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Estilista" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Estilista</span>
-            </label>
-            <label class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                <input type="checkbox" value="Tráfego Pago & Impulsionamentos" class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                <span class="text-lg font-semibold text-left">Tráfego Pago & Impulsionamentos</span>
-            </label>
-        </div>
-                                <button id="solicitar-projeto-btn" class="mt-8 w-full bg-white text-black font-bold py-3 px-6 rounded-lg uppercase">QUERO LANÇAR UM PROJETO COM A BT!</button>
-    </div>
-</div>
-        
-        <div id="details-agenciamento-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-            <div class="bg-zinc-900 rounded-2xl max-w-7xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
-                <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-                <h3 class="text-3xl font-bold text-center mb-4">Agenciamento Mensal</h3>
-                <p class="text-center text-gray-400 mb-8">Planos de acompanhamento contínuo para sua carreira.</p>
-                <div class="overflow-y-auto pr-4 scroll-container">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible justify-center md:justify-items-stretch">
-                        <div class="agenciamento-card bg-black p-4 sm:p-6 rounded-2xl border-2 border-transparent hover:border-green-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[280px] max-w-[350px] w-full md:min-w-0 mx-auto md:mx-0" data-color="green">
-                            <h4 class="text-xl font-bold mb-4 text-green-400">BÁSICO</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
-                                <li class="whitespace-nowrap"><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Sugestões</strong> de <strong>Conteúdo Extra</strong> para Stories</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Assessoria</strong> via WhatsApp</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Acompanhamento em <strong>Lançamentos</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Gestão de <strong>Impulsionamento</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Desconto</strong> com <strong>Parceiros</strong> Beatempo</li>
-                            </ul>
-                            <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-1 sm:px-2 md:px-4 rounded-lg text-[11px] sm:text-xs md:text-sm uppercase hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"><h4 class="hidden">Agenciamento Mensal - Básico</h4>QUERO MINHA CARREIRA GERENCIADA!</button>
-                        </div>
-                        <div class="agenciamento-card bg-black p-4 sm:p-6 rounded-2xl border-2 border-transparent hover:border-blue-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[280px] max-w-[350px] w-full md:min-w-0 mx-auto md:mx-0" data-color="blue">
-                            <h4 class="text-xl font-bold mb-4 text-blue-400">PROFISSIONAL</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
-                                <li class="whitespace-nowrap"><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Sugestões</strong> de <strong>Conteúdo Extra</strong> para Stories</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Assessoria</strong> via WhatsApp</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Acompanhamento em <strong>Lançamentos</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Gestão de <strong>Impulsionamento</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Desconto</strong> com <strong>Parceiros</strong> Beatempo</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>Sessões Semanais</strong> no <strong>Estúdio</strong> Beatempo</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>2</strong> Postagens por Semana <strong>(8/mês)</strong></li>
-                            </ul>
-                            <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-2 md:px-4 rounded-lg text-xs md:text-sm uppercase hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"><h4 class="hidden">Agenciamento Mensal - Profissional</h4>QUERO MINHA CARREIRA GERENCIADA!</button>
-                        </div>
-                        <div class="agenciamento-card bg-black p-4 sm:p-6 rounded-2xl border-2 border-transparent hover:border-purple-500 transition-all duration-300 flex flex-col text-center h-[500px] min-w-[280px] max-w-[350px] w-full md:min-w-0 mx-auto md:mx-0" data-color="purple">
-                            <h4 class="text-xl font-bold mb-4 text-purple-400">PREMIUM</h4>
-                            <ul class="space-y-2 text-gray-300 flex-grow text-left text-xs md:text-sm">
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Reunião <strong>Mensal</strong></li>
-                                <li class="whitespace-nowrap"><i class="fa-solid fa-check text-green-400 mr-2"></i>Definição de pilares de <strong>Conteúdo</strong> e <strong>Estética</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Elaboração de <strong>Legendas</strong> e <strong>Adaptações</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Sugestões</strong> de <strong>Conteúdo Extra</strong> para Stories</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Assessoria</strong> via WhatsApp</li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Acompanhamento em <strong>Lançamentos</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Gestão de <strong>Impulsionamento</strong></li>
-                                <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Desconto</strong> com <strong>Parceiros</strong> Beatempo</li>
-                                <li><i class="fa-solid fa-check text-blue-400 mr-2"></i><strong>Sessões Semanais</strong> no <strong>Estúdio</strong> Beatempo</li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>4</strong> Postagens por Semana <strong>(16/mês)</strong></li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Relatório</strong> de <strong>Métricas Detalhado</strong></li>
-                                <li><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Prioridade</strong> na <strong>Agenda da Equipe</strong> e <strong>Parceiros</strong></li>
-                                <li class="mb-4"><i class="fa-solid fa-check text-purple-400 mr-2"></i><strong>Assessoria</strong> para <strong>Shows</strong> - <em>Em breve</em></li>
-                            </ul>
-                            <button class="budget-option-final mt-auto w-full bg-transparent border border-white text-white font-medium py-2 px-2 md:px-4 rounded-lg text-xs md:text-sm uppercase hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"><h4 class="hidden">Agenciamento Mensal - Premium</h4>QUERO MINHA CARREIRA GERENCIADA!</button>
-                        </div>
-                    </div>
+
+        <!-- Details Modal: Projeto Beatempo -->
+        <div id="details-projeto-modal"
+            class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
+            <div
+                class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
+                <button
+                    class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                        class="fa-solid fa-xmark text-2xl"></i></button>
+                <h3 class="text-3xl font-bold mb-6 text-center">Projeto Beatempo</h3>
+                <div id="projeto-checklist" class="space-y-4">
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors border-2 border-green-500">
+                        <input type="checkbox" value="Gerenciamento do Lançamento" checked disabled
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Gerenciamento do Lançamento 🔒</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Produção de Conteúdos"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Produção de Conteúdos</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Capa (diversos formatos)"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Capa (diversos formatos)</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Ensaio de Fotos"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Ensaio de Fotos</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Vídeoclipe / Visualizer"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Vídeoclipe / Visualizer</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Estilista"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Estilista</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Tráfego Pago & Impulsionamentos"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Tráfego Pago & Impulsionamentos</span>
+                    </label>
                 </div>
+                <button id="solicitar-projeto-btn"
+                    class="mt-8 w-full bg-white text-black font-bold py-3 px-6 rounded-lg uppercase">QUERO LANÇAR UM
+                    PROJETO COM A BT!</button>
             </div>
         </div>
-        
-        <div id="details-ensina-modal" class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
-             <div class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
-                <button class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
+
+        <!-- Details Modal: Agenciamento Mensal (Checklist Atualizado) -->
+        <div id="details-agenciamento-modal"
+            class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
+            <div
+                class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
+                <button
+                    class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                        class="fa-solid fa-xmark text-2xl"></i></button>
+                <h3 class="text-3xl font-bold mb-6 text-center">Assessoria Mensal</h3>
+                <div id="assessoria-checklist" class="space-y-4">
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Acompanhamento de Gravações"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Acompanhamento de Gravações</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Edição de Vídeos"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Edição de Vídeos</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Assessorias Semanais e/ou Mensais"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Assessorias Semanais e/ou Mensais</span>
+                    </label>
+                </div>
+                <button id="solicitar-assessoria-btn"
+                    class="mt-8 w-full bg-white text-black font-bold py-3 px-6 rounded-lg uppercase">QUERO MINHA
+                    ASSESSORIA MENSAL!</button>
+            </div>
+        </div>
+
+        <!-- Details Modal: Beatempo Ensina -->
+        <div id="details-ensina-modal"
+            class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
+            <div
+                class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
+                <button
+                    class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                        class="fa-solid fa-xmark text-2xl"></i></button>
                 <h3 class="text-3xl font-bold mb-6 text-center">Beatempo Ensina</h3>
                 <div class="space-y-4">
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                    <div
+                        class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
                         <i class="fa-solid fa-guitar text-2xl text-white w-8 text-center mr-4"></i>
                         <h4 class="text-lg font-semibold">Aulas de Instrumentos</h4>
                     </div>
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                    <div
+                        class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
                         <i class="fa-solid fa-microphone-lines text-2xl text-white w-8 text-center mr-4"></i>
                         <h4 class="text-lg font-semibold">Aulas de Produção Musical</h4>
                     </div>
-                    <div class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                    <div
+                        class="budget-option-final flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
                         <i class="fa-solid fa-lightbulb text-2xl text-white w-8 text-center mr-4"></i>
                         <h4 class="text-lg font-semibold">Mentoria de Carreira</h4>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-  <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
-    <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
-        <button id="close-orcamento-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
-                            <h3 class="text-3xl font-bold mb-1 text-center">Vamos Conversar?</h3>
-        <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
-        
-        <form id="orcamento-form" class="space-y-4">
-            <input type="hidden" name="servico_desejado" id="servico_desejado">
-            <div>
-                <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
-                <input type="text" id="nome" name="nome" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-            </div>
-            <div>
-                <label for="telefone" class="block text-sm font-medium text-gray-300 mb-1">Telefone (WhatsApp)</label>
-                <input type="tel" id="telefone" name="telefone" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-            </div>
-            <div>
-                <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram (@usuario)</label>
-                <input type="text" id="instagram" name="instagram" required class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-            </div>
-            <!-- Seletor de modalidade Beatempo Ensina, oculto por padrão -->
-            <div id="modalidade-container" style="display:none;">
-                <label for="modalidade" class="block text-sm font-medium text-gray-300 mb-1">Modalidade</label>
-                <select id="modalidade" name="modalidade" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-                    <option value="">Selecione a modalidade</option>
-                    <!-- Opções dinâmicas via JS -->
-                </select>
-                <!-- Campo livre para comentários -->
-                <div class="mt-4">
-                    <label for="comentario-modalidade" class="block text-sm font-medium text-gray-300 mb-1">Nos conte um pouco mais... <span class="text-gray-500">(opcional)</span></label>
-                    <textarea id="comentario-modalidade" name="comentario_modalidade" rows="3" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white" placeholder="Ex: Quero aprender violão e guitarra, ou mentoria + produção musical..."></textarea>
+
+        <!-- Details Modal: Estúdio Musical (NOVO) -->
+        <div id="details-estudio-modal"
+            class="fixed inset-0 bg-black/80 z-[65] flex items-center justify-center p-4 hidden">
+            <div
+                class="bg-zinc-900 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative modal-content border border-gray-700">
+                <button
+                    class="close-details-modal absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                        class="fa-solid fa-xmark text-2xl"></i></button>
+                <h3 class="text-3xl font-bold mb-6 text-center">Estúdio Musical</h3>
+                <div id="estudio-checklist" class="space-y-4">
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Estúdio Independente"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Estúdio Independente</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Captação"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Captação</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Beat"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Beat</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Mixagem"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Mixagem</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Masterização"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Masterização</span>
+                    </label>
                 </div>
+                <button id="solicitar-estudio-btn"
+                    class="mt-8 w-full bg-white text-black font-bold py-3 px-6 rounded-lg uppercase">QUERO GRAVAR NO
+                    ESTÚDIO!</button>
             </div>
-            <!-- Campo Spotify, só aparece para outros serviços -->
-            <div id="spotify-container">
-                <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span class="text-gray-500">(Opcional)</span></label>
-                <input type="url" id="spotify" name="spotify" class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
-            </div>
-            <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
-                Enviar Solicitação
-            </button>
-        </form>
+        </div>
+
+    </main>
+
+    <div id="orcamento-modal" class="fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4 hidden">
+        <div class="bg-zinc-900 rounded-2xl max-w-lg w-full p-6 md:p-8 relative modal-content border border-gray-700">
+            <button id="close-orcamento-modal"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
+            <h3 class="text-3xl font-bold mb-1 text-center">Vamos Conversar?</h3>
+            <p id="modal-service-title" class="text-center text-gray-400 mb-6"></p>
+
+            <form id="orcamento-form" class="space-y-4">
+                <input type="hidden" name="servico_desejado" id="servico_desejado">
+                <div>
+                    <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required
+                        class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+                <div>
+                    <label for="telefone" class="block text-sm font-medium text-gray-300 mb-1">Telefone
+                        (WhatsApp)</label>
+                    <input type="tel" id="telefone" name="telefone" required
+                        class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+                <div>
+                    <label for="instagram" class="block text-sm font-medium text-gray-300 mb-1">Instagram
+                        (@usuario)</label>
+                    <input type="text" id="instagram" name="instagram" required
+                        class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+
+                <!-- Serviços Adicionais -->
+                <div id="servicos-extras-container" class="space-y-2">
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Serviços Adicionais</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <label class="flex items-center cursor-pointer p-2 rounded hover:bg-zinc-800 transition-colors">
+                            <input type="checkbox" name="servicos_extras" value="Estúdio Independente"
+                                class="custom-checkbox h-5 w-5 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-3 flex-shrink-0">
+                            <span class="text-white text-sm">Estúdio Independente</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer p-2 rounded hover:bg-zinc-800 transition-colors">
+                            <input type="checkbox" name="servicos_extras" value="Captação"
+                                class="custom-checkbox h-5 w-5 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-3 flex-shrink-0">
+                            <span class="text-white text-sm">Captação</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer p-2 rounded hover:bg-zinc-800 transition-colors">
+                            <input type="checkbox" name="servicos_extras" value="Beat"
+                                class="custom-checkbox h-5 w-5 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-3 flex-shrink-0">
+                            <span class="text-white text-sm">Beat</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer p-2 rounded hover:bg-zinc-800 transition-colors">
+                            <input type="checkbox" name="servicos_extras" value="Mixagem"
+                                class="custom-checkbox h-5 w-5 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-3 flex-shrink-0">
+                            <span class="text-white text-sm">Mixagem</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer p-2 rounded hover:bg-zinc-800 transition-colors">
+                            <input type="checkbox" name="servicos_extras" value="Masterização"
+                                class="custom-checkbox h-5 w-5 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-3 flex-shrink-0">
+                            <span class="text-white text-sm">Masterização</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Seletor de modalidade Beatempo Ensina, oculto por padrão -->
+                <div id="modalidade-container" style="display:none;">
+                    <label for="modalidade" class="block text-sm font-medium text-gray-300 mb-1">Modalidade</label>
+                    <select id="modalidade" name="modalidade"
+                        class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                        <option value="">Selecione a modalidade</option>
+                        <!-- Opções dinâmicas via JS -->
+                    </select>
+                    <!-- Campo livre para comentários -->
+                    <div class="mt-4">
+                        <label for="comentario-modalidade" class="block text-sm font-medium text-gray-300 mb-1">Nos
+                            conte um pouco mais... <span class="text-gray-500">(opcional)</span></label>
+                        <textarea id="comentario-modalidade" name="comentario_modalidade" rows="3"
+                            class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white"
+                            placeholder="Ex: Quero aprender violão e guitarra, ou mentoria + produção musical..."></textarea>
+                    </div>
+                </div>
+                <!-- Campo Spotify, só aparece para outros serviços -->
+                <div id="spotify-container">
+                    <label for="spotify" class="block text-sm font-medium text-gray-300 mb-1">Perfil do Spotify <span
+                            class="text-gray-500">(Opcional)</span></label>
+                    <input type="url" id="spotify" name="spotify"
+                        class="w-full bg-zinc-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+                <button type="submit"
+                    class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
+                    Enviar Solicitação
+                </button>
+            </form>
+        </div>
     </div>
-  </div>
     <footer class="bg-black border-t border-gray-800 py-10">
-      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        <div class="flex items-center space-x-3 mb-4 md:mb-0">
-          <img src="assets/PNG_SIMBOLO_BRANCO.png" alt="Logo Beatempo" class="h-16 w-auto">
-          <span class="font-bold text-lg tracking-wide">Beatempo</span>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <img src="assets/PNG_SIMBOLO_BRANCO.png" alt="Logo Beatempo" class="h-16 w-auto">
+                <span class="font-bold text-lg tracking-wide">Beatempo</span>
+            </div>
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                © 2024 Beatempo. Todos os direitos reservados.
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com/beatempo.ag" target="_blank"
+                    class="hover:text-white transition-colors" title="Instagram"><i
+                        class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://wa.me/554123910713" target="_blank" class="hover:text-white transition-colors"
+                    title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="mailto:beatempoco@gmail.com" class="hover:text-white transition-colors" title="Gmail"><i
+                        class="fas fa-envelope fa-lg"></i></a>
+                <a href="https://www.youtube.com/@Beatempo-ag" target="_blank"
+                    class="hover:text-white transition-colors" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                <a href="https://www.tiktok.com/@beatempo.ag" target="_blank" class="hover:text-white transition-colors"
+                    title="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
+            </div>
         </div>
-        <div class="text-gray-400 text-sm mb-4 md:mb-0">
-          © 2024 Beatempo. Todos os direitos reservados.
-        </div>
-        <div class="flex space-x-4">
-          <a href="https://www.instagram.com/beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="https://wa.me/554123910713" target="_blank" class="hover:text-white transition-colors" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
-          <a href="mailto:beatempoco@gmail.com" class="hover:text-white transition-colors" title="Gmail"><i class="fas fa-envelope fa-lg"></i></a>
-          <a href="https://www.youtube.com/@Beatempo-ag" target="_blank" class="hover:text-white transition-colors" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
-          <a href="https://www.tiktok.com/@beatempo.ag" target="_blank" class="hover:text-white transition-colors" title="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
-        </div>
-      </div>
     </footer>
     <script src="script.js"></script>
     <div id="info-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-black rounded-2xl max-w-2xl w-full p-8 md:p-10 relative modal-content border border-gray-700">
-            <button id="close-info-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <button id="close-info-modal"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
             <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
-                <img id="modal-img" src="" alt="Foto" class="w-40 h-40 rounded-full object-cover flex-shrink-0 border-4 border-white">
+                <img id="modal-img" src="" alt="Foto"
+                    class="w-40 h-40 rounded-full object-cover flex-shrink-0 border-4 border-white">
                 <div class="md:ml-8 mt-6 md:mt-0">
                     <h3 id="modal-name" class="text-4xl font-extrabold"></h3>
                     <p id="modal-role" class="text-gray-400 font-semibold text-lg"></p>
                     <p id="modal-bio" class="mt-4 text-gray-300"></p>
                     <div id="modal-social-links" class="mt-6 flex justify-center md:justify-start space-x-4 text-2xl">
-                        <a id="modal-spotify" href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-spotify"></i></a>
-                        <a id="modal-youtube" href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
-                        <a id="modal-soundcloud" href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-soundcloud"></i></a>
-                        <a id="modal-instagram" href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a id="modal-spotify" href="#" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-spotify"></i></a>
+                        <a id="modal-youtube" href="#" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                        <a id="modal-soundcloud" href="#" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-soundcloud"></i></a>
+                        <a id="modal-instagram" href="#" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="production-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-gradient-to-br from-zinc-900 to-black rounded-3xl max-w-lg w-full p-4 md:p-6 relative modal-content border border-gray-800 shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
-            <button id="close-production-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors w-8 h-8 bg-black/50 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70">
+    <div id="production-modal"
+        class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-gradient-to-br from-zinc-900 to-black rounded-3xl max-w-lg w-full p-4 md:p-6 relative modal-content border border-gray-800 shadow-2xl transform transition-all duration-300 scale-95 opacity-0"
+            id="modal-content">
+            <button id="close-production-modal"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors w-8 h-8 bg-black/50 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-            
+
             <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
                 <!-- Album Art Section -->
                 <div class="relative group flex-shrink-0">
-                    <img id="modal-production-img" src="" alt="Capa da música" class="w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover shadow-xl border-2 border-white/20 group-hover:border-white/30 transition-all duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img id="modal-production-img" src="" alt="Capa da música"
+                        class="w-40 h-40 md:w-48 md:h-48 rounded-xl object-cover shadow-xl border-2 border-white/20 group-hover:border-white/30 transition-all duration-300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
                 </div>
-                
+
                 <!-- Content Section -->
                 <div class="flex-1 flex flex-col justify-between h-40 md:h-48">
                     <!-- Title Section - Alinhado com o topo do álbum -->
                     <div class="space-y-3">
-                        <h3 id="modal-production-title" class="text-2xl md:text-3xl font-black text-white leading-tight"></h3>
+                        <h3 id="modal-production-title"
+                            class="text-2xl md:text-3xl font-black text-white leading-tight"></h3>
                         <div class="w-20 h-0.5 bg-gradient-to-r from-white to-gray-600 rounded-full"></div>
                     </div>
-                    
+
                     <!-- Action Buttons - Apenas ícones -->
                     <div class="flex justify-center md:justify-start gap-6">
-                        <a id="modal-spotify-link" href="#" target="_blank" 
-                           class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+                        <a id="modal-spotify-link" href="#" target="_blank"
+                            class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
                             <i class="fab fa-spotify text-2xl"></i>
                         </a>
-                        <a id="modal-youtube-link" href="#" target="_blank" 
-                           class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+                        <a id="modal-youtube-link" href="#" target="_blank"
+                            class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
                             <i class="fab fa-youtube text-2xl"></i>
                         </a>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
     </div>
-    <div id="all-productions-modal" class="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 hidden">
-        <div class="bg-zinc-900 rounded-2xl max-w-6xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
-            <button id="close-all-productions-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i class="fa-solid fa-xmark text-2xl"></i></button>
+    </div>
+    <div id="all-productions-modal"
+        class="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 hidden">
+        <div
+            class="bg-zinc-900 rounded-2xl max-w-6xl w-full p-6 md:p-8 relative modal-content border border-gray-700 max-h-[90vh] flex flex-col">
+            <button id="close-all-productions-modal"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors w-8 h-8 z-10"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
             <h3 class="text-3xl font-bold mb-6 text-center">Todos os Lançamentos</h3>
             <div class="overflow-y-auto overflow-x-hidden pr-4 scroll-container">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa Dilema (remix funk)" class="w-full h-auto rounded-md object-cover mb-4">
+                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa Dilema (remix funk)"
+                            class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">Dilema (remix funk)</h4>
-                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci</p>
+                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci
+                        </p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-dilema.jpg" alt="Capa Dilema" class="w-full h-auto rounded-md object-cover mb-4">
+                        <img src="assets/capas/capa-dilema.jpg" alt="Capa Dilema"
+                            class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">Dilema</h4>
-                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci</p>
+                        <p class="text-sm text-gray-400 truncate">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci
+                        </p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=jl0bf3Ow77A" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=jl0bf3Ow77A" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-qvsdn.jpg" alt="Capa QVSDN" class="w-full h-auto rounded-md object-cover mb-4">
+                        <img src="assets/capas/capa-qvsdn.jpg" alt="Capa QVSDN"
+                            class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">QVSDN?</h4>
                         <p class="text-sm text-gray-400">Munha</p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=YAPV2vOCglQ" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=YAPV2vOCglQ" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-sentimentos.jpg" alt="Capa Sentimentos" class="w-full h-auto rounded-md object-cover mb-4">
+                        <img src="assets/capas/capa-sentimentos.jpg" alt="Capa Sentimentos"
+                            class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">Sentimentos</h4>
                         <p class="text-sm text-gray-400 truncate">Born</p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa Lei da Atração" class="w-full h-auto rounded-md object-cover mb-4">
+                        <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa Lei da Atração"
+                            class="w-full h-auto rounded-md object-cover mb-4">
                         <h4 class="font-bold text-lg">Lei da Atração</h4>
                         <p class="text-sm text-gray-400">Tento</p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                            <a href="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-meia-lua.jpg" alt="Capa Meia Lua" class="w-full h-auto rounded-md object-cover mb-4">
-                            <h4 class="font-bold text-lg">Meia Lua</h4>
+                        <img src="assets/capas/capa-meia-lua.jpg" alt="Capa Meia Lua"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Meia Lua</h4>
                         <p class="text-sm text-gray-400">Sao Tchelli ft. Bega</p>
-                            <div class="flex items-center gap-4 mt-2">
-                                <a href="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=9d139e8f2e1347e7" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-spotify fa-lg"></i></a>
-                                <a href="https://www.youtube.com/watch?v=u26HdC5mKUM" target="_blank" class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
-                            </div>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=9d139e8f2e1347e7"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=u26HdC5mKUM" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
-                    <div class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
+                    </div>
+                    <div
+                        class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
                         <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
                         <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
                     </div>
-                    <div class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
+                    <div
+                        class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
                         <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
                         <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
                     </div>
@@ -699,18 +1059,19 @@
         </div>
     </div>
     <style>
-.custom-budget-btn svg {
-  min-width: 2rem;
-  min-height: 2rem;
-}
-</style>
-<div id="whatsapp-float" class="fixed bottom-6 left-6 z-50">
-    <a href="https://wa.me/554123910713" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"
-       class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg transition-colors duration-200">
-      <i class="fab fa-whatsapp text-3xl text-white"></i>
+        .custom-budget-btn svg {
+            min-width: 2rem;
+            min-height: 2rem;
+        }
+    </style>
+    <div id="whatsapp-float" class="fixed bottom-6 left-6 z-50">
+        <a href="https://wa.me/554123910713" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp"
+            class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg transition-colors duration-200">
+            <i class="fab fa-whatsapp text-3xl text-white"></i>
+        </a>
+    </div>
     </a>
-  </div>
-  </a>
-</div>
+    </div>
 </body>
+
 </html>
