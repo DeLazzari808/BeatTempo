@@ -198,11 +198,10 @@
                     <!-- Price -->
                     <div class="mb-8">
                         <div class="flex items-baseline gap-3 justify-center lg:justify-start">
-                            <span class="text-4xl font-black">R$ 89</span>
+                            <span class="text-4xl font-black">R$ 89,90</span>
                             <span class="text-gray-500 text-lg line-through">R$ 119</span>
                             <span class="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded">-25%</span>
                         </div>
-                        <p class="text-gray-500 text-sm mt-2">ou 3x de R$ 29,67 sem juros</p>
                     </div>
 
                     <!-- Size Selector -->
@@ -221,15 +220,12 @@
                             <button
                                 class="size-option w-14 h-14 rounded-2xl border-2 border-white/20 text-sm font-bold hover:border-white"
                                 data-size="GG">GG</button>
-                            <button
-                                class="size-option w-14 h-14 rounded-2xl border-2 border-white/20 text-sm font-bold hover:border-white"
-                                data-size="XG">XG</button>
                         </div>
                     </div>
 
                     <!-- CTA Button -->
                     <a id="whatsapp-cta"
-                        href="https://wa.me/554123910713?text=Olá!%20Quero%20comprar%20a%20Camiseta%20Beatempo%20-%20Tamanho%20G"
+                        href="https://wa.me/5541991990409?text=Olá!%20Quero%20comprar%20a%20Camiseta%20Beatempo%20-%20Tamanho%20G"
                         target="_blank"
                         class="inline-flex items-center justify-center gap-3 bg-white text-black font-black py-4 px-10 rounded-2xl text-lg uppercase tracking-wide glow-hover transition-all duration-300 hover:scale-105 hover:bg-gray-100 w-full sm:w-auto">
                         <i class="fab fa-whatsapp text-2xl"></i>
@@ -249,15 +245,15 @@
                     <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-white/3 rounded-full blur-2xl"></div>
 
                     <!-- Main product card -->
-                    <div class="relative z-10 glass-card rounded-[3rem] p-8 max-w-md w-full float-animation">
-                        <!-- Placeholder image -->
-                        <div
-                            class="aspect-square w-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl flex items-center justify-center overflow-hidden relative">
-                            <!-- TODO: Substituir por imagem real da camiseta -->
-                            <div class="text-center p-8">
-                                <i class="fa-solid fa-shirt text-8xl text-gray-600 mb-4"></i>
-                                <p class="text-gray-500 text-sm font-medium">IMAGEM EM BREVE</p>
-                            </div>
+                    <div
+                        class="relative z-10 glass-card rounded-[3rem] p-6 max-w-xl w-full float-animation shadow-2xl shadow-white/10">
+                        <!-- Product images with toggle -->
+                        <div class="aspect-square w-full bg-white rounded-3xl flex items-center justify-center overflow-hidden relative cursor-pointer"
+                            id="product-image-container" onclick="toggleProductImage()">
+                            <img id="product-image-front" src="assets/camiseta-frente.png.jpeg"
+                                alt="Camiseta Beatempo - Frente" class="w-full h-full object-cover">
+                            <img id="product-image-back" src="assets/camiseta-costas.png.jpeg"
+                                alt="Camiseta Beatempo - Costas" class="w-full h-full object-cover hidden">
 
                             <!-- Overlay badge -->
                             <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1.5 rounded-full">
@@ -269,39 +265,12 @@
                         <div class="mt-6 flex justify-between items-center">
                             <div>
                                 <p class="text-xs text-gray-500 uppercase tracking-wider">Material</p>
-                                <p class="text-sm font-semibold">100% Algodão</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-xs text-gray-500 uppercase tracking-wider">Estoque</p>
-                                <p class="text-sm font-semibold text-orange-400">Últimas unidades</p>
+                                <p class="text-sm font-semibold">Poliviscose</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Floating secondary card (overlapping effect) -->
-                    <div class="absolute -bottom-6 -left-6 z-20 glass-card rounded-2xl p-4 hidden lg:block">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                                <i class="fa-solid fa-fire text-orange-400"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-400">Vendas hoje</p>
-                                <p class="text-lg font-bold">+12 unidades</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Another floating element -->
-                    <div class="absolute -top-4 -right-4 z-20 glass-card rounded-2xl p-3 hidden lg:block">
-                        <div class="flex items-center gap-2">
-                            <div class="flex -space-x-2">
-                                <div class="w-8 h-8 rounded-full bg-gray-700 border-2 border-bt-black"></div>
-                                <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-bt-black"></div>
-                                <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-bt-black"></div>
-                            </div>
-                            <span class="text-xs text-gray-400">+47 interessados</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -312,36 +281,232 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-24 px-6 bg-bt-dark">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid sm:grid-cols-3 gap-8">
-                <div
-                    class="glass-card rounded-3xl p-8 text-center glow-hover transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 flex items-center justify-center">
-                        <i class="fa-solid fa-medal text-2xl text-white"></i>
+    <!-- Details Section -->
+    <section class="py-16 px-6 bg-bt-dark">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black uppercase mb-3 gradient-text">Detalhes do Produto</h2>
+                <p class="text-gray-400 text-lg">Camiseta Preta Manga Curta - Edição Limitada</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- Main Product Specs Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 glow-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
+                        <i class="fa-solid fa-shirt text-3xl text-white"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Qualidade Premium</h3>
-                    <p class="text-gray-400 text-sm">Tecido 100% algodão penteado, macio e durável.</p>
+                    <h3 class="font-bold text-lg mb-2">Tecido</h3>
+                    <p class="text-gray-400 text-sm mb-1">Poliviscose Premium</p>
+                    <p class="text-gray-500 text-xs">65% Poliéster / 35% Viscose</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 glow-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
+                        <i class="fa-solid fa-palette text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Cor</h3>
+                    <p class="text-gray-400 text-sm mb-1">Preto</p>
+                    <div class="flex justify-center gap-2 mt-2">
+                        <div class="w-6 h-6 rounded-full bg-black border-2 border-white/20"></div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 glow-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
+                        <i class="fa-solid fa-ruler text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Manga</h3>
+                    <p class="text-gray-400 text-sm mb-1">Curta</p>
+                    <p class="text-gray-500 text-xs">Corte moderno</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 glow-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
+                        <i class="fa-solid fa-box-open text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Estoque</h3>
+                    <p class="text-gray-400 text-sm mb-1">100 unidades</p>
+                    <p class="text-green-400 text-xs font-semibold mt-1">Edição Limitada</p>
+                </div>
+            </div>
+
+            <!-- Detailed Information Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Left Column: Technical Details -->
+                <div class="glass-card rounded-3xl p-8">
+                    <h3 class="text-xl font-black uppercase mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-info-circle text-white"></i>
+                        Especificações Técnicas
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start pb-4 border-b border-white/10">
+                            <span class="text-gray-400 text-sm">Composição</span>
+                            <span class="text-white font-semibold text-right">65% Poliéster / 35% Viscose</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-white/10">
+                            <span class="text-gray-400 text-sm">Gramatura</span>
+                            <span class="text-white font-semibold text-right">180 GSM</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-white/10">
+                            <span class="text-gray-400 text-sm">Tamanhos Disponíveis</span>
+                            <span class="text-white font-semibold text-right">P, M, G, GG</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-white/10">
+                            <span class="text-gray-400 text-sm">Tipo de Gola</span>
+                            <span class="text-white font-semibold text-right">Gola Redonda</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-white/10">
+                            <span class="text-gray-400 text-sm">Tipo de Costura</span>
+                            <span class="text-white font-semibold text-right">Overlock Premium</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="text-gray-400 text-sm">Origem</span>
+                            <span class="text-white font-semibold text-right">Brasil</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div
-                    class="glass-card rounded-3xl p-8 text-center glow-hover transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 flex items-center justify-center">
-                        <i class="fa-solid fa-paint-brush text-2xl text-white"></i>
+                <!-- Right Column: Features & Benefits -->
+                <div class="glass-card rounded-3xl p-8">
+                    <h3 class="text-xl font-black uppercase mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-star text-white"></i>
+                        Características Premium
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Tecido Macio e Respirável</h4>
+                                <p class="text-gray-400 text-sm">Conforto máximo para o dia a dia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Alta Durabilidade</h4>
+                                <p class="text-gray-400 text-sm">Resistente a lavagens e uso constante</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Design Exclusivo</h4>
+                                <p class="text-gray-400 text-sm">Estampa única e personalizada Beatempo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Corte Moderno</h4>
+                                <p class="text-gray-400 text-sm">Ajuste perfeito e estilo contemporâneo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Não Encolhe</h4>
+                                <p class="text-gray-400 text-sm">Mantém o tamanho após lavagens</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Design Exclusivo</h3>
-                    <p class="text-gray-400 text-sm">Arte original criada pela equipe Beatempo.</p>
                 </div>
+            </div>
 
-                <div
-                    class="glass-card rounded-3xl p-8 text-center glow-hover transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 flex items-center justify-center">
-                        <i class="fa-solid fa-box text-2xl text-white"></i>
+            <!-- Care Instructions -->
+            <div class="glass-card rounded-3xl p-8 mb-12">
+                <h3 class="text-xl font-black uppercase mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-hand-sparkles text-white"></i>
+                    Instruções de Cuidado
+                </h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="fa-solid fa-water text-2xl text-white"></i>
+                        </div>
+                        <p class="text-white font-semibold mb-1">Lavagem</p>
+                        <p class="text-gray-400 text-sm">Máquina 30°C</p>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Edição Limitada</h3>
-                    <p class="text-gray-400 text-sm">Apenas 50 unidades disponíveis neste drop.</p>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="fa-solid fa-ban text-2xl text-white"></i>
+                        </div>
+                        <p class="text-white font-semibold mb-1">Não Usar</p>
+                        <p class="text-gray-400 text-sm">Lavagem a seco</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="fa-solid fa-thermometer-half text-2xl text-white"></i>
+                        </div>
+                        <p class="text-white font-semibold mb-1">Passar</p>
+                        <p class="text-gray-400 text-sm">Temperatura baixa</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
+                            <i class="fa-solid fa-sun text-2xl text-white"></i>
+                        </div>
+                        <p class="text-white font-semibold mb-1">Secar</p>
+                        <p class="text-gray-400 text-sm">À sombra</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Size Guide -->
+            <div class="glass-card rounded-3xl p-8">
+                <h3 class="text-xl font-black uppercase mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-ruler-combined text-white"></i>
+                    GUIA DE TAMANHOS
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="text-left py-3 px-4 text-gray-400 font-semibold uppercase text-sm">TAMANHO</th>
+                                <th class="text-center py-3 px-4 text-gray-400 font-semibold uppercase text-sm">ALTURA (CM)</th>
+                                <th class="text-center py-3 px-4 text-gray-400 font-semibold uppercase text-sm">TÓRAX (CM)</th>
+                                <th class="text-center py-3 px-4 text-gray-400 font-semibold uppercase text-sm">MANGA (CM)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-white">
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="py-3 px-4 font-bold">P</td>
+                                <td class="py-3 px-4 text-center">68</td>
+                                <td class="py-3 px-4 text-center">50</td>
+                                <td class="py-3 px-4 text-center">18</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="py-3 px-4 font-bold">M</td>
+                                <td class="py-3 px-4 text-center">70</td>
+                                <td class="py-3 px-4 text-center">54</td>
+                                <td class="py-3 px-4 text-center">19</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="py-3 px-4 font-bold">G</td>
+                                <td class="py-3 px-4 text-center">72</td>
+                                <td class="py-3 px-4 text-center">58</td>
+                                <td class="py-3 px-4 text-center">20</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-3 px-4 font-bold">GG</td>
+                                <td class="py-3 px-4 text-center">74</td>
+                                <td class="py-3 px-4 text-center">62</td>
+                                <td class="py-3 px-4 text-center">21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-gray-400 text-xs mt-4 text-center">
+                    <i class="fa-solid fa-info-circle mr-1"></i>
+                    Medidas aproximadas. Podem variar em até 2cm.
+                </p>
             </div>
         </div>
     </section>
@@ -358,7 +523,7 @@
                     class="text-gray-500 hover:text-white transition-colors">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="https://wa.me/554123910713" target="_blank"
+                <a href="https://wa.me/5541991990409" target="_blank"
                     class="text-gray-500 hover:text-white transition-colors">
                     <i class="fab fa-whatsapp text-xl"></i>
                 </a>
@@ -387,9 +552,28 @@
 
                 // Update WhatsApp link
                 const message = encodeURIComponent(`Olá! Quero comprar a Camiseta Beatempo - Tamanho ${selectedSize}`);
-                whatsappCta.href = `https://wa.me/554123910713?text=${message}`;
+                whatsappCta.href = `https://wa.me/5541991990409?text=${message}`;
             });
         });
+
+        // Toggle product image (front/back)
+        let showingFront = true;
+        function toggleProductImage() {
+            const frontImg = document.getElementById('product-image-front');
+            const backImg = document.getElementById('product-image-back');
+
+            if (showingFront) {
+                frontImg.classList.add('hidden');
+                backImg.classList.remove('hidden');
+            } else {
+                frontImg.classList.remove('hidden');
+                backImg.classList.add('hidden');
+            }
+            showingFront = !showingFront;
+        }
+
+        // Auto-rotate images every 3 seconds
+        setInterval(toggleProductImage, 3000);
     </script>
 </body>
 

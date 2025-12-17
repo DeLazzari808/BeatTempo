@@ -7,7 +7,7 @@
     <title>Beatempo - Agência Publicitária Musical</title>
     <link rel="icon" href="assets/PNG_SIMBOLO_PRETO.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/PNG_SIMBOLO_PRETO.png">
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/output.css?v=1.4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Google Analytics -->
@@ -22,8 +22,23 @@
 
 <body class="bg-black text-white antialiased">
 
+    <!-- DROP BANNER - Clicável -->
+    <div id="drop-banner" onclick="window.location.href='/drop'"
+        style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: linear-gradient(to right, #18181b, #27272a, #18181b); padding: 10px 16px; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 14px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <span
+            style="background: white; color: black; font-weight: 900; padding: 2px 8px; border-radius: 4px; font-size: 12px;">DROP
+            001</span>
+        <span style="font-weight: 500; color: white;">Camiseta Beatempo Exclusiva</span>
+        <span style="color: #9ca3af;">•</span>
+        <span style="color: white; font-weight: 700;">R$ 89,90</span>
+        <span style="color: #d1d5db; display: flex; align-items: center; gap: 4px;">
+            Ver agora
+            <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
+        </span>
+    </div>
+
     <header id="main-header"
-        class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+        class="fixed top-10 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex-1">
                 <a href="/">
@@ -103,7 +118,7 @@
                     <div class="md:pr-8 flex flex-col">
                         <div>
                             <h3 class="text-3xl font-bold mb-4">PROJETO BEATEMPO <span
-                                    class="text-xs font-normal">(OPCIONAL)</span></h3>
+                                    class="text-xs font-normal">(TRAGA SEU TIME!)</span></h3>
                             <ul class="space-y-4 text-gray-300">
                                 <li>• Gerenciamento do Lançamento</li>
                                 <li>• Produção de Conteúdos</li>
@@ -136,9 +151,10 @@
                         <div>
                             <h3 class="text-3xl font-bold mb-4">ASSESSORIA MENSAL</h3>
                             <ul class="space-y-4 text-gray-300">
-                                <li>• Acompanhamento de Gravações</li>
+                                <li>• Diárias de Gravação</li>
                                 <li>• Edição de Vídeos</li>
-                                <li>• Assessorias Semanais e/ou Mensais</li>
+                                <li>• Encontros Presenciais ou Online para Alavancamento de Carreira, Lançamento de
+                                    Projetos, Identidade Visual...</li>
                             </ul>
                         </div>
                         <div class="mt-auto pt-8">
@@ -162,11 +178,12 @@
                 <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
                     <div class="pr-8 flex flex-col">
                         <div>
-                            <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA <span class="text-xs font-normal">(PRESENCIAL E ONLINE)</span></h3>
-                                                        <div class="bg-black border-2 border-white rounded-lg">
-                                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                                                <div class="p-6">
-                                                                    <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
+                            <h3 class="text-3xl font-bold mb-8 text-left">BEATEMPO ENSINA <span
+                                    class="text-xs font-normal">(PRESENCIAL E ONLINE)</span></h3>
+                            <div class="bg-black border-2 border-white rounded-lg">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="p-6">
+                                        <h4 class="text-xl font-bold uppercase text-white mb-4">Aulas Instrumentais</h4>
                                         <ul class="space-y-3 text-gray-300">
                                             <li>• Violão</li>
                                             <li>• Guitarra</li>
@@ -210,7 +227,8 @@
                         <div>
                             <h3 class="text-3xl font-bold mb-4">ESTÚDIO MUSICAL</h3>
                             <ul class="space-y-4 text-gray-300">
-                                <li>• Estúdio Independente</li>
+                                <li>• Agende com nosso Produtor</li>
+                                <li>• Traga seu Produtor/Artista</li>
                                 <li>• Captação</li>
                                 <li>• Beat</li>
                                 <li>• Mixagem</li>
@@ -245,66 +263,68 @@
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
 
                     <div class="bg-black rounded-2xl p-6 md:p-8 cursor-pointer group production-trigger"
-                        data-title="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                        data-description="Dilema (remix funk) - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                        data-img="./assets/capas/capa-dilema-remix.jpg"
-                        data-spotify-link="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
-                        data-youtube-link="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv">
-                        <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa da música Dilema Remix"
+                        data-title="Balança & Dança - Sao Tchelli, Bega, Born"
+                        data-description="Balança & Dança - Sao Tchelli, Bega, Born"
+                        data-img="./assets/capas/capa-balanca-e-danca.png"
+                        data-spotify-link="https://open.spotify.com/intl-pt/track/2PrBVRI6aV0gJY0e6mhxgo?si=ebd1b38f16e24427"
+                        data-youtube-link="https://www.youtube.com/watch?v=UjcN0tE2lWM">
+                        <img src="./assets/capas/capa-balanca-e-danca.png" alt="Capa da música Balança & Dança"
                             class="w-full rounded-lg shadow-lg mb-6 group-hover:scale-105 transition-transform duration-300"
                             loading="eager">
                         <div>
                             <p class="text-gray-400 font-semibold">Último Lançamento</p>
-                            <h3 class="text-4xl font-extrabold mt-2">Dilema (remix funk)</h3>
+                            <h3 class="text-4xl font-extrabold mt-2">Balança & Dança</h3>
                         </div>
                     </div>
 
                     <div class="space-y-8">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- 1. MODO OFF -->
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
-                                data-title="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                                data-description="Dilema - Bega, Sao Tchelli, Born, Cruzzz, ChiefJota & Dialucci"
-                                data-img="./assets/capas/capa-dilema.jpg"
-                                data-spotify-link="https://open.spotify.com/intl-pt/track/3RDCTQ6ooPNzIQYGSixfnO?si=73d59cd69dfa41b7"
-                                data-youtube-link="https://www.youtube.com/watch?v=jl0bf3Ow77A">
-                                <img src="assets/capas/capa-dilema.jpg" alt="Capa da música Dilema"
+                                data-title="MODO OFF - Topy (prod. Green Icy)"
+                                data-description="MODO OFF - Topy (prod. Green Icy)"
+                                data-img="./assets/capas/capa-modo-off.jpg" data-spotify-link="#"
+                                data-youtube-link="https://www.youtube.com/watch?v=1W8clyNokpo">
+                                <img src="assets/capas/capa-modo-off.jpg" alt="Capa da música MODO OFF"
                                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     loading="eager">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Dilema</h4>
-                                    <p class="text-gray-300 text-sm">Bega, Sao Tchelli, Born, Cruzzz, ChiefJota &
-                                        Dialucci</p>
+                                    <h4 class="text-white text-lg font-bold">MODO OFF</h4>
+                                    <p class="text-gray-300 text-sm">Topy (prod. Green Icy)</p>
                                 </div>
                             </div>
+                            <!-- 2. É Assim Que Eu Acordo -->
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
-                                data-title="QVSDN? - Munha" data-description="QVSDN? - Munha"
-                                data-img="./assets/capas/capa-qvsdn.jpg"
-                                data-spotify-link="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c"
-                                data-youtube-link="https://www.youtube.com/watch?v=YAPV2vOCglQ">
-                                <img src="assets/capas/capa-qvsdn.jpg" alt="Capa da música QVSDN"
+                                data-title="É Assim Que Eu Acordo Todos os Dias - Guima"
+                                data-description="É Assim Que Eu Acordo Todos os Dias - Guima"
+                                data-img="./assets/capas/capa-guima-album.jpg" data-spotify-link="#"
+                                data-youtube-link="https://www.youtube.com/playlist?list=PLNjqiB73c_DrJMMxhTwNYvbp9C-9mqUxK">
+                                <img src="assets/capas/capa-guima-album.jpg" alt="Capa do álbum Guima"
                                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     loading="eager">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">QVSDN?</h4>
-                                    <p class="text-gray-300 text-sm">Munha</p>
+                                    <h4 class="text-white text-lg font-bold">É Assim Que Eu Acordo...</h4>
+                                    <p class="text-gray-300 text-sm">Guima</p>
                                 </div>
                             </div>
+                            <!-- 3. Algo a Mais -->
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
-                                data-title="Sentimentos - Born" data-description="Sentimentos - Born"
-                                data-img="./assets/capas/capa-sentimentos.jpg"
-                                data-spotify-link="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0"
-                                data-youtube-link="https://www.youtube.com/watch?v=66BTEjMgf-E">
-                                <img src="assets/capas/capa-sentimentos.jpg" alt="Capa da música Sentimentos"
+                                data-title="Algo a Mais - Valle feat. Lino"
+                                data-description="Algo a Mais - Valle feat. Lino"
+                                data-img="./assets/capas/capa-algo-a-mais.png" data-spotify-link="#"
+                                data-youtube-link="#">
+                                <img src="assets/capas/capa-algo-a-mais.png" alt="Capa da música Algo a Mais"
                                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     loading="eager">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <h4 class="text-white text-lg font-bold">Sentimentos</h4>
-                                    <p class="text-gray-300 text-sm">Born</p>
+                                    <h4 class="text-white text-lg font-bold">Algo a Mais</h4>
+                                    <p class="text-gray-300 text-sm">Valle ft. Lino</p>
                                 </div>
                             </div>
+                            <!-- 4. Lei da Atração -->
                             <div class="production-trigger cursor-pointer group relative overflow-hidden rounded-2xl aspect-square"
                                 data-title="Lei da Atração - Tento" data-description="Lei da Atração - Tento"
                                 data-img="./assets/capas/capa-lei-da-atracao.jpg"
@@ -319,7 +339,6 @@
                                     <p class="text-gray-300 text-sm">Tento</p>
                                 </div>
                             </div>
-
                         </div>
                         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div class="flex flex-row items-center gap-4">
@@ -347,7 +366,8 @@
                     <div class="bg-black/80 rounded-2xl p-8 text-center shadow-lg border border-gray-700">
                         <h3 class="text-2xl font-bold mb-4 text-white uppercase">VAMOS CONVERSAR?</h3>
                         <p class="text-gray-400 mb-8">Para quem quer <strong>impulsionar</strong> sua
-                            <strong>carreira</strong> no <strong>ramo musical</strong></p>
+                            <strong>carreira</strong> no <strong>ramo musical</strong>
+                        </p>
                         <div class="flex flex-col gap-4">
                             <a href="https://wa.me/554123910713" target="_blank"
                                 class="w-full text-center bg-white text-black font-bold py-3 px-8 rounded-lg shadow transition-all duration-200 hover:bg-gray-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white uppercase">
@@ -573,7 +593,8 @@
                     <div id="btn-agenciamento"
                         class="bg-black p-8 rounded-2xl text-center cursor-pointer border-2 border-gray-800 hover:border-white hover:scale-105 transition-all">
                         <i class="fa-solid fa-calendar-days text-4xl mb-4 text-white"></i>
-                                                    <h3 class="text-2xl font-bold mb-2">Assessoria Mensal</h3>                        <p class="text-gray-400">Acompanhamento <strong>contínuo</strong> e <strong>estratégico</strong>
+                        <h3 class="text-2xl font-bold mb-2">Assessoria Mensal</h3>
+                        <p class="text-gray-400">Acompanhamento <strong>contínuo</strong> e <strong>estratégico</strong>
                             da <strong>carreira</strong>.</p>
                     </div>
 
@@ -666,9 +687,9 @@
                 <div id="assessoria-checklist" class="space-y-4">
                     <label
                         class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <input type="checkbox" value="Acompanhamento de Gravações"
+                        <input type="checkbox" value="Diárias de Gravação"
                             class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                        <span class="text-lg font-semibold text-left">Acompanhamento de Gravações</span>
+                        <span class="text-lg font-semibold text-left">Diárias de Gravação</span>
                     </label>
                     <label
                         class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
@@ -678,9 +699,11 @@
                     </label>
                     <label
                         class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <input type="checkbox" value="Assessorias Semanais e/ou Mensais"
+                        <input type="checkbox"
+                            value="Encontros para Alavancamento de Carreira, Lançamentos, Identidade Visual"
                             class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                        <span class="text-lg font-semibold text-left">Assessorias Semanais e/ou Mensais</span>
+                        <span class="text-lg font-semibold text-left">Encontros Presenciais ou Online para Alavancamento
+                            de Carreira, Lançamento de Projetos, Identidade Visual...</span>
                     </label>
                 </div>
                 <button id="solicitar-assessoria-btn"
@@ -730,9 +753,15 @@
                 <div id="estudio-checklist" class="space-y-4">
                     <label
                         class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
-                        <input type="checkbox" value="Estúdio Independente"
+                        <input type="checkbox" value="Agende com nosso Produtor"
                             class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
-                        <span class="text-lg font-semibold text-left">Estúdio Independente</span>
+                        <span class="text-lg font-semibold text-left">Agende com nosso Produtor</span>
+                    </label>
+                    <label
+                        class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
+                        <input type="checkbox" value="Traga seu Produtor/Artista"
+                            class="custom-checkbox h-6 w-6 rounded bg-zinc-700 border-gray-600 text-white focus:ring-white mr-4 flex-shrink-0">
+                        <span class="text-lg font-semibold text-left">Traga seu Produtor/Artista</span>
                     </label>
                     <label
                         class="flex items-center bg-black p-4 rounded-lg cursor-pointer hover:bg-zinc-800 transition-colors">
@@ -881,7 +910,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=1.3"></script>
     <div id="info-modal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-black rounded-2xl max-w-2xl w-full p-8 md:p-10 relative modal-content border border-gray-700">
             <button id="close-info-modal"
@@ -912,7 +941,7 @@
     </div>
     <div id="production-modal"
         class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-gradient-to-br from-zinc-900 to-black rounded-3xl max-w-lg w-full p-4 md:p-6 relative modal-content border border-gray-800 shadow-2xl transform transition-all duration-300 scale-95 opacity-0"
+        <div class="bg-gradient-to-br from-zinc-900 to-black rounded-3xl max-w-lg w-full p-4 md:p-6 relative modal-content border border-gray-800 shadow-2xl"
             id="modal-content">
             <button id="close-production-modal"
                 class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors w-8 h-8 bg-black/50 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/70">
@@ -964,6 +993,21 @@
             <h3 class="text-3xl font-bold mb-6 text-center">Todos os Lançamentos</h3>
             <div class="overflow-y-auto overflow-x-hidden pr-4 scroll-container">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
+                    <!-- 1. Meia Lua (mais antigo) -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-meia-lua.jpg" alt="Capa Meia Lua"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Meia Lua</h4>
+                        <p class="text-sm text-gray-400">Sao Tchelli ft. Bega</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=9d139e8f2e1347e7"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=u26HdC5mKUM" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- 2. Dilema (remix funk) -->
                     <div class="bg-black p-4 rounded-lg">
                         <img src="assets/capas/capa-dilema-remix.jpg" alt="Capa Dilema (remix funk)"
                             class="w-full h-auto rounded-md object-cover mb-4">
@@ -974,10 +1018,54 @@
                             <a href="https://open.spotify.com/intl-pt/track/36Dq9ZvbcEmDRzKSBAhSnu?si=df58c76e68874ea9"
                                 target="_blank" class="text-green-500 hover:text-green-400"><i
                                     class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=8gngqQPxnBg&pp=0gcJCccJAYcqIYzv" target="_blank"
+                            <a href="https://www.youtube.com/watch?v=8gngqQPxnBg" target="_blank"
                                 class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
+                    <!-- 3. Lei da Atração -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa Lei da Atração"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Lei da Atração</h4>
+                        <p class="text-sm text-gray-400">Tento</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=0Jw0b58uNI0&list=PLsQSYYnJHwH0DKN79lInoetTH04jTugrx"
+                                target="_blank" class="text-red-600 hover:text-red-500"><i
+                                    class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- 4. Sentimentos -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-sentimentos.jpg" alt="Capa Sentimentos"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">Sentimentos</h4>
+                        <p class="text-sm text-gray-400 truncate">Born</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- 5. QVSDN -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-qvsdn.jpg" alt="Capa QVSDN"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">QVSDN?</h4>
+                        <p class="text-sm text-gray-400">Munha</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c"
+                                target="_blank" class="text-green-500 hover:text-green-400"><i
+                                    class="fab fa-spotify fa-lg"></i></a>
+                            <a href="https://www.youtube.com/watch?v=YAPV2vOCglQ" target="_blank"
+                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- 6. Dilema -->
                     <div class="bg-black p-4 rounded-lg">
                         <img src="assets/capas/capa-dilema.jpg" alt="Capa Dilema"
                             class="w-full h-auto rounded-md object-cover mb-4">
@@ -992,67 +1080,52 @@
                                 class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
+                    <!-- 7. Algo a Mais -->
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-qvsdn.jpg" alt="Capa QVSDN"
+                        <img src="assets/capas/capa-algo-a-mais.png" alt="Capa Algo a Mais"
                             class="w-full h-auto rounded-md object-cover mb-4">
-                        <h4 class="font-bold text-lg">QVSDN?</h4>
-                        <p class="text-sm text-gray-400">Munha</p>
+                        <h4 class="font-bold text-lg">Algo a Mais</h4>
+                        <p class="text-sm text-gray-400 truncate">Valle ft. Lino</p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/0I9AVqWGJ3uIZNWG4ZhRgw?si=12d0353297de455c"
-                                target="_blank" class="text-green-500 hover:text-green-400"><i
-                                    class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=YAPV2vOCglQ" target="_blank"
+                            <span class="text-gray-500 text-sm">Em breve nas plataformas</span>
+                        </div>
+                    </div>
+                    <!-- 8. É Assim Que Eu Acordo -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-guima-album.jpg" alt="Capa É Assim Que Eu Acordo"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">É Assim Que Eu Acordo...</h4>
+                        <p class="text-sm text-gray-400 truncate">Guima</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://www.youtube.com/playlist?list=PLNjqiB73c_DrJMMxhTwNYvbp9C-9mqUxK"
+                                target="_blank" class="text-red-600 hover:text-red-500"><i
+                                    class="fab fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- 9. MODO OFF -->
+                    <div class="bg-black p-4 rounded-lg">
+                        <img src="assets/capas/capa-modo-off.jpg" alt="Capa MODO OFF"
+                            class="w-full h-auto rounded-md object-cover mb-4">
+                        <h4 class="font-bold text-lg">MODO OFF</h4>
+                        <p class="text-sm text-gray-400 truncate">Topy (prod. Green Icy)</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <a href="https://www.youtube.com/watch?v=1W8clyNokpo" target="_blank"
                                 class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
                     </div>
+                    <!-- 10. Balança & Dança (mais novo) -->
                     <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-sentimentos.jpg" alt="Capa Sentimentos"
+                        <img src="assets/capas/capa-balanca-e-danca.png" alt="Capa Balança & Dança"
                             class="w-full h-auto rounded-md object-cover mb-4">
-                        <h4 class="font-bold text-lg">Sentimentos</h4>
-                        <p class="text-sm text-gray-400 truncate">Born</p>
+                        <h4 class="font-bold text-lg">Balança & Dança</h4>
+                        <p class="text-sm text-gray-400 truncate">Sao Tchelli, Bega, Born</p>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/0nWLpE7Np1zJBNywVJwOV0?si=0c4769d5b67546e0"
+                            <a href="https://open.spotify.com/intl-pt/track/2PrBVRI6aV0gJY0e6mhxgo?si=ebd1b38f16e24427"
                                 target="_blank" class="text-green-500 hover:text-green-400"><i
                                     class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank"
+                            <a href="https://www.youtube.com/watch?v=UjcN0tE2lWM" target="_blank"
                                 class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
                         </div>
-                    </div>
-                    <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-lei-da-atracao.jpg" alt="Capa Lei da Atração"
-                            class="w-full h-auto rounded-md object-cover mb-4">
-                        <h4 class="font-bold text-lg">Lei da Atração</h4>
-                        <p class="text-sm text-gray-400">Tento</p>
-                        <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/album/4a7uQkcYQNVOjvNqDIzuf8?si=szupSWzMRCGn80Na4O33FQ"
-                                target="_blank" class="text-green-500 hover:text-green-400"><i
-                                    class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=66BTEjMgf-E" target="_blank"
-                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-black p-4 rounded-lg">
-                        <img src="assets/capas/capa-meia-lua.jpg" alt="Capa Meia Lua"
-                            class="w-full h-auto rounded-md object-cover mb-4">
-                        <h4 class="font-bold text-lg">Meia Lua</h4>
-                        <p class="text-sm text-gray-400">Sao Tchelli ft. Bega</p>
-                        <div class="flex items-center gap-4 mt-2">
-                            <a href="https://open.spotify.com/intl-pt/track/19m9fzo1MIl3IVEVHDSjOw?si=9d139e8f2e1347e7"
-                                target="_blank" class="text-green-500 hover:text-green-400"><i
-                                    class="fab fa-spotify fa-lg"></i></a>
-                            <a href="https://www.youtube.com/watch?v=u26HdC5mKUM" target="_blank"
-                                class="text-red-600 hover:text-red-500"><i class="fab fa-youtube fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
-                        <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
-                        <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
-                    </div>
-                    <div
-                        class="bg-black p-4 rounded-lg border-2 border-dashed border-gray-700 flex flex-col items-center justify-center min-h-[200px]">
-                        <i class="fa-solid fa-clock text-4xl text-gray-600 mb-4"></i>
-                        <h4 class="font-bold text-lg text-gray-500">Em Breve</h4>
                     </div>
                 </div>
             </div>
